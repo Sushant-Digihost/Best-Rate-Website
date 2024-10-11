@@ -13,6 +13,7 @@ import "swiper/css/thumbs";
 import "swiper/css/autoplay";
 import readyToExploreVideo from "./../assets/images/ready-to-explore.webm";
 import marqueeBackground from "../assets/images/marque.svg";
+import FixedVideo from "./../assets/images/video/fixed-btn-animation.mp4";
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -24,7 +25,7 @@ export const BroweThemesBtn = () => {
   return (
     <div class="BroweThemesBtn">
       <div class="btn-fixed">
-        <video autoPlay muted loop playsInline src="src/assets/images/video/fixed-btn-animation.mp4" type="video/mp4">
+        <video autoPlay muted loop playsInline src={FixedVideo} type="video/mp4">
         </video>
         <a href="#">Browse Themes</a>
       </div>
