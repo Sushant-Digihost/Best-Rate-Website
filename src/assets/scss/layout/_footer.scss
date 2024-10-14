@@ -43,6 +43,9 @@
             background-position: left 90%;
             overflow: visible !important;
 
+            // Apply the animation
+            animation: backgroundSizeRepeatAnimation 4s ease-in-out infinite;
+
             // Adding keyframes for the repeat animation
             @keyframes backgroundSizeRepeatAnimation {
               0% {
@@ -57,9 +60,6 @@
                 background-size: 0 2px;
               }
             }
-
-            // Apply the animation
-            animation: backgroundSizeRepeatAnimation 4s ease-in-out infinite;
 
             &:hover {
               color: $secondary;
@@ -111,15 +111,15 @@
     }
 
     .social {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: space-between;
 
       h2 {
         a {
           color: #fff;
           font-family: $ibrand;
-          font-size: 8.75rem;
+          font-size: 6.75rem;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
@@ -129,7 +129,7 @@
       ul {
         display: flex;
         align-items: center;
-        gap: 50px;
+        // gap: 50px;
 
         li {
           a {
@@ -203,7 +203,6 @@
 }
 
 .social {
-  //   a {
   .so-links {
     display: flex;
     justify-content: space-between;
@@ -242,5 +241,4 @@
       }
     }
   }
-  //   }
 }
