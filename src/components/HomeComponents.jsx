@@ -510,8 +510,12 @@ export const Home_Blog = () => {
 export const Pricing_Plan = () => {
   return (
     <div className="section pricing_plan">
+      <div class="video_wrapper">
+        <video autoPlay muted loop playsInline src={FixedVideo} type="video/mp4">
+        </video>
+      </div>
       <Container>
-        <div className="section_heading">
+        <div className="section_heading position-relative z-1">
           <h2 className="heading text-light">Pricing Plans</h2>
         </div>
 
