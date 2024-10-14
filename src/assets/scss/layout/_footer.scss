@@ -160,7 +160,7 @@
       p {
         color: #d3d3d3;
         font-family: $urbanist;
-        font-size: 0.8rem;
+        font-size: 0.91rem;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -168,14 +168,14 @@
         a {
           color: #d3d3d3;
           font-family: $urbanist;
-          font-size: 0.8rem;
+          font-size: 0.91rem;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           transition: all 0.3s linear;
 
           &:hover {
-            color: $primary;
+            color: $secondary;
           }
         }
       }
@@ -187,14 +187,14 @@
         a {
           color: #d3d3d3;
           font-family: $urbanist;
-          font-size: 0.8rem;
+          font-size: 0.91rem;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           transition: all 0.3s linear;
 
           &:hover {
-            color: $primary;
+            color: $secondary;
           }
         }
       }

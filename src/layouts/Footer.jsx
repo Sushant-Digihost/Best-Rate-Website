@@ -493,8 +493,7 @@ const Footer = () => {
             </div>
             <div className="copyright">
               <p>
-                © Copyright 2024{" "}
-                <a href="#!">DiigiiHost Tech Solutions Pvt. Ltd.</a> ALL RIGHTS
+                © Copyright 2024 <a href="#!">DiigiiHost.</a> ALL RIGHTS
                 RESERVED.
               </p>
               <div className="term">

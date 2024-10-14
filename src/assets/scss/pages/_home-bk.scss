@@ -1,4 +1,4 @@
-// BroweThemesBtn 
+// BroweThemesBtn
 
 .BroweThemesBtn {
   position: fixed;
@@ -40,9 +40,6 @@
   }
 }
 
-
-
-
 // Hero
 
 .hero {
@@ -56,7 +53,10 @@
       font-weight: 700;
 
       &:nth-child(1) {
-        background: var(--Innovation, linear-gradient(167deg, #CCFFFC 31.89%, #EEF3F8 78.33%));
+        background: var(
+          --Innovation,
+          linear-gradient(167deg, #ccfffc 31.89%, #eef3f8 78.33%)
+        );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -64,12 +64,12 @@
       }
 
       &:nth-child(2) {
-        color: rgba(226, 229, 235, 0.50);
+        color: rgba(226, 229, 235, 0.5);
         text-align: center;
       }
 
       &:nth-child(3) {
-        color: rgba(226, 229, 235, 0.50);
+        color: rgba(226, 229, 235, 0.5);
         text-align: end;
       }
     }
@@ -218,8 +218,10 @@
 
       &:nth-child(2) {
         position: relative;
-        background: var(--Pri-sec, linear-gradient(89deg, #8AFAF3 -10.35%, #122C65 108.09%));
-        ;
+        background: var(
+          --Pri-sec,
+          linear-gradient(89deg, #8afaf3 -10.35%, #122c65 108.09%)
+        );
         right: 12px;
         z-index: 2;
       }
@@ -376,7 +378,7 @@
         height: 15%;
         z-index: 0;
         // border-bottom: 1px solid #630707;
-        background: linear-gradient(90deg, #8AFAF3 0%, #122C65 78.57%);
+        background: linear-gradient(90deg, #8afaf3 0%, #122c65 78.57%);
       }
 
       &.swiper-slide-thumb-active.swiper-slide-visible {
@@ -432,16 +434,29 @@
 .start-sucess {
   position: relative;
 
-  marquee {
+  .marquee {
     background-color: $primary;
     padding: 20px 0 10px;
     width: 100%;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
 
     .headings {
       width: 100%;
       display: flex;
       gap: 15px;
       padding: 10px 0;
+      flex-wrap: nowrap;
+      animation: marquee 25s linear infinite;
+      @keyframes marquee {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
 
       h4 {
         color: $secondary;
@@ -450,6 +465,7 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        white-space: nowrap;
       }
     }
   }
@@ -575,30 +591,54 @@
 
     .global_corners {
       --gfs: 14.4;
-      background: linear-gradient(to right,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 0 0,
-        linear-gradient(to right,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 0 100%,
-        linear-gradient(to left,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 100% 0,
-        linear-gradient(to left,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 100% 100%,
-        linear-gradient(to bottom,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 0 0,
-        linear-gradient(to bottom,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 100% 0,
-        linear-gradient(to top,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 0 100%,
-        linear-gradient(to top,
-          #122C65 calc(2 / var(--gfs) * 1rem),
-          transparent calc(1 / var(--gfs) * 1rem)) 100% 100%;
+      background: linear-gradient(
+            to right,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 0,
+        linear-gradient(
+            to right,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 100%,
+        linear-gradient(
+            to left,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 0,
+        linear-gradient(
+            to left,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 100%,
+        linear-gradient(
+            to bottom,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 0,
+        linear-gradient(
+            to bottom,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 0,
+        linear-gradient(
+            to top,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 100%,
+        linear-gradient(
+            to top,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 100%;
       background-repeat: no-repeat;
       background-size: calc(12 / var(--gfs) * 1rem) calc(12 / var(--gfs) * 1rem);
     }
@@ -684,7 +724,6 @@
   }
 }
 
-
 // blog_section_home"
 
 .blog_section_home {
@@ -700,7 +739,7 @@
     .blog_item {
       padding: 20px;
       border-radius: 30px;
-      background: #EAF0F6;
+      background: #eaf0f6;
       position: relative;
       margin-bottom: 1.5rem;
       min-height: 180px;
@@ -720,10 +759,9 @@
       }
 
       .item_content {
-
         .post_date {
           display: inline-block;
-          color: #8C9399;
+          color: #8c9399;
           font-family: $urbanist;
           font-size: 14px;
           font-style: normal;
@@ -747,7 +785,11 @@
             display: inline;
             padding-bottom: 0;
             transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-            background-image: linear-gradient(to bottom, currentColor 0%, currentColor 98%);
+            background-image: linear-gradient(
+              to bottom,
+              currentColor 0%,
+              currentColor 98%
+            );
             background-size: 0 1px;
             background-repeat: no-repeat;
             background-position: left 100%;
@@ -800,7 +842,7 @@
   }
 }
 
-// pricing_plan 
+// pricing_plan
 
 .pricing_plan {
   position: relative;
@@ -827,7 +869,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -837,7 +879,6 @@
       backdrop-filter: blur(72px);
       z-index: 1;
     }
-
   }
 
   .pricing_items_group {
@@ -851,12 +892,16 @@
       position: relative;
       border-radius: 30px;
       padding: 35px 15px;
-      background: linear-gradient(174deg, rgba(0, 0, 0, 0.20) -2.06%, rgba(135, 135, 135, 0.20) 70.4%);
+      background: linear-gradient(
+        174deg,
+        rgba(0, 0, 0, 0.2) -2.06%,
+        rgba(135, 135, 135, 0.2) 70.4%
+      );
       min-height: 440px;
       /* Background */
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -864,9 +909,16 @@
         bottom: 0;
         border-radius: 30px;
         padding: 1px;
-        background: linear-gradient(110deg, #0039FF 12%, rgba(71, 64, 68, 0) 80%, #AAAAAA 100%);
-        -webkit-mask: linear-gradient(#AAAAAA 0 0) content-box, linear-gradient(#AAAAAA 0 0);
-        mask: linear-gradient(#AAAAAA 0 0) content-box, linear-gradient(#AAAAAA 0 0);
+        background: linear-gradient(
+          110deg,
+          #0039ff 12%,
+          rgba(71, 64, 68, 0) 80%,
+          #aaaaaa 100%
+        );
+        -webkit-mask: linear-gradient(#aaaaaa 0 0) content-box,
+          linear-gradient(#aaaaaa 0 0);
+        mask: linear-gradient(#aaaaaa 0 0) content-box,
+          linear-gradient(#aaaaaa 0 0);
         -webkit-mask-composite: destination-out;
         mask-composite: exclude;
         pointer-events: none;
@@ -883,7 +935,7 @@
       }
 
       .item_desc {
-        color: #D3D3D3;
+        color: #d3d3d3;
         font-family: $urbanist;
         font-size: 16px;
         font-style: normal;
@@ -912,10 +964,10 @@
         display: flex;
         padding: 10px;
         border-radius: 10px;
-        border: 1px solid #FFF;
+        border: 1px solid #fff;
         justify-content: center;
         align-items: center;
-        color: #FFF;
+        color: #fff;
         font-weight: 600;
         font-size: 16px;
         transition: all 0.3s linear;
@@ -931,10 +983,8 @@
       .icon_list {
         padding: {
           top: 2rem;
-          left: 0.85rem
+          left: 0.85rem;
         }
-
-        ;
 
         li {
           display: flex;
@@ -942,19 +992,22 @@
           gap: 10px;
 
           &:not(:last-child) {
-            margin-bottom: 1.2rem
+            margin-bottom: 1.2rem;
           }
         }
       }
 
       &.active {
         scale: 1.12;
-        background: linear-gradient(173deg, rgba(255, 255, 255, 0.20) -14.73%, rgba(135, 135, 135, 0.08) 66.37%);
+        background: linear-gradient(
+          173deg,
+          rgba(255, 255, 255, 0.2) -14.73%,
+          rgba(135, 135, 135, 0.08) 66.37%
+        );
         box-shadow: 2px 2px 44px 0px rgba(0, 0, 0, 0.29);
 
-
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 0;
@@ -964,8 +1017,14 @@
           /* Same border radius */
           padding: 1px;
           /* Border width */
-          background: linear-gradient(160deg, #00D1FF 12%, rgba(71, 64, 68, 0) 53%, #FFFFFF 100%);
-          -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          background: linear-gradient(
+            160deg,
+            #00d1ff 12%,
+            rgba(71, 64, 68, 0) 53%,
+            #ffffff 100%
+          );
+          -webkit-mask: linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
           mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
           -webkit-mask-composite: destination-out;
           mask-composite: exclude;
@@ -997,7 +1056,11 @@
       }
 
       &:last-child {
-        background: linear-gradient(174deg, rgba(0, 0, 0, 0.20) -2.06%, rgba(135, 135, 135, 0.20) 70.4%);
+        background: linear-gradient(
+          174deg,
+          rgba(0, 0, 0, 0.2) -2.06%,
+          rgba(135, 135, 135, 0.2) 70.4%
+        );
       }
     }
   }
