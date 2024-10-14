@@ -18,13 +18,13 @@ import img2 from "./../../src/assets/images/pricing/i2.png"
 import img3 from "./../../src/assets/images/pricing/i3.png"
 import img4 from "./../../src/assets/images/pricing/i4.png"
 
-
 export const Cta = () => {
     const cta = useRef(null);
 
     useEffect(() => {
         const element = cta.current;
 
+        // Create the timeline
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: element,
@@ -32,49 +32,42 @@ export const Cta = () => {
                 end: 'bottom bottom', 
                 markers: false, 
                 scroller: "body",
-            },
-            repeat: -1, 
-            yoyo: true, 
-            onComplete: function () {
-                gsap.to(['.img_1', '.img_2', '.img_3', '.img_4'], {
-                    opacity: 0, 
-                    duration: 0.5, 
-                    onComplete: () => {
-                        setTimeout(() => {
-                            tl.restart();
-                        }, 2000); 
-                    }
-                });
-            },
+            }
         });
 
-        // Slow and smooth animation for img_1
+        // Animate each image with a smooth transition
         tl.fromTo(
             '.img_1',
-            { x: -30, opacity: 0, ease: "slow(0.7, 0.7, false)" },
-            { x: 0, opacity: 1, duration: 1.3, ease: 'power1.inOut' }, "SS"
-        );
-        
-        // Slow and smooth animation for img_2
-        tl.fromTo(
+            { x: -20, opacity: 0},
+            { x: 0, opacity: 1, duration: 2.07, ease: 'power4.out' }, "SS"
+        )
+        .fromTo(
             '.img_2',
-            { y: -30, opacity: 0, ease: "slow(0.7, 0.7, false)" },
-            { y: 0, opacity: 1, duration: 1.3, ease: 'power1.inOut' }, "SS"
-        );
-        
-        // Slow and smooth animation for img_3
-        tl.fromTo(
+            { y: -20,  x: -32, opacity: 0 },
+            { y: 0, x: -32, opacity: 1, duration: 2.07, ease: 'power4.out' }, "SS"
+        )
+        .fromTo(
             '.img_3',
-            { y: 30, opacity: 0, ease: "slow(0.7, 0.7, false)" },
-            { y: 0, opacity: 1, duration: 1.3, ease: 'power1.inOut' }, "SS"
-        );
-        
-        // Slow and smooth animation for img_4
-        tl.fromTo(
+            { y: 0, opacity: 0 },
+            { y: -28, opacity: 1, duration: 2.07, ease: 'power4.out' }, "SS"
+        )
+        .fromTo(
             '.img_4',
-            { x: 30, opacity: 0, ease: "slow(0.7, 0.7, false)" },
-            { x: 0, opacity: 1, duration: 1.3, ease: 'power1.inOut' }, "SS"
+            { x: 0,  y: -29 ,opacity: 0  },
+            { x: -32, opacity: 1, y: -28, duration: 2.07, ease: 'power4.out' }, "SS"
         );
+
+        // Add a fade-out effect for all images once animations are done
+        tl.to(['.img_1', '.img_2', '.img_3', '.img_4'], {
+            opacity: 0,
+            duration: 0.15,
+            onComplete: () => {
+                // Wait for 2 seconds before restarting the animation
+                setTimeout(() => {
+                    tl.restart();
+                }, 1000); // 2-second delay
+            }
+        });
 
         // Cleanup function to kill ScrollTrigger on component unmount
         return () => {
@@ -87,19 +80,19 @@ export const Cta = () => {
             <Container>
                 <div className="cta_image">
                     <div className="d-flex justify-content-center">
-                        <div className="img_1">
-                            <img src={img1} alt="Img" className='img-fluid' style={{ height: '60px', width: "60px" }} />
+                        <div className="img_1 cta_img_wrap">
+                            <img src={img1} alt="Img" className='img-fluid' />
                         </div>
-                        <div className="img_2">
-                            <img src={img2} alt="Img" className='img-fluid' style={{ height: '60px', width: "60px" }} />
+                        <div className="img_2 cta_img_wrap">
+                            <img src={img2} alt="Img" className='img-fluid' />
                         </div>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <div className="img_3">
-                            <img src={img3} alt="Img" className='img-fluid' style={{ height: '60px', width: "60px" }} />
+                        <div className="img_3 cta_img_wrap">
+                            <img src={img3} alt="Img" className='img-fluid' />
                         </div>
-                        <div className="img_4">
-                            <img src={img4} alt="Img" className='img-fluid' style={{ height: '60px', width: "60px" }} />
+                        <div className="img_4 cta_img_wrap">
+                            <img src={img4} alt="Img" className='img-fluid' />
                         </div>
                     </div>
                 </div>
@@ -116,8 +109,6 @@ export const Cta = () => {
         </div>
     );
 }
-
-
 
 export const Blogsection = () => {
     return (
