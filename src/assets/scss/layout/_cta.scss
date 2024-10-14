@@ -70,6 +70,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
+    .cta_img_wrap{
+      overflow: hidden;
+    }
   }
 }
 
