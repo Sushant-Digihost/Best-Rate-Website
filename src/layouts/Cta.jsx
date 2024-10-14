@@ -38,23 +38,23 @@ export const Cta = () => {
         // Animate each image with a smooth transition
         tl.fromTo(
             '.img_1',
-            { x: -20, opacity: 0},
-            { x: 0, opacity: 1, duration: 2.07, ease: 'power4.out' }, "SS"
+            { x: -30, opacity: 0},
+            { x: 0, opacity: 1, duration: 1.87, ease: 'power4.out' }, "SS"
         )
         .fromTo(
             '.img_2',
-            { y: -20,  x: -32, opacity: 0 },
-            { y: 0, x: -32, opacity: 1, duration: 2.07, ease: 'power4.out' }, "SS"
+            { y: -30,  x: -32, opacity: 0 },
+            { y: 0, x: -32, opacity: 1, duration: 1.87, ease: 'power4.out' }, "SS"
         )
         .fromTo(
             '.img_3',
-            { y: 0, opacity: 0 },
-            { y: -28, opacity: 1, duration: 2.07, ease: 'power4.out' }, "SS"
+            { y: 10, opacity: 0 },
+            { y: -28, opacity: 1, duration: 1.87, ease: 'power4.out' }, "SS"
         )
         .fromTo(
             '.img_4',
-            { x: 0,  y: -29 ,opacity: 0  },
-            { x: -32, opacity: 1, y: -28, duration: 2.07, ease: 'power4.out' }, "SS"
+            { x: 10,  y: -29 ,opacity: 0  },
+            { x: -32, opacity: 1, y: -28, duration: 1.87, ease: 'power4.out' }, "SS"
         );
 
         // Add a fade-out effect for all images once animations are done
