@@ -256,23 +256,48 @@
       position: absolute;
       top: 15px;
       right: 15px;
-      background: $light;
-      width: 40px;
-      height: 40px;
+     
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      rotate: 40deg;
       transition: all .3s linear;
-      svg {
-        fill: #001f63;
+      .circle{
+        background: $light;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        transition: all  0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        svg {
+          transition: all  0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+          &.svg2{
+            transform: translate(-44px, 0px);
+          }
+        }
       }
+
+     
     }
     &:hover{
       cursor: pointer;
       .arrow {
-        rotate: 90deg;
+        .circle{
+          // background: $primary;
+          svg {
+            transform: translate(44px, -44px);
+            &.svg2{
+              transform: translate(0px, -41px);
+            }
+            circle {
+              // fill: $primary;
+            }
+
+            path {
+              // fill: $light;
+            }
+          }
+        }
       }
     }
   }

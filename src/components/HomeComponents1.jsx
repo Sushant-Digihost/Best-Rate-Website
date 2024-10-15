@@ -40,30 +40,14 @@ export const BroweThemesBtn = () => {
 };
 
 export const Hero = () => {
-  const [visibleIndex, setVisibleIndex] = useState(0); // State to track which h2 is visible
-
-  useEffect(() => {
-    // Reset visibility on mount
-    setVisibleIndex(0);
-
-    // Timer to show h2 one by one
-    const timer = setInterval(() => {
-      setVisibleIndex((prevIndex) => {
-        // Loop back to the first h2 after the last one
-        return (prevIndex + 1) % 3; // There are 3 h2 elements
-      });
-    }, 3000); // Change every 2 seconds
-
-    return () => clearInterval(timer); // Clear interval on component unmount
-  }, []);
   return (
     <div className="hero">
       <Container>
         <div className="texts">
           <div className="bg-texts">
-          <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
-            <h2 className={visibleIndex === 1 ? "visible" : ""}>Innovation</h2>
-            <h2 className={visibleIndex === 2 ? "visible" : ""}>Vision</h2>
+            <h2>Insight</h2>
+            <h2>Innovation</h2>
+            <h2>Vision</h2>
           </div>
           <div className="main-text">
             <h2>Setting up your business as easy as</h2>
@@ -540,8 +524,8 @@ export const Home_Blog = () => {
           <div className="row">
             <div className="col md-6 col-lg-4">
               <div className="blog_item">
-              <div className="item_arrow">
-                  <div className="circle">
+                <div className="item_arrow">
+                  <a href="#!">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40"
@@ -549,26 +533,13 @@ export const Home_Blog = () => {
                       viewBox="0 0 40 41"
                       fill="none"
                     >
+                      <circle cx="20" cy="20.7148" r="20" fill="white" />
                       <path
                         d="M26.2138 14.8108C26.2136 14.8108 26.2133 14.8107 26.213 14.8107L21.1623 14.8229C20.784 14.8239 20.4779 15.1313 20.4788 15.5097C20.4797 15.8881 20.7872 16.1941 21.1656 16.1932L24.5565 16.185L14.2966 26.4449C14.0291 26.7125 14.0291 27.1463 14.2966 27.4138C14.5642 27.6814 14.998 27.6814 15.2656 27.4138L25.5254 17.154L25.5172 20.5448C25.5163 20.9232 25.8224 21.2307 26.2007 21.2316C26.5792 21.2325 26.8866 20.9264 26.8875 20.5481L26.8998 15.4975C26.8998 15.4972 26.8997 15.4969 26.8997 15.4966C26.9001 15.1175 26.5918 14.8103 26.2138 14.8108Z"
                         fill="#0026AC"
                       />
                     </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="41"
-                      viewBox="0 0 40 41"
-                      fill="none"
-                      className="svg2"
-                    >
-                      <path
-                        d="M26.2138 14.8108C26.2136 14.8108 26.2133 14.8107 26.213 14.8107L21.1623 14.8229C20.784 14.8239 20.4779 15.1313 20.4788 15.5097C20.4797 15.8881 20.7872 16.1941 21.1656 16.1932L24.5565 16.185L14.2966 26.4449C14.0291 26.7125 14.0291 27.1463 14.2966 27.4138C14.5642 27.6814 14.998 27.6814 15.2656 27.4138L25.5254 17.154L25.5172 20.5448C25.5163 20.9232 25.8224 21.2307 26.2007 21.2316C26.5792 21.2325 26.8866 20.9264 26.8875 20.5481L26.8998 15.4975C26.8998 15.4972 26.8997 15.4969 26.8997 15.4966C26.9001 15.1175 26.5918 14.8103 26.2138 14.8108Z"
-                        fill="#0026AC"
-                      />
-                    </svg>
-                  </div>
-                 
+                  </a>
                 </div>
                 <div className="item_content">
                   <div className="flex_wrap">
@@ -585,8 +556,8 @@ export const Home_Blog = () => {
             </div>
             <div className="col md-6 col-lg-4">
               <div className="blog_item">
-              <div className="item_arrow">
-                  <div className="circle">
+                <div className="item_arrow">
+                  <a href="#!">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40"
@@ -594,26 +565,13 @@ export const Home_Blog = () => {
                       viewBox="0 0 40 41"
                       fill="none"
                     >
+                      <circle cx="20" cy="20.7148" r="20" fill="white" />
                       <path
                         d="M26.2138 14.8108C26.2136 14.8108 26.2133 14.8107 26.213 14.8107L21.1623 14.8229C20.784 14.8239 20.4779 15.1313 20.4788 15.5097C20.4797 15.8881 20.7872 16.1941 21.1656 16.1932L24.5565 16.185L14.2966 26.4449C14.0291 26.7125 14.0291 27.1463 14.2966 27.4138C14.5642 27.6814 14.998 27.6814 15.2656 27.4138L25.5254 17.154L25.5172 20.5448C25.5163 20.9232 25.8224 21.2307 26.2007 21.2316C26.5792 21.2325 26.8866 20.9264 26.8875 20.5481L26.8998 15.4975C26.8998 15.4972 26.8997 15.4969 26.8997 15.4966C26.9001 15.1175 26.5918 14.8103 26.2138 14.8108Z"
                         fill="#0026AC"
                       />
                     </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="41"
-                      viewBox="0 0 40 41"
-                      fill="none"
-                      className="svg2"
-                    >
-                      <path
-                        d="M26.2138 14.8108C26.2136 14.8108 26.2133 14.8107 26.213 14.8107L21.1623 14.8229C20.784 14.8239 20.4779 15.1313 20.4788 15.5097C20.4797 15.8881 20.7872 16.1941 21.1656 16.1932L24.5565 16.185L14.2966 26.4449C14.0291 26.7125 14.0291 27.1463 14.2966 27.4138C14.5642 27.6814 14.998 27.6814 15.2656 27.4138L25.5254 17.154L25.5172 20.5448C25.5163 20.9232 25.8224 21.2307 26.2007 21.2316C26.5792 21.2325 26.8866 20.9264 26.8875 20.5481L26.8998 15.4975C26.8998 15.4972 26.8997 15.4969 26.8997 15.4966C26.9001 15.1175 26.5918 14.8103 26.2138 14.8108Z"
-                        fill="#0026AC"
-                      />
-                    </svg>
-                  </div>
-                 
+                  </a>
                 </div>
                 <div className="item_content">
                   <div className="flex_wrap">
@@ -630,8 +588,8 @@ export const Home_Blog = () => {
             </div>
             <div className="col md-6 col-lg-4">
               <div className="blog_item">
-              <div className="item_arrow">
-                  <div className="circle">
+                <div className="item_arrow">
+                  <a href="#!">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40"
@@ -639,26 +597,13 @@ export const Home_Blog = () => {
                       viewBox="0 0 40 41"
                       fill="none"
                     >
+                      <circle cx="20" cy="20.7148" r="20" fill="white" />
                       <path
                         d="M26.2138 14.8108C26.2136 14.8108 26.2133 14.8107 26.213 14.8107L21.1623 14.8229C20.784 14.8239 20.4779 15.1313 20.4788 15.5097C20.4797 15.8881 20.7872 16.1941 21.1656 16.1932L24.5565 16.185L14.2966 26.4449C14.0291 26.7125 14.0291 27.1463 14.2966 27.4138C14.5642 27.6814 14.998 27.6814 15.2656 27.4138L25.5254 17.154L25.5172 20.5448C25.5163 20.9232 25.8224 21.2307 26.2007 21.2316C26.5792 21.2325 26.8866 20.9264 26.8875 20.5481L26.8998 15.4975C26.8998 15.4972 26.8997 15.4969 26.8997 15.4966C26.9001 15.1175 26.5918 14.8103 26.2138 14.8108Z"
                         fill="#0026AC"
                       />
                     </svg>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="41"
-                      viewBox="0 0 40 41"
-                      fill="none"
-                      className="svg2"
-                    >
-                      <path
-                        d="M26.2138 14.8108C26.2136 14.8108 26.2133 14.8107 26.213 14.8107L21.1623 14.8229C20.784 14.8239 20.4779 15.1313 20.4788 15.5097C20.4797 15.8881 20.7872 16.1941 21.1656 16.1932L24.5565 16.185L14.2966 26.4449C14.0291 26.7125 14.0291 27.1463 14.2966 27.4138C14.5642 27.6814 14.998 27.6814 15.2656 27.4138L25.5254 17.154L25.5172 20.5448C25.5163 20.9232 25.8224 21.2307 26.2007 21.2316C26.5792 21.2325 26.8866 20.9264 26.8875 20.5481L26.8998 15.4975C26.8998 15.4972 26.8997 15.4969 26.8997 15.4966C26.9001 15.1175 26.5918 14.8103 26.2138 14.8108Z"
-                        fill="#0026AC"
-                      />
-                    </svg>
-                  </div>
-                 
+                  </a>
                 </div>
                 <div className="item_content">
                   <div className="flex_wrap">
