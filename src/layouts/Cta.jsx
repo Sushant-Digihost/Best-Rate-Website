@@ -31,7 +31,7 @@ export const Cta = () => {
                 start: 'top 50%',
                 end: "bottom bottom", // Optional: Define an end point
                 toggleActions: "play none none reverse",
-                markers: true,
+                markers: false,
                 scroller: "body",
             }
         });
