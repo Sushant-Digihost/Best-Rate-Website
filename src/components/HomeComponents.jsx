@@ -124,10 +124,10 @@ export const ExpertyBuild = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "top 50%", // Adjust as needed
+        start: "top 30%", // Adjust as needed
         end: "bottom bottom", // Optional: Define an end point
         toggleActions: "play none none reverse", // Play on enter, reverse on leave
-        markers: true, // Optional: Display markers for debugging
+        markers: false, // Optional: Display markers for debugging
         scroller: "body",
       },
     });
