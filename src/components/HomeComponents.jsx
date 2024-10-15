@@ -124,54 +124,47 @@ export const ExpertyBuild = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "top 30%", // Adjust as needed
+        start: "top 50%", // Adjust as needed
         end: "bottom bottom", // Optional: Define an end point
         toggleActions: "play none none reverse", // Play on enter, reverse on leave
-        markers: false, // Optional: Display markers for debugging
+        markers: true, // Optional: Display markers for debugging
         scroller: "body",
       },
     });
+
     tl.fromTo(
       ".heading1",
+      { y: 0 },
       {
-        y: 50,
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-      },
-      {
-        y: 0, // Move to original position
+        y: 0,
         duration: 1, // Increase duration for smoothness
-        ease: "power4.out",
+        ease: 'expoScale(0.5,7,none)',
       },
       "SS"
     );
-    // Adjusting the animations for smoother effects
+
     tl.fromTo(
       ".heading2",
+      { y: 120, opacity: 0 },
       {
-        y: 100,
-        opacity: 0, // Start hidden
-      },
-      {
-        y: 0, // Move to original position
-        opacity: 1, // Fade in
-        duration: 1, // Increase duration for smoothness
-        ease: "power4.out",
+        y: -20,
+        opacity: 1,
+        duration: 1,
+        ease: 'expoScale(0.5,7,none)',
       },
       "SS"
     );
+
     tl.fromTo(
       ".heading3",
+      { y: 120, opacity: 0 },
       {
-        y: 100,
-        opacity: 0, // Start hidden
+        y: -20,
+        opacity: 1,
+        duration: 1,
+        ease: 'expoScale(0.5,7,none)',
       },
-      {
-        y: 0, // Move to original position
-        opacity: 1, // Fade in
-        duration: 1, // Increase duration for smoothness
-        ease: "power4.out",
-      },
-      "<0.2" // Start this animation 0.2 seconds after heading2 animation
+      "<0.2"
     );
 
     // Cleanup function to kill ScrollTrigger on component unmount
@@ -179,23 +172,28 @@ export const ExpertyBuild = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
   return (
     <div className="section experty-build" ref={expertyBuild}>
       <Container fluid className="px-0">
         <div className="cta-heading heading1">
           <a href="#">
             <h4>Expertly Build Website</h4>
+            <h4 className="headingss">Know More</h4>
           </a>
         </div>
         <div className="cta-heading heading2">
           <a href="#">
             <h4>Built by experts</h4>
+            <h4 className="headingss">Know More</h4>
           </a>
         </div>
         <div className="cta-heading heading3">
           <a href="#">
             <h4>Delivered within 24hrs</h4>
+            <h4 className="headingss">Know More</h4>
           </a>
+
         </div>
       </Container>
     </div>
