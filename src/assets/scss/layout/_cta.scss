@@ -29,7 +29,7 @@
     opacity: 0.7;
   }
   .content {
-    padding: 55px 0 150px;
+    padding: 55px 0 130px;
     position: relative;
     z-index: 1;
     h2 {
@@ -70,10 +70,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    padding-top: 4rem;
+    // overflow: hidden;
 
     .cta_img_wrap{
-      overflow: hidden;
+      // overflow: hidden;
     }
   }
 }

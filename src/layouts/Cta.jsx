@@ -28,9 +28,10 @@ export const Cta = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: element,
-                start: 'top 30%', 
-                end: 'bottom bottom', 
-                markers: false, 
+                start: 'top 50%',
+                end: "bottom bottom", // Optional: Define an end point
+                toggleActions: "play none none reverse",
+                markers: true,
                 scroller: "body",
             }
         });
@@ -38,36 +39,24 @@ export const Cta = () => {
         // Animate each image with a smooth transition
         tl.fromTo(
             '.img_1',
-            { x: -30, opacity: 0},
-            { x: 0, opacity: 1, duration: 1.87, ease: 'power4.out' }, "SS"
+            { x: -100, opacity: 0, width: '100px', y: -29 },
+            { x: 0, opacity: 1, width: "auto", y: 0, duration: 2.87, ease: 'power4.out' }, "SS"
         )
-        .fromTo(
-            '.img_2',
-            { y: -30,  x: -32, opacity: 0 },
-            { y: 0, x: -32, opacity: 1, duration: 1.87, ease: 'power4.out' }, "SS"
-        )
-        .fromTo(
-            '.img_3',
-            { y: 10, opacity: 0 },
-            { y: -28, opacity: 1, duration: 1.87, ease: 'power4.out' }, "SS"
-        )
-        .fromTo(
-            '.img_4',
-            { x: 10,  y: -29 ,opacity: 0  },
-            { x: -32, opacity: 1, y: -28, duration: 1.87, ease: 'power4.out' }, "SS"
-        );
-
-        // Add a fade-out effect for all images once animations are done
-        tl.to(['.img_1', '.img_2', '.img_3', '.img_4'], {
-            opacity: 0,
-            duration: 0.15,
-            onComplete: () => {
-                // Wait for 2 seconds before restarting the animation
-                setTimeout(() => {
-                    tl.restart();
-                }, 1000); // 2-second delay
-            }
-        });
+            .fromTo(
+                '.img_2',
+                { y: -29, x: 68, opacity: 0, width: '100px' },
+                { y: 0, x: -32, opacity: 1, width: "auto", duration: 2.87, ease: 'power4.out' }, "SS"
+            )
+            .fromTo(
+                '.img_3',
+                { y: 29, x: -100, opacity: 0, width: '100px' },
+                { y: -28, x: 0, opacity: 1, width: "auto", duration: 2.87, ease: 'power4.out' }, "SS"
+            )
+            .fromTo(
+                '.img_4',
+                { x: 68, y: 29, opacity: 0, width: '100px' },
+                { x: -32, opacity: 1, y: -28, width: "auto", duration: 2.87, ease: 'power4.out' }, "SS"
+            );
 
         // Cleanup function to kill ScrollTrigger on component unmount
         return () => {
