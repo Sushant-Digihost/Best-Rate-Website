@@ -43,18 +43,18 @@ export const Hero = () => {
   const [visibleIndex, setVisibleIndex] = useState(0); // State to track which h2 is visible
 
   useEffect(() => {
-    // Reset visibility on mount
+   
     setVisibleIndex(0);
 
-    // Timer to show h2 one by one
+   
     const timer = setInterval(() => {
       setVisibleIndex((prevIndex) => {
-        // Loop back to the first h2 after the last one
-        return (prevIndex + 1) % 3; // There are 3 h2 elements
+      
+        return (prevIndex + 1) % 3; 
       });
-    }, 3000); // Change every 2 seconds
+    }, 3000); 
 
-    return () => clearInterval(timer); // Clear interval on component unmount
+    return () => clearInterval(timer); 
   }, []);
   return (
     <div className="hero">

@@ -162,7 +162,7 @@ export const Blogsection = () => {
 export const Oneclick = () => {
     return (
         <div className="section oneclick">
-            <div className="container">
+            <div className="fluid-container px-5">
                 <div className="oneclick-container">
                     <div className="onetext">
                         <div className="oneday">

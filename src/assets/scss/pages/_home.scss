@@ -51,8 +51,8 @@
       text-align: center;
       font-size: 12.2vw;
       font-weight: 700;
-      visibility: hidden; /* Start hidden */
-      opacity: 0; /* Prevents display issues */
+      visibility: hidden; 
+      opacity: 0; 
       transition: visibility 0s, opacity 0.5s linear;
       &:nth-child(1) {
         // background: var(
@@ -61,6 +61,7 @@
         // );
         animation: textShine 3s linear infinite;
         // background:  linear-gradient(185deg, #CCFFFC 62.89%, #EEF3F8 78.33%);
+        // background:  linear-gradient(180deg, #b5f3f0 31.89%, #dbedff 78.33%);
         text-align: start;
         background-clip: text;
         -webkit-background-clip: text;
@@ -71,6 +72,7 @@
         // color: rgba(226, 229, 235, 0.5);
         text-align: center;
         animation: textShine2 3s linear infinite;
+        // background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -531,7 +533,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(450 / 14.4 * 1rem) !important;
+    height: calc(490 / 14.4 * 1rem) !important;
 
     .videoSlider_videoWrap {
       position: relative;
@@ -599,7 +601,7 @@
     }
 
     &.swiper-slide-active {
-      height: calc(420 / 14.4 * 1rem) !important;
+      height: calc(450 / 14.4 * 1rem) !important;
       transition: height 0.9s ease-in-out;
 
       .videoSlider_videoWrap {
@@ -921,10 +923,11 @@
   }
 
   .pricing_items_group {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 55px;
-    padding: 4rem 0;
+    display: flex;
+    gap: 70px;
+    padding: 55px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     color: $light;
 
     .pricing_item {
@@ -1104,7 +1107,7 @@
     -webkit-text-fill-color: transparent;
   }
   50% {
-    background:   linear-gradient(180deg, #CCFFFC 31.89%, #EEF3F8 78.33%);
+    background:   linear-gradient(180deg, #b5f3f0 31.89%, #dbedff 78.33%);
     opacity: 1;
     background-clip: text;
     -webkit-background-clip: text;
@@ -1122,7 +1125,7 @@
     -webkit-text-fill-color: transparent;
   }
   50%{
-    background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
+    background: linear-gradient(180deg, rgb(204 209 218 / 68%) 31.89%, #d6eaff 78.33%);
     background-clip: text;
     opacity: 1;
     -webkit-background-clip: text;
@@ -1130,7 +1133,7 @@
   }
 
 }
-.visible {
-  visibility: visible;
-  opacity: 1; /* Fully visible */
-}
+// .visible {
+//   visibility: visible;
+//   opacity: 1; /* Fully visible */
+// }
