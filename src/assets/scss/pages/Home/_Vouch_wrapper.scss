@@ -15,6 +15,11 @@
         justify-content: center;
         height: calc(490 / 14.4 * 1rem) !important;
 
+        @include min-xxl {
+            height: calc(640 / 14.4 * 1rem) !important;
+            ;
+        }
+
         .videoSlider_videoWrap {
             position: relative;
             flex-shrink: 0;
@@ -84,6 +89,11 @@
             height: calc(450 / 14.4 * 1rem) !important;
             transition: height 0.9s ease-in-out;
 
+            @include min-xxl {
+                height: calc(600 / 14.4 * 1rem) !important;
+                ;
+            }
+
             .videoSlider_videoWrap {
                 opacity: 1;
             }
@@ -111,9 +121,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 56vw;
-            height: calc(400 / 14.4 * 1rem);
+            width: 72vw;
+            height: calc(430 / 14.4 * 1rem);
             transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+
+            @include min-xxl {
+                height: calc(580 / 14.4 * 1rem);
+            }
         }
 
         .global_corners {
@@ -143,7 +157,37 @@
                     #122c65 calc(2 / var(--gfs) * 1rem),
                     transparent calc(1 / var(--gfs) * 1rem)) 100% 100%;
             background-repeat: no-repeat;
-            background-size: calc(12 / var(--gfs) * 1rem) calc(12 / var(--gfs) * 1rem);
+            background-size: calc(18 / var(--gfs) * 1rem) calc(18 / var(--gfs) * 1rem);
+
+            @include min-xxl16 {
+                background: linear-gradient(to right,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 0 0,
+                    linear-gradient(to right,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 0 100%,
+                    linear-gradient(to left,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 100% 0,
+                    linear-gradient(to left,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 100% 100%,
+                    linear-gradient(to bottom,
+                        #122c65 calc(2 / var(--gfs) * 1rem),
+                        transparent calc(1 / var(--gfs) * 1rem)) 0 0,
+                    linear-gradient(to bottom,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 100% 0,
+                    linear-gradient(to top,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 0 100%,
+                    linear-gradient(to top,
+                        #122c65 calc(3 / var(--gfs) * 1rem),
+                        transparent calc(2 / var(--gfs) * 1rem)) 100% 100%;
+                background-size: calc(22 / var(--gfs) * 1rem) calc(22 / var(--gfs) * 1rem);
+                background-repeat: no-repeat;
+
+            }
         }
     }
 

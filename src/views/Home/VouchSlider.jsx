@@ -158,7 +158,7 @@ const  VouchSlider = () => {
                 </h2>
                 <div className="Vouch_wrapper">
                     <Swiper
-                        slidesPerView={1.8}
+                        slidesPerView={1.4}
                         spaceBetween={30}
                         centeredSlides={true}
                         speed={900}

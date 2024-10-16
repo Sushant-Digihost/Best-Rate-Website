@@ -50,9 +50,14 @@
             border-radius: 30px;
             padding: 35px 15px;
             background: linear-gradient(174deg,
-                    rgba(0, 0, 0, 0.2) -2.06%,
-                    rgba(135, 135, 135, 0.2) 70.4%);
+            rgba(0, 0, 0, 0.2) -2.06%,
+            rgba(135, 135, 135, 0.2) 70.4%);
             min-height: 440px;
+            
+            @include min-xxl{
+                min-height: 57.292vh;
+                padding: 2.562vw 1.098vw;
+            }
             /* Background */
 
             &::before {
@@ -85,6 +90,10 @@
                 font-weight: 700;
                 line-height: normal;
                 margin-bottom: 0.5rem;
+
+                @include min-xxl{
+                    font-size: 1.757vw;
+                }
             }
 
             .item_desc {
@@ -94,6 +103,11 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 22px;
+                
+                @include min-xxl{
+                    line-height: 1.611vw;
+                    font-size: 1.171vw;
+                }
             }
 
             .price_value {

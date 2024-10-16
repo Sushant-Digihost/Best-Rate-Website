@@ -14,6 +14,10 @@
     .logo {
       img {
         width: 65px;
+
+        @include min-xxl{
+          width: 4.758vw;
+        }
       }
     }
     .navlinks {
@@ -49,6 +53,10 @@
             font-size: 16px;
             font-weight: 400;
             padding: 6px 20px;
+
+            @include min-xxl(){
+              font-size: 1.171vw;
+            }
           }
           &.active {
             a {
@@ -71,6 +79,10 @@
           line-height: normal;
           letter-spacing: 0.36px;
           color: $primary;
+
+          @include min-xxl{
+            font-size: 1.318vw;
+          }
         }
       }
     }

@@ -25,26 +25,6 @@ html {
   scroll-behavior: smooth;
 }
 
-// html, body {
-//   height: 100%;
-//   margin: 0;
-//   overflow: hidden; /* Prevent default scrolling */
-// }
-
-// [data-scroll-container] {
-//   height: 100%;
-//   width: 100%;
-//   overflow: hidden; /* Prevent any overflow that might cause issues */
-// }
-
-// .scrollable-component {
-//   overflow: hidden; /* Disable scroll for these elements */
-// }
-
-// .c-scrollbar:not(:last-child){
-//   display: none;
-// }
-
 body {
   margin: 0;
   padding: 0;
@@ -113,6 +93,10 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+
+    @include min-xxl{
+      font-size : 4.026vw
+    }
   }
 }
 

@@ -12,14 +12,14 @@
         width: 110%;
         position: relative;
         z-index: 1;
-        transition: z-index .3s ease-in-out;
+        transition: z-index .3s linear, transform .3s linear;
 
 
         a {
             text-align: center;
             display: inline-flex;
             justify-content: center;
-            transition: all 0.53s ease-in-out;
+            transition: all 0.3s linear;
 
 
             h4 {
@@ -32,7 +32,11 @@
                 text-transform: capitalize;
                 position: relative;
                 width: fit-content;
-                transition: all 0.53s ease-in-out;
+                transition: all 0.3s linear;
+
+                @include min-xxl{
+                    font-size: 2.343vw;
+                }
 
             }
 
@@ -44,7 +48,7 @@
                 left: 50%;
                 visibility: hidden;
                 transform: translate(-50%, -50%);
-                transition: all 0.53s ease-in-out;
+                transition: all 0.3s linear;
 
                 &::after {
                     position: absolute;
@@ -61,7 +65,7 @@
                     opacity: 0;
                     top: 50%;
                     transform: translateY(-50%);
-                    transition: all 0.53s ease-in-out;
+                    transition: all 0.3s linear;
                 }
             }
 
@@ -69,6 +73,7 @@
 
         &:hover {
             z-index: 2;
+            transform: rotate(0deg) !important;
 
             a {
 
