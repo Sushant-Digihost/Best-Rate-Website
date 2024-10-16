@@ -21,3 +21,123 @@ $sm-breakpoint: 576px;
 $md-breakpoint: 768px;
 $lg-breakpoint: 992px;
 $xl-breakpoint: 1200px;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxl16 : 1600px,
+  xxl18 : 1800px,
+  xxl20 : 2000px,
+  xxl22 : 2200px,
+  xxl24 : 2400px,
+);
+
+// Min Width
+
+@mixin min-xs {
+    @media (min-width: map-get($breakpoints, "xs")) {
+      @content;
+    }
+  }
+  
+  @mixin min-sm {
+    @media (min-width: map-get($breakpoints, "sm")) {
+      @content;
+    }
+  }
+  
+  @mixin min-md {
+    @media (min-width: map-get($breakpoints, "md")) {
+      @content;
+    }
+  }
+  
+  @mixin min-lg {
+    @media (min-width: map-get($breakpoints, "lg")) {
+      @content;
+    }
+  }
+  
+  @mixin min-xl {
+    @media (min-width: map-get($breakpoints, "xl")) {
+      @content;
+    }
+  }
+  
+  @mixin min-xxl {
+    @media (min-width: map-get($breakpoints, "xxl")) {
+      @content;
+    }
+  }
+
+  @mixin min-xxl16 {
+    @media (min-width: map-get($breakpoints, "xxl16")) {
+      @content;
+    }
+  }
+
+  @mixin min-xxl18 {
+    @media (min-width: map-get($breakpoints, "xxl18")) {
+      @content;
+    }
+  }
+
+  @mixin min-xxl20 {
+    @media (min-width: map-get($breakpoints, "xxl20")) {
+      @content;
+    }
+  }
+
+  @mixin min-xxl22 {
+    @media (min-width: map-get($breakpoints, "xxl22")) {
+      @content;
+    }
+  }
+
+  @mixin min-xxl24 {
+    @media (min-width: map-get($breakpoints, "xxl")) {
+      @content;
+    }
+  }
+  
+  // Max width
+  
+  @mixin max-xs {
+    @media (max-width: map-get($breakpoints, "xs")) {
+      @content;
+    }
+  }
+  
+  @mixin max-sm {
+    @media (max-width: map-get($breakpoints, "sm")) {
+      @content;
+    }
+  }
+  
+  @mixin max-md {
+    @media (max-width: map-get($breakpoints, "md")) {
+      @content;
+    }
+  }
+  
+  @mixin max-lg {
+    @media (max-width: map-get($breakpoints, "lg")) {
+      @content;
+    }
+  }
+  
+  @mixin max-xl {
+    @media (max-width: map-get($breakpoints, "xl")) {
+      @content;
+    }
+  }
+  
+  @mixin max-xxl {
+    @media (max-width: map-get($breakpoints, "xxl")) {
+      @content;
+    }
+  }

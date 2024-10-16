@@ -25,6 +25,26 @@ html {
   scroll-behavior: smooth;
 }
 
+// html, body {
+//   height: 100%;
+//   margin: 0;
+//   overflow: hidden; /* Prevent default scrolling */
+// }
+
+// [data-scroll-container] {
+//   height: 100%;
+//   width: 100%;
+//   overflow: hidden; /* Prevent any overflow that might cause issues */
+// }
+
+// .scrollable-component {
+//   overflow: hidden; /* Disable scroll for these elements */
+// }
+
+// .c-scrollbar:not(:last-child){
+//   display: none;
+// }
+
 body {
   margin: 0;
   padding: 0;
@@ -93,5 +113,24 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
+  }
+}
+
+.container-xl, .container-lg, .container-md, .container-sm, .container{
+  
+  @include min-xl {
+    max-width: 1260px;
+  }
+  @include min-xxl16 {
+    max-width: 1460px;
+  }
+  @include min-xxl18 {
+    max-width: 1500px;
+  }
+  @include min-xxl20 {
+    max-width: 1650px;
+  }
+  @include min-xxl22 {
+    max-width: 2140px;
   }
 }
