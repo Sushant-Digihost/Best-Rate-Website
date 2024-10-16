@@ -1,0 +1,42 @@
+// Start Sucess
+.start-sucess {
+    position: relative;
+
+    .marquee {
+        background-color: $primary;
+        padding: 20px 0 10px;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        overflow: hidden;
+
+        .headings {
+            width: 100%;
+            display: flex;
+            gap: 15px;
+            padding: 10px 0;
+            flex-wrap: nowrap;
+            animation: marquee 25s linear infinite;
+
+            @keyframes marquee {
+                from {
+                    transform: translateX(0%);
+                }
+
+                to {
+                    transform: translateX(-100%);
+                }
+            }
+
+            h4 {
+                color: $secondary;
+                font-family: $ibrand;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                white-space: nowrap;
+            }
+        }
+    }
+}

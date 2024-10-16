@@ -1,0 +1,41 @@
+// BroweThemesBtn
+
+.BroweThemesBtn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateX(39%) translateY(-50%) rotate(270deg);
+    z-index: 1000;
+
+    .btn-fixed {
+        position: relative; // Make the button relative for positioning child elements
+        padding: 10px 60px;
+        overflow: hidden; // Hide overflow
+        border-radius: 20px 20px 0 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        video {
+            position: absolute; // Position video absolutely within the button
+            top: 0;
+            left: 0;
+            width: 100%; // Cover the entire button
+            height: 100%;
+            object-fit: cover; // Maintain aspect ratio and cover the button
+            z-index: 0; // Place behind the text
+        }
+
+        a {
+            position: relative; // Make link position relative to sit above video
+            color: $secondary;
+            font-family: $urbanist;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            z-index: 1; // Ensure text is above the video
+        }
+    }
+}

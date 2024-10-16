@@ -1,0 +1,115 @@
+// Hero
+
+.hero {
+    position: relative;
+    background-color: $background;
+
+    .bg-texts {
+        h2 {
+            text-align: center;
+            font-size: 12.2vw;
+            font-weight: 700;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+
+            &:nth-child(1) {
+                // background: var(
+                //   --Innovation,
+                //   linear-gradient(167deg, #ccfffc 31.89%, #eef3f8 78.33%)
+                // );
+                animation: textShine 3s linear infinite;
+                // background:  linear-gradient(185deg, #CCFFFC 62.89%, #EEF3F8 78.33%);
+                // background:  linear-gradient(180deg, #b5f3f0 31.89%, #dbedff 78.33%);
+                text-align: start;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &:nth-child(2) {
+                // color: rgba(226, 229, 235, 0.5);
+                text-align: center;
+                animation: textShine2 3s linear infinite;
+                // background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &:nth-child(3) {
+                // color: rgba(226, 229, 235, 0.5);
+                text-align: end;
+                animation: textShine 3s linear infinite;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .main-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        transform: translate(-50%, -50%);
+
+        h2 {
+            color: $dark-alt;
+            text-align: center;
+            font-family: $ibrand;
+            font-size: 7.7vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            text-align: center;
+        }
+    }
+}
+
+
+@keyframes textShine {
+
+    0% {
+        background: linear-gradient(167deg, rgba(226, 229, 235, 0.50) 31.89%, #EEF3F8 78.33%);
+        background-clip: text;
+        opacity: 1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(180deg, #b5f3f0 31.89%, #dbedff 78.33%);
+        opacity: 1;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+}
+
+@keyframes textShine2 {
+    0% {
+        background: linear-gradient(167deg, #fff 78.33%);
+        background-clip: text;
+        opacity: 1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    50% {
+        background: linear-gradient(180deg, rgb(204 209 218 / 68%) 31.89%, #d6eaff 78.33%);
+        background-clip: text;
+        opacity: 1;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    /* Fully visible */
+}

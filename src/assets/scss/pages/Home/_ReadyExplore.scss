@@ -1,0 +1,117 @@
+// Ready to Explore
+.ready-to-explore {
+    .heading {
+        margin-bottom: 50px;
+    }
+
+    .thumbslider {
+        .swiper-slide {
+            height: 70px !important;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.5s all ease;
+            position: relative;
+
+            .thumb {
+                display: flex;
+                align-items: start;
+                gap: 15px;
+                padding: 20px;
+                z-index: 3;
+                position: relative;
+                border-radius: 15px;
+                height: 98.5%;
+
+                .icon {
+                    svg {
+                        width: 30px;
+                        margin-top: -7px;
+                    }
+                }
+
+                .text {
+                    h4 {
+                        color: $dark-alt;
+                        font-size: 20px;
+                        font-weight: bold;
+
+                        @media (max-width: $lg-breakpoint) {
+                            font-size: 20px;
+                        }
+                    }
+
+                    p {
+                        color: #232323;
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-top: 10px;
+                        opacity: 0;
+                        transition: 0.5s all ease;
+
+                        @media (max-width: $lg-breakpoint) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 15%;
+                z-index: 0;
+                // border-bottom: 1px solid #630707;
+                background: linear-gradient(90deg, #8afaf3 0%, #122c65 78.57%);
+            }
+
+            &.swiper-slide-thumb-active.swiper-slide-visible {
+                height: 138px !important;
+                background: #ededed;
+
+                .thumb {
+                    background: $primary;
+                }
+
+                .icon {
+                    svg {
+                        path {
+                            fill: $secondary;
+                        }
+                    }
+                }
+
+                .text {
+                    h4 {
+                        color: $secondary;
+                    }
+
+                    p {
+                        opacity: 1;
+                        color: $light;
+                    }
+                }
+
+                &::after {
+                    width: 100%;
+                    transition: 5s all ease;
+                }
+            }
+        }
+    }
+
+    .navslider {
+        .video-slide {
+            border-radius: 15px;
+            overflow: hidden;
+
+            video {
+                height: 100%;
+                width: 100%;
+                border-radius: 15px;
+            }
+        }
+    }
+}

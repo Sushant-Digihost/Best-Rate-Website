@@ -1,0 +1,214 @@
+// pricing_plan
+
+.pricing_plan {
+    position: relative;
+    z-index: 1;
+    padding: 70px 0 50px !important;
+
+    .video_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        overflow: hidden;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(72px);
+            z-index: 1;
+        }
+    }
+
+    .pricing_items_group {
+        display: flex;
+        gap: 70px;
+        padding: 55px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        color: $light;
+
+        .pricing_item {
+            position: relative;
+            border-radius: 30px;
+            padding: 35px 15px;
+            background: linear-gradient(174deg,
+                    rgba(0, 0, 0, 0.2) -2.06%,
+                    rgba(135, 135, 135, 0.2) 70.4%);
+            min-height: 440px;
+            /* Background */
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 30px;
+                padding: 1px;
+                background: linear-gradient(110deg,
+                        #0039ff 12%,
+                        rgba(71, 64, 68, 0) 80%,
+                        #aaaaaa 100%);
+                -webkit-mask: linear-gradient(#aaaaaa 0 0) content-box,
+                    linear-gradient(#aaaaaa 0 0);
+                mask: linear-gradient(#aaaaaa 0 0) content-box,
+                    linear-gradient(#aaaaaa 0 0);
+                -webkit-mask-composite: destination-out;
+                mask-composite: exclude;
+                pointer-events: none;
+            }
+
+            .item_title {
+                color: $light;
+                font-family: $urbanist;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-bottom: 0.5rem;
+            }
+
+            .item_desc {
+                color: #d3d3d3;
+                font-family: $urbanist;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 22px;
+            }
+
+            .price_value {
+                padding: 1rem 0;
+
+                h1 {
+                    color: $light;
+                    font-family: $urbanist;
+                    font-size: 54px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+
+                    span {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            .bd-btn-link {
+                display: flex;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: 600;
+                font-size: 16px;
+                transition: all 0.3s linear;
+
+                &:hover {
+                    border: 1px solid $light;
+                    background-color: $secondary;
+                    color: $primary;
+                    background-color: $secondary;
+                }
+            }
+
+            .icon_list {
+                padding: {
+                    top: 2rem;
+                    left: 0.85rem;
+                }
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1.2rem;
+                    }
+                }
+            }
+
+            &.active {
+                scale: 1.12;
+                background: linear-gradient(173deg,
+                        rgba(255, 255, 255, 0.2) -14.73%,
+                        rgba(135, 135, 135, 0.08) 66.37%);
+                box-shadow: 2px 2px 44px 0px rgba(0, 0, 0, 0.29);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 30px;
+                    /* Same border radius */
+                    padding: 1px;
+                    /* Border width */
+                    background: linear-gradient(160deg,
+                            #00d1ff 12%,
+                            rgba(71, 64, 68, 0) 53%,
+                            #ffffff 100%);
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                        linear-gradient(#fff 0 0);
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: destination-out;
+                    mask-composite: exclude;
+                    pointer-events: none;
+                }
+
+                .bd-btn-link {
+                    border: 1px solid $light;
+                    background-color: $secondary;
+                    color: $primary;
+                    background-color: $secondary;
+                }
+
+                .icon_list {
+                    .list_item_icon {
+                        svg {
+                            path {
+                                &:last-child {
+                                    fill: $secondary;
+                                }
+
+                                &:first-child {
+                                    fill: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:last-child {
+                background: linear-gradient(174deg,
+                        rgba(0, 0, 0, 0.2) -2.06%,
+                        rgba(135, 135, 135, 0.2) 70.4%);
+            }
+        }
+    }
+}
