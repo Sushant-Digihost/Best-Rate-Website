@@ -458,7 +458,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="social">
+            <div className="social mt-xxl-4">
               <Row className="align-items-center">
                 <Col sm={5}>
                   <h2>

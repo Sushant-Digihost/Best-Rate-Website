@@ -4,38 +4,60 @@
     position: fixed;
     top: 50%;
     right: 0;
-    transform: translateX(39%) translateY(-50%) rotate(270deg);
+    transform: translateX(37%) translateY(-50%) rotate(270deg);
     z-index: 1000;
 
     .btn-fixed {
         position: relative; // Make the button relative for positioning child elements
-        padding: 10px 60px;
+        padding: 0.63vw 2.916vw;
         overflow: hidden; // Hide overflow
-        border-radius: 20px 20px 0 0px;
+        border-radius: 1.46vw 1.46vw 0 0px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
 
-        video {
-            position: absolute; // Position video absolutely within the button
+        .video_wrapper {
+            position: absolute;
             top: 0;
             left: 0;
-            width: 100%; // Cover the entire button
+            width: 100%;
             height: 100%;
-            object-fit: cover; // Maintain aspect ratio and cover the button
-            z-index: 0; // Place behind the text
+            z-index: 0;
+            overflow: hidden;
+
+            video {
+                position: absolute; // Position video absolutely within the button
+                top: 0;
+                left: 0;
+                width: 100%; // Cover the entire button
+                height: 100%;
+                object-fit: cover; // Maintain aspect ratio and cover the button
+                z-index: 0; // Place behind the text
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5.27vw);
+                z-index: 1;
+            }
         }
 
         a {
             position: relative; // Make link position relative to sit above video
-            color: $secondary;
+            color: $light;
             font-family: $urbanist;
-            font-size: 20px;
+            font-size: 1.31vw;
             font-style: normal;
             font-weight: 600;
-            line-height: 40px;
-            z-index: 1; // Ensure text is above the video
+            line-height: 2.92vw;
+            z-index: 9; // Ensure text is above the video
         }
     }
 }

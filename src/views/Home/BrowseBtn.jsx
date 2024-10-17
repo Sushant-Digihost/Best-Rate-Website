@@ -5,14 +5,16 @@ const BrowseBtn = () => {
     return (
         <div className="BroweThemesBtn">
             <div className="btn-fixed">
-                <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    src={FixedVideo}
-                    type="video/mp4"
-                ></video>
+                <div className="video_wrapper">
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        src={FixedVideo}
+                        type="video/mp4"
+                    ></video>
+                </div>
                 <a href="#">Browse Themes</a>
             </div>
         </div>

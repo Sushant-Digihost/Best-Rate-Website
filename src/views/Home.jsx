@@ -4,6 +4,7 @@ import HeroSection from "./Home/HeroSection";
 import ExpertyBuild from "./Home/ExpertyBuild";
 import ReadyToExplore from "./Home/ReadyToExplore";
 import StartSuccess from "./Home/StartSuccess";
+import EcosystemBuild from "./Home/EcosystemBuild";
 import VouchSlider from "./Home/VouchSlider";
 import OneclickCta from "./Home/OneclickCta";
 import HomeBlog from "./Home/HomeBlog";
@@ -21,6 +22,7 @@ const Home = () => {
       <ExpertyBuild />
       <ReadyToExplore />
       <StartSuccess />
+      <EcosystemBuild />
       <VouchSlider />
       <OneclickCta />
       <PremiumElement/>

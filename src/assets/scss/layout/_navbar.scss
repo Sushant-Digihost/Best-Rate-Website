@@ -6,6 +6,10 @@
 
   .container {
     position: relative;
+
+    @include min-xxl20{
+      min-width: 1880px;
+    }
   }
   .navbar-content {
     display: flex;
