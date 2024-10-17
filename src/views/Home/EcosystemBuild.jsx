@@ -27,7 +27,7 @@ const EcosystemBuild = () => {
                 end: "bottom bottom ",
                 pin: true,
                 pinSpacing: false,
-                markers: true,
+                markers: false,
                 scrub: 5,
             }
         });
@@ -44,21 +44,21 @@ const EcosystemBuild = () => {
                 opacity: 1,
                 duration: 3,
             }, 'b')
-            // .to(".ecosystem_items_grouped .grid-item-3", {
-            //     y: -1050,
-            //     opacity: 1,
-            //     duration: 3,
-            // }, 'b')
-            // .to(".ecosystem_items_grouped .grid-item-4", {
-            //     y: -1050,
-            //     opacity: 1,
-            //     duration: 3,
-            // }, 'b')
-            // .to(".ecosystem_items_grouped .grid-item-5", {
-            //     y: -1050,
-            //     opacity: 1,
-            //     duration: 3,
-            // }, 'b')
+            .to(".ecosystem_items_grouped .grid-item-3", {
+                y: -1050,
+                opacity: 1,
+                duration: 3,
+            }, 'b')
+            .to(".ecosystem_items_grouped .grid-item-4", {
+                y: -1050,
+                opacity: 1,
+                duration: 3,
+            }, 'b')
+            .to(".ecosystem_items_grouped .grid-item-5", {
+                y: -1050,
+                opacity: 1,
+                duration: 3,
+            }, 'b')
     }, []);
 
     return (
