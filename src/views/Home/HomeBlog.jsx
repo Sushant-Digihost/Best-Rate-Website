@@ -16,7 +16,7 @@ const HomeBlog = () => {
                         <div className="col md-6 col-lg-4">
                             <div className="blog_item">
                                 <div className="item_arrow">
-                                    <div className="circle">
+                                    <a href="#!" className="circle">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="40"
@@ -42,7 +42,7 @@ const HomeBlog = () => {
                                                 fill="#0026AC"
                                             />
                                         </svg>
-                                    </div>
+                                    </a>
 
                                 </div>
                                 <div className="item_content">
@@ -61,7 +61,7 @@ const HomeBlog = () => {
                         <div className="col md-6 col-lg-4">
                             <div className="blog_item">
                                 <div className="item_arrow">
-                                    <div className="circle">
+                                    <a href="#!" className="circle">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="40"
@@ -87,7 +87,7 @@ const HomeBlog = () => {
                                                 fill="#0026AC"
                                             />
                                         </svg>
-                                    </div>
+                                    </a>
 
                                 </div>
                                 <div className="item_content">
@@ -106,7 +106,7 @@ const HomeBlog = () => {
                         <div className="col md-6 col-lg-4">
                             <div className="blog_item">
                                 <div className="item_arrow">
-                                    <div className="circle">
+                                    <a href="#!" className="circle">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="40"
@@ -132,7 +132,7 @@ const HomeBlog = () => {
                                                 fill="#0026AC"
                                             />
                                         </svg>
-                                    </div>
+                                    </a>
 
                                 </div>
                                 <div className="item_content">

@@ -281,7 +281,7 @@
       position: absolute;
       top: 15px;
       right: 15px;
-     
+     z-index: 1;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -293,6 +293,7 @@
         height: 40px;
         width: 40px;
         overflow: hidden;
+        display: block;
         transition: all  0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
         // display: flex;
         // justify-content: center;
@@ -320,10 +321,12 @@
      
     }
     &:hover{
-      cursor: pointer;
+      // cursor: pointer;
       .arrow {
+        cursor: pointer;
         .circle{
           // background: $primary;
+        
           svg {
             transform: translate(44px, -44px);
             &.svg2{

@@ -9,6 +9,7 @@ import OneclickCta from "./Home/OneclickCta";
 import HomeBlog from "./Home/HomeBlog";
 import Pricing_Plan from "./Home/Pricing_Plan";
 import CtaHome from "./Home/CtaHome";
+import { PremiumElement } from "./Home/PremiumElement";
 
 
 
@@ -22,6 +23,7 @@ const Home = () => {
       <StartSuccess />
       <VouchSlider />
       <OneclickCta />
+      <PremiumElement/>
       <HomeBlog />
       <Pricing_Plan />
       <CtaHome />

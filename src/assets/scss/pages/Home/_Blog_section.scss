@@ -27,12 +27,13 @@
                 top: 10px;
                 transition: all 0.3s linear;
                 overflow: hidden;
-
+                
                 .circle {
                     background: $light;
                     border-radius: 50%;
                     height: 40px;
                     width: 40px;
+                    display: block;
                     overflow: hidden;
                     transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -88,7 +89,6 @@
 
             &:hover {
                 background: $secondary;
-                cursor: pointer;
 
                 .item_arrow {
 
