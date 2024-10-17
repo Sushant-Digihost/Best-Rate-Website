@@ -22,7 +22,7 @@ const Home = () => {
       <ExpertyBuild />
       <ReadyToExplore />
       <StartSuccess />
-      <EcosystemBuild />
+      {/* <EcosystemBuild /> */}
       <VouchSlider />
       <OneclickCta />
       <PremiumElement/>
