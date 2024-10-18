@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <BrowseBtn/>
       <HeroSection />
-      {/* <ExpertyBuild /> */}
+      <ExpertyBuild />
       <ReadyToExplore />
       <StartSuccess />
       <EcosystemBuild />
