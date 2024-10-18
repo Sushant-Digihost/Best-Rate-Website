@@ -22,66 +22,52 @@ const EcosystemBuild = () => {
 
         const timeline = gsap.timeline({
             scrollTrigger: {
-                trigger: Ecosystem.current,
-                start: "top top",
-                end: "bottom bottom ",
+                trigger: ".Ecosystem-Build",
                 pin: true,
                 pinSpacing: false,
-                markers: false,
+                markers: true,
                 scrub: 5,
+                scroller: "body",
+                start: 'top 0%',
+                end: 'top -200%',
             }
         });
 
         timeline
-            .to(".ecosystem_items_grouped .grid-item-1", {
-                y: -1050,
-                opacity: 1,
-                duration: 3,
-            }, 'b')
-
-            .to(".ecosystem_items_grouped .grid-item-2", {
-                y: -1050,
-                opacity: 1,
-                duration: 3,
-            }, 'b')
-            .to(".ecosystem_items_grouped .grid-item-3", {
-                y: -1050,
-                opacity: 1,
-                duration: 3,
-            }, 'b')
-            .to(".ecosystem_items_grouped .grid-item-4", {
-                y: -1050,
-                opacity: 1,
-                duration: 3,
-            }, 'b')
-            .to(".ecosystem_items_grouped .grid-item-5", {
-                y: -1050,
-                opacity: 1,
-                duration: 3,
-            }, 'b')
+            .to(".ecosystem_items_grouped", 
+                {
+                    y: -200,
+                    opacity: 1,
+                    duration: 3,
+                }, 
+                'b'
+            )
     }, []);
 
     return (
-        <div className="section Ecosystem-Build" ref={Ecosystem}>
-            <Container>
-                <div className="ecosystem_content">
-                    <Row className='justify-content-center'>
-                        <Col lg={9}>
-                            <h2 className="heading mb-2">A Holistic Ecosystem Build for <span className="d-lg-block">  Business to Start, Nourish & Prosper</span></h2>
-                        </Col>
-                        <Col md={4}>
-                            <p className='text-start'>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
-                            </p>
-                        </Col>
-                        <Col lg={12}>
-                            <div className="big_btn text-center mt-4">
-                                <a href="#!" className="button">Take the next step!</a>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-            </Container>
+        <>
+            <div className="section Ecosystem-Build" ref={Ecosystem}>
+                <Container>
+                    <div className="ecosystem_content">
+                        <Row className='justify-content-center'>
+                            <Col lg={9}>
+                                <h2 className="heading mb-2">A Holistic Ecosystem Build for <span className="d-lg-block">  Business to Start, Nourish & Prosper</span></h2>
+                            </Col>
+                            <Col md={4}>
+                                <p className='text-start'>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+                                </p>
+                            </Col>
+                            <Col lg={12}>
+                                <div className="big_btn text-center mt-4">
+                                    <a href="#!" className="button">Take the next step!</a>
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+                </Container>
+
+            </div>
             <div className="ecosystem_items_grouped">
                 <div className="ecosystem_grid">
                     <div className='grid-item-1'>
@@ -182,7 +168,7 @@ const EcosystemBuild = () => {
                 </div>
 
             </div>
-        </div>
+        </>
     )
 }
 
