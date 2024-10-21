@@ -1,5 +1,6 @@
 .premium-element{
     background-color: $background;
+    padding-bottom: 80px !important;
     .elementhead{
         position: relative;
         height: 64vh;
@@ -93,7 +94,7 @@
     }
     .element-slider{
         .slider{
-            margin-top: 40px;
+            margin-top: 22px;
             .swiper {
                 .swiper-wrapper{
                     transition-timing-function: linear;
@@ -131,6 +132,21 @@
                     }
                 }
             }
+        }
+    }
+    .premium-btn{
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) -42.61%, #F0F4F9 85.74%);
+        padding-top: 95px;
+        padding-bottom: 40px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        a{
+            font-size: 1.6vw;
+            padding: 19px 34px;
+            font-weight: 500;
         }
     }
 }

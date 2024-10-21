@@ -479,7 +479,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="#!" className="twitter">
-                        <span>Twitter</span> X
+                        <span>Twitter</span><span className="x"> X</span>
                       </a>
                     </li>
                     <li>

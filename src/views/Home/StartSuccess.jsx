@@ -17,14 +17,42 @@ const StartSuccess = () => {
                     
                     modules={[Autoplay]}
                     spaceBetween={30} 
-                    slidesPerView={4.5} 
                     loop={true} 
                     autoplay={{
                       delay: 0,
                       disableOnInteraction: false,
                     }}  
                     speed={4000}
-              
+                    breakpoints={{
+                        // when window width is >= 320px
+                        320: {
+                          slidesPerView: 1.5,
+                          spaceBetween: 10,
+                        },
+                        // when window width is >= 480px
+                        480: {
+                          slidesPerView: 2.5,
+                          spaceBetween: 15,
+                        },
+                        // when window width is >= 640px
+                        640: {
+                          slidesPerView: 3.5,
+                          spaceBetween: 20,
+                        },
+                        // when window width is >= 1024px
+                        991: {
+                          slidesPerView: 4.5,
+                          spaceBetween: 30,
+                        },
+                        1500: {
+                            slidesPerView: 5.5,
+                            spaceBetween: 30,
+                          },
+                        1600: {
+                            slidesPerView: 6,
+                            spaceBetween: 30,
+                          },
+                      }}
                 >
                     <SwiperSlide >
                         <div className='headings'>
@@ -65,17 +93,7 @@ const StartSuccess = () => {
                    
                    
                 </Swiper>
-                {/* <div className="marquee">
-                    <div className='headings'>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                        <h4><a href="#!">Start Your Success!</a></h4>
-                    </div>
-                </div> */}
+             
             </Container>
         </div>
     );

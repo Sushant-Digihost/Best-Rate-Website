@@ -271,6 +271,9 @@ export const PremiumElement = () => {
                     </Swiper>
                 </div>
             </div>
+            <div className="premium-btn">
+                <a href="#!" className="button btn-2">Browse Themes Now</a>
+            </div>
         </Container>
     </section>
     </>
