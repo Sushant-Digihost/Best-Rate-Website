@@ -13,12 +13,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: calc(490 / 14.4 * 1rem) !important;
-
-        @include min-xxl {
-            height: calc(640 / 14.4 * 1rem) !important;
-            ;
-        }
+        height: 95.5vh !important;
 
         .videoSlider_videoWrap {
             position: relative;
@@ -36,7 +31,7 @@
                     color: $dark;
                     text-align: center;
                     font-family: $urbanist;
-                    font-size: 20px;
+                    font-size: 1.46vw;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
@@ -46,7 +41,7 @@
                     color: rgba(0, 0, 0, 0.8);
                     text-align: center;
                     font-family: $urbanist;
-                    font-size: 16px;
+                    font-size: 1.17vw;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
@@ -73,26 +68,21 @@
                 .button_wrap {
                     position: absolute;
                     display: flex;
-                    width: 50px;
-                    height: 50px;
-                    padding: 16px;
+                    width: 3.66vw;
+                    height: 3.66vw;
+                    padding: 1.17vw;;
                     justify-content: center;
                     align-items: center;
                     flex-shrink: 0;
                     background: $primary;
-                    border-radius: 7px;
+                    border-radius: 0.51vw;
                 }
             }
         }
 
         &.swiper-slide-active {
-            height: calc(450 / 14.4 * 1rem) !important;
+            height: 88.56vh !important; 
             transition: height 0.9s ease-in-out;
-
-            @include min-xxl {
-                height: calc(600 / 14.4 * 1rem) !important;
-                ;
-            }
 
             .videoSlider_videoWrap {
                 opacity: 1;
@@ -115,18 +105,18 @@
         align-items: center;
         justify-content: center;
         pointer-events: none;
-        padding-top: 5px;
+        padding-top: 0.366vw;
 
         .videoSlider_corners {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 72vw;
-            height: calc(430 / 14.4 * 1rem);
+            width: 73vw;
+            height: 85.6vh; 
             transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 
             @include min-xxl {
-                height: calc(580 / 14.4 * 1rem);
+                height: 87.6vh; 
             }
         }
 
@@ -194,41 +184,61 @@
     .custom-pagination {
         position: relative;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 1.56vw;
         transition: all 0.5s ease-in-out;
 
         .pagination-item {
             color: $dark;
             text-align: center;
             font-family: $urbanist;
-            font-size: 16px;
+            font-size: 1.17vw;
             font-style: normal;
             font-weight: 600;
-            line-height: 14px;
+            line-height: 1.02vw;
             transition: all 0.5s ease-in-out;
             position: relative;
             display: inline-block;
 
-            &::after {
+
+            @mixin before(){
                 content: "...";
-                width: 17px;
-                height: 22px;
-                font-size: 25px;
-                line-height: 22px;
+                width: 1.24vw;
+                height: 1.61vw;
+                font-size: 1.83vw;
+                line-height: 1.61vw;
                 position: absolute;
-                bottom: 0px;
+            }
+
+            &.first::after{
+                @include before();
+                bottom: 0vw;
+                left: 1.46vw;
+            }
+            &.last::before{
+                @include before();
+                bottom: 0vw;
+                left: -1.46vw;
             }
 
             &.active {
-                color: $primary;
-                font-size: 22px;
-                line-height: 22px;
-                transition: all 0.5s ease-in-out;
+                background: $primary;
+                color: $secondary;
+                border-radius: 0.29vw;
+                padding: 0.58vw;
+                font-weight: 500;
 
+                &::before {
+                    @include before();
+                    top: 0vw;
+                    left:  -1.46vw;
+                    color: $dark;
+                }
                 &::after {
-                    content: "...";
+                    @include before();
+                    top: 0vw;
+                    right:  -1.46vw;
                     color: $dark;
                 }
             }
@@ -254,8 +264,8 @@
 
     .close-btn {
         position: absolute;
-        right: 40px;
-        top: 20px;
+        right: 2.92vw;
+        top: 1.46vw;
         z-index: 999;
         border: none;
         transition: all 0.3s ease-in-out;

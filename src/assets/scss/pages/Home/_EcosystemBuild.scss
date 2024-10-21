@@ -3,7 +3,6 @@
     height: 100vh !important;
     width: 100%;
     overflow: hidden;
-    // background-color: rgb(82, 201, 209) !important;
 
     .ecosystem_content {
         text-align: center;
@@ -131,10 +130,6 @@
 
 .ecosystem_items_grouped { 
     position: relative;
-    z-index: 99;
-    top: auto;
-    left: 0;
-
     .ecosystem_grid {
         padding: 1.17vw;
         display: grid;

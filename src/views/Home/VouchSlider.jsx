@@ -204,16 +204,22 @@ const  VouchSlider = () => {
 
                     {/* Custom Pagination */}
                     <div className="custom-pagination">
-                        {getVisiblePagination().map((index, paginationIndex) => (
-                            <span
-                                key={paginationIndex}
-                                className={`pagination-item ${currentIndex === index ? "active" : ""
-                                    }`}
-                            >
-                                {String(index + 1).padStart(2, "0")}
-                            </span>
-                        ))}
+                        {getVisiblePagination().map((index, paginationIndex) => {
+                            const isActive = currentIndex === index;
+                            const isFirst = paginationIndex === 0;
+                            const isLast = paginationIndex === getVisiblePagination().length - 1;
+
+                            return (
+                                <span
+                                    key={paginationIndex}
+                                    className={`pagination-item ${isActive ? "active" : ""} ${isFirst ? "first" : ""} ${isLast ? "last" : ""}`}
+                                >
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+                            );
+                        })}
                     </div>
+
 
                     <div className="videoSlider_cornerWrap">
                         <div
