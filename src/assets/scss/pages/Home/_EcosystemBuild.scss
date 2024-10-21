@@ -131,6 +131,8 @@
 
 .ecosystem_items_grouped { 
     position: relative;
+    max-height: 100vh ;
+    height: 100vh;
     .ecosystem_grid {
         padding: 1.17vw;
         display: grid;

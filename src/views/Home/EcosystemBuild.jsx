@@ -35,12 +35,12 @@ const EcosystemBuild = () => {
               scrub: 5,
               scroller: "body",
               start: 'top 0%',
-              end: 'top -180%',
+              end: 'bottom 0%',
             }
           });
     
           timeline.to(".ecosystem_items_grouped", {
-            y: -200,
+            y: -700,
             opacity: 1,
             duration: 3,
           });

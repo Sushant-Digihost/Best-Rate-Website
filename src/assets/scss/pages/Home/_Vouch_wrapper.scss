@@ -112,7 +112,8 @@
             align-items: center;
             justify-content: center;
             width: 73vw;
-            height: 85.6vh; 
+            height: 86.2vh; 
+            margin-top: -0.80vw;
             transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 
             @include min-xxl {
