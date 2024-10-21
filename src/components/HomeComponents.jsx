@@ -17,6 +17,7 @@ import FixedVideo from "./../assets/images/video/fixed-btn-animation.mp4";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ReactLenis, useLenis } from 'lenis/react'
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -56,6 +57,11 @@ export const Hero = () => {
 
     return () => clearInterval(timer); 
   }, []);
+
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+  })
+  
   return (
     <div className="hero">
       <Container>
