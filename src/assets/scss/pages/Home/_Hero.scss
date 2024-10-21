@@ -30,14 +30,15 @@
                 }
 
                 &:nth-child(2) {
-                    // color: rgba(226, 229, 235, 0.5);
+                    //color: rgba(226, 229, 235, 0.5);
                     text-align: center;
                     animation: textShine2 3s linear infinite;
-                    // background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
+                    //background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                }
+                    -webkit-animation: textShine2 3s linear infinite;
+}
 
                 &:nth-child(3) {
                     // color: rgba(226, 229, 235, 0.5);
