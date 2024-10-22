@@ -123,8 +123,29 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+          // background: linear-gradient(
+          //   120deg,
+          //   rgba(255, 255, 255, 1) 30%,
+          //   #aaaaaa 50%,
+          //   #929191 70%,
+          //   rgba(255, 255, 255, 1) 90% // Ending with bright white
+          // );
+          // background-size: 200%;
+          // background-clip: text;
+          // -webkit-background-clip: text;
+          // color: transparent;
+          // animation: shine-text 3s infinite;
         }
       }
+
+      // @keyframes shine-text {
+      //   0% {
+      //     background-position: 200%;
+      //   }
+      //   100% {
+      //     background-position: -200%;
+      //   }
+      // }
 
       ul {
         display: flex;
@@ -137,11 +158,18 @@
             transition: all 0.3s linear;
 
             &.twitter {
+              display: flex;
+              gap: 0px;
+              justify-content: center;
               span {
-                
-                &.x{
+                display: none;
+                i {
+                  font-style: normal;
+                }
+                &.x {
+                  display: block;
                   text-decoration: none;
-                  opacity: 0;
+                  opacity: 1;
                 }
               }
             }
@@ -152,8 +180,13 @@
               color: $secondary;
               &.twitter {
                 span {
+                  display: block;
+                  opacity: 1;
                   text-decoration: line-through;
-                  &.x{
+                  i {
+                    opacity: 0;
+                  }
+                  &.x {
                     text-decoration: none;
                     opacity: 1;
                   }
@@ -255,3 +288,51 @@
     }
   }
 }
+
+// kfoep
+// $duration: 5s;
+// $text-color: rgba(255, 255, 255, 0.3);
+// $bgr-color: #333;
+
+// .shine {
+//   font-size: 3em;
+//   margin: 0 auto;
+//   margin-bottom: 1em;
+//   font-weight: bold;
+// }
+
+// .shine {
+//   background: #222 -webkit-gradient(
+//       linear,
+//       left top,
+//       right top,
+//       from(#222),
+//       to(#222),
+//       color-stop(0.5, #fff)
+//     ) 0 0 no-repeat;
+//   -webkit-background-size: 150px;
+//   color: $text-color;
+//   -webkit-background-clip: text;
+//   -webkit-animation-name: shine;
+//   -webkit-animation-duration: $duration;
+//   -webkit-animation-iteration-count: infinite;
+//   text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+// }
+
+// @keyframes shine {
+//   0%,
+//   10% {
+//     background-position: -1000px;
+//   }
+//   20% {
+//     background-position: top left;
+//   }
+//   90% {
+//     background-position: top right;
+//   }
+//   100% {
+//     background-position: 1000px;
+//   }
+// }
+
+// kfoep

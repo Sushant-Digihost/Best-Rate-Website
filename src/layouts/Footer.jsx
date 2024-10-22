@@ -462,7 +462,9 @@ const Footer = () => {
               <Row className="align-items-center">
                 <Col sm={5}>
                   <h2>
-                    <a href="#!">Best Rate</a>
+                    <a href="#!" class="shine">
+                      Best Rate
+                    </a>
                   </h2>
                 </Col>
                 <Col sm={7}>
@@ -479,7 +481,10 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="#!" className="twitter">
-                        <span>Twitter</span><span className="x"> X</span>
+                        <span>
+                          Twitter <i>X</i>
+                        </span>
+                        <span className="x"> X</span>
                       </a>
                     </li>
                     <li>
