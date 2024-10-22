@@ -443,6 +443,9 @@ const HeroSection =() => {
                             <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
                             <h2 className={visibleIndex === 1 ? "visible" : ""}>Innovation</h2>
                             <h2 className={visibleIndex === 2 ? "visible" : ""}>Vision</h2>
+                            {/* <h2 className="visible">Insight</h2>
+                            <h2 className="visible">Innovation</h2>
+                            <h2 className="visible">Vision</h2> */}
                         </div>
                         <div className="main-text">
                             <h2>Setting up your business as easy as</h2>

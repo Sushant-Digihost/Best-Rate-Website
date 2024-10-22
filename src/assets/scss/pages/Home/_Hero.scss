@@ -90,25 +90,33 @@
                 }
 
                 &:nth-child(2) {
-                    // color: rgba(226, 229, 235, 0.5);
+                    //color: rgba(226, 229, 235, 0.5);
                     text-align: center;
                     animation: textShine2 3s linear infinite;
-                    // background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
-                    opacity: 0.6;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
+                    //background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
+                    //background:linear-gradient(180deg,rgb(204209218/68%)31.89%,#CCFFFC78.33%);;
+                    
+                    color: var(--default, rgba(226, 229, 235, 0.6));
+                    opacity: 1;
+                    //background-clip: text;
+                    //-webkit-background-clip: text;
+                    //-webkit-text-fill-color: transparent;
+                    //-webkit-animation: textShine2 3s linear infinite;
+                    //-webkit-animation: textShine2 3s linear infinite;
+                    -webkit-animation: textShine2 3s linear infinite;
+}
 
                 &:nth-child(3) {
-                    // color: rgba(226, 229, 235, 0.5);
+                    //color: rgba(226, 229, 235, 0.5);
                     text-align: end;
                     animation: textShine 3s linear infinite;
                     background-clip: text;
+                    // background: var(--Innovation, linear-gradient(170deg, #CCFFFC 31.89%, #eaecee 78.33%));
                     opacity: 1;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                }
+                    -webkit-animation: textShine 3s linear infinite;
+}
             }
         }
 
@@ -328,36 +336,33 @@
 @keyframes textShine {
 
     0% {
-        background: linear-gradient(167deg, rgba(226, 229, 235, 0.50) 31.89%, #EEF3F8 78.33%);
+        background:  rgba(226, 229, 235, 0.50);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     50% {
-        background: var(--Innovation, linear-gradient(170deg, #CCFFFC 31.89%, #eaecee 78.33%));
+        background: var(--Innovation, linear-gradient(174deg, #CCFFFC 64.89%, #e9e9e9be 80.33%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        opacity: 0.8;
     }
 
 }
 
-@keyframes textShine2 {
-    0% {
-        background: linear-gradient(167deg, #fff 78.33%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+// @keyframes textShine2 {
+//     0% {
+//         color: var(--default, rgba(226, 229, 235, 0.50));
+//         opacity: 1;
+//     }
 
-    50% {
-        background: linear-gradient(180deg, rgb(204 209 218 / 68%) 31.89%,  #CCFFFC  78.33%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+//     50% {
+//         color: var(--default, rgba(226, 229, 235, 0.50));
+//         opacity: 1;
+//     }
 
-}
+// }
 
 .visible {
     visibility: visible;
