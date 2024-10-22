@@ -5,44 +5,48 @@
     padding-top: 100px !important;
 
     .blog_grouped {
-        border-radius: 40px;
-        margin-top: 3rem;
+        border-radius: 2.92vw;
+        margin-top: 3.51vw;
         background: $light;
-        padding: 55px;
-        padding-bottom: 35px;
+        padding: 4.02vw;
+        padding-bottom: 2.56vw;
 
         .blog_item {
-            padding: 20px;
-            border-radius: 30px;
+            padding: 1.46vw;
+            border-radius: 2.19vw;
             background: #eaf0f6;
             position: relative;
             margin-bottom: 1.5rem;
-            min-height: 180px;
+            min-height: 29.65vh;
             display: flex;
             align-items: flex-end;
             transition: all 0.3s linear;
 
             .item_arrow {
                 position: absolute;
-                right: 10px;
-                top: 10px;
+                right: 0.73vw;
+                top: 0.73vw;
                 transition: all 0.3s linear;
                 overflow: hidden;
                 
                 .circle {
                     background: $light;
                     border-radius: 50%;
-                    height: 40px;
-                    width: 40px;
+                    height: 2.92vw;
+                    width: 2.92vw;
                     display: block;
                     overflow: hidden;
                     transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
 
                     svg {
                         transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+                        height: 2.92vw;
+                        width: 2.92vw;
 
                         &.svg2 {
-                            transform: translate(-44px, 0px);
+                            transform: translate(-3.22vw, 0px);
+                            height: 2.92vw;
+                            width: 2.92vw;
                         }
                     }
                 }
@@ -54,17 +58,17 @@
                     display: inline-block;
                     color: #8c9399;
                     font-family: $urbanist;
-                    font-size: 14px;
+                    font-size: 1.02vw;
                     font-style: normal;
                     font-weight: 400;
-                    line-height: 16px;
+                    line-height: 1.17vw;
                 }
 
                 .item_title {
-                    font-size: 18px;
+                    font-size: 1.31vw;
                     font-style: normal;
                     font-weight: 700;
-                    line-height: 26px;
+                    line-height: 1.90vw;
                     overflow: hidden;
                     display: -webkit-box;
                     -webkit-line-clamp: 2;
@@ -75,12 +79,12 @@
                         color: $primary;
                         font-family: $urbanist;
                         display: inline;
-                        padding-bottom: 0;
+                        padding-bottom: 0.07vw;
                         transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
                         background-image: linear-gradient(to bottom,
                                 currentColor 0%,
                                 currentColor 98%);
-                        background-size: 0 1px;
+                        background-size: 0 0.07vw;
                         background-repeat: no-repeat;
                         background-position: left 100%;
                         overflow: visible !important;
@@ -98,10 +102,10 @@
                         background: $primary;
 
                         svg {
-                            transform: translate(44px, -44px);
+                            transform: translate(3.22vw, -3.22vw);
 
                             &.svg2 {
-                                transform: translate(0px, -41px);
+                                transform: translate(0px, -3.00vw);
                             }
 
                             circle {
@@ -120,7 +124,7 @@
                     .item_title {
                         a {
                             text-decoration: none;
-                            background-size: 100% 1px;
+                            background-size: 100% 0.07vw;
                         }
                     }
                 }
@@ -134,11 +138,10 @@
         .btn_primary {
             color: $primary;
             font-family: $urbanist;
-            font-size: 18px;
+            font-size: 1.31vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 18px;
-            /* 130% */
+            line-height: 1.31vw;
         }
     }
 }
