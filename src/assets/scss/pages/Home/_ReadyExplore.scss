@@ -6,8 +6,8 @@
 
     .thumbslider {
         .swiper-slide {
-            height: 70px !important;
-            border-radius: 15px;
+            height: 13.53vh !important;
+            border-radius: 1.09vw;
             overflow: hidden;
             transition: 0.5s all ease;
             position: relative;
@@ -15,41 +15,41 @@
             .thumb {
                 display: flex;
                 align-items: start;
-                gap: 15px;
-                padding: 20px;
+                gap: 1.09vw;
+                padding: 2vw 1.46vw 3.41vw;
                 z-index: 3;
                 position: relative;
-                border-radius: 15px;
-                height: 98.5%;
+                border-radius: 1.09vw;
+                height: 98%;
 
                 .icon {
                     svg {
-                        width: 30px;
-                        margin-top: -7px;
+                        width: 2.19vw;
+                        margin-top: -0.51vw;
                     }
                 }
 
                 .text {
                     h4 {
                         color: $dark-alt;
-                        font-size: 20px;
+                        font-size: 1.46vw;
                         font-weight: bold;
 
                         @media (max-width: $lg-breakpoint) {
-                            font-size: 20px;
+                            font-size: 1.46vw;
                         }
                     }
 
                     p {
                         color: #232323;
-                        font-size: 14px;
+                        font-size: 1.024vw;
                         font-weight: 500;
-                        margin-top: 10px;
+                        margin-top: 0.73vw;
                         opacity: 0;
                         transition: 0.5s all ease;
 
                         @media (max-width: $lg-breakpoint) {
-                            font-size: 14px;
+                            font-size: 1.024vw;
                         }
                     }
                 }
@@ -64,11 +64,11 @@
                 height: 15%;
                 z-index: 0;
                 // border-bottom: 1px solid #630707;
-                background: linear-gradient(90deg, #8afaf3 0%, #122c65 78.57%);
+                background: linear-gradient(90deg,#122c65 0%,  #8afaf3 78.57%);
             }
 
             &.swiper-slide-thumb-active.swiper-slide-visible {
-                height: 138px !important;
+                height: 22.73vh !important;
                 background: #ededed;
 
                 .thumb {
@@ -104,7 +104,7 @@
 
     .navslider {
         .video-slide {
-            border-radius: 15px;
+            border-radius: 1.09vw;
             overflow: hidden;
             // height: 550px;
             // width: 100%;
@@ -116,7 +116,7 @@
             video {
                 height: 100%;
                 width: 100%;
-                border-radius: 15px;
+                border-radius: 1.09vw;
                 // object-fit: cover;
             }
         }

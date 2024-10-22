@@ -18,47 +18,49 @@ const ExpertyBuild = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: element,
-                start: "top 30%", // Adjust as needed
-                end: "bottom bottom", // Optional: Define an end point
-                toggleActions: "play none none reverse", // Play on enter, reverse on leave
-                markers: false, // Optional: Display markers for debugging
+                start: "top 50%", 
+                end: "bottom bottom", 
+                toggleActions: "play none none reverse", 
+                // markers: true, 
+                // pin: true,
                 scroller: "body",
             },
         });
 
         tl.fromTo(
             ".heading1",
-            { y: 0 },
+            { y: 100, opacity : 0 },
             {
                 y: 0,
-                duration: 1, // Increase duration for smoothness
-                ease: 'expoScale(0.5,7,none)',
+                opacity : 1,
+                duration:0.95,
+                ease: "power4.out",
             },
             "SS"
         );
 
         tl.fromTo(
             ".heading2",
-            { y: 120, opacity: 0 },
+            { y: 150, opacity : 0 },
             {
-                y: -20,
-                opacity: 1,
-                duration: 1,
-                ease: 'expoScale(0.5,7,none)',
+                y: 10,
+                opacity : 1,
+                duration:0.95,
+                ease: "power4.out",
             },
             "SS"
         );
 
         tl.fromTo(
             ".heading3",
-            { y: 120, opacity: 0 },
+            { y: 250, opacity : 0 },
             {
-                y: -20,
-                opacity: 1,
-                duration: 1,
-                ease: 'expoScale(0.5,7,none)',
+                y: 20,
+                opacity : 1,
+                duration:0.95,
+                ease: "power4.out",
             },
-            "<0.2"
+            "SS"
         );
 
         // Cleanup function to kill ScrollTrigger on component unmount

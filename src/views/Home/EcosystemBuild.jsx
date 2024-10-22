@@ -22,46 +22,46 @@ const EcosystemBuild = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-    
+
         const mediaQuery = gsap.matchMedia();
-    
+
         mediaQuery.add("(min-width: 1024px)", () => {
-          const timeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: ".Ecosystem-Build",
-              pin: true,
-              pinSpacing: false,
-              markers: true,
-              scrub: 5,
-              scroller: "body",
-              start: 'top 0%',
-              end: 'top -180%',
-            }
-          });
-    
-          timeline.to(".ecosystem_items_grouped", {
-            y: -200,
-            opacity: 1,
-            duration: 3,
-          });
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".Ecosystem-Build",
+                    pin: true,
+                    pinSpacing: false,
+                    markers: false,
+                    scrub: 5,
+                    scroller: "body",
+                    start: 'top 0%',
+                    end: 'top -180%',
+                }
+            });
+
+            timeline.to(".ecosystem_items_grouped", {
+                y: -200,
+                opacity: 1,
+                duration: 3,
+            });
         });
-    
+
         // Debounce the resize listener for performance optimization
         const handleResize = debounce(() => {
-          ScrollTrigger.refresh();
-          console.log("ScrollTrigger refreshed")
+            ScrollTrigger.refresh();
+            console.log("ScrollTrigger refreshed")
         }, 200);
 
         ScrollTrigger.refresh();
         console.log("ScrollTrigger refreshed on load");
-    
+
         window.addEventListener("resize", handleResize);
-    
+
         return () => {
-          window.removeEventListener("resize", handleResize);
-          mediaQuery.revert();
+            window.removeEventListener("resize", handleResize);
+            mediaQuery.revert();
         };
-      }, []);
+    }, []);
 
     return (
         <>
