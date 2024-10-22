@@ -184,7 +184,7 @@ const HeroSection =() => {
                 pin: true,
                 pinSpacing: true, 
                 scrub: true,
-                markers: true,
+                // markers: true,
             }
         });
     
@@ -215,11 +215,10 @@ const HeroSection =() => {
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c1", { 
-                        backgroundColor: "#ffffff", 
+                      
                         duration: 1 
                     });
                     gsap.to(".domain-name .c1 .in-step", { 
-                        color: "#000000", 
                         duration: 1 
                     });
                 },
@@ -233,11 +232,10 @@ const HeroSection =() => {
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c1", { 
-                        backgroundColor: "#122C65", 
+                
                         duration: 1 
                     });
                     gsap.to(".domain-name .c1 .in-step", { 
-                        color: "#ffffff", 
                         duration: 1 
                     });
                 }
@@ -274,11 +272,10 @@ const HeroSection =() => {
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c2", { 
-                        backgroundColor: "#ffffff", 
+                       
                         duration: 1 
                     });
                     gsap.to(".domain-name .c2 .in-step", { 
-                        color: "#000000", 
                         duration: 1 
                     });
                 },
@@ -292,11 +289,10 @@ const HeroSection =() => {
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c2", { 
-                        backgroundColor: "#122C65", 
+                      
                         duration: 1 
                     });
                     gsap.to(".domain-name .c2 .in-step", { 
-                        color: "#ffffff", 
                         duration: 1 
                     });
                 }
@@ -341,11 +337,10 @@ const HeroSection =() => {
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c3", { 
-                        backgroundColor: "#ffffff", 
+               
                         duration: 1 
                     });
                     gsap.to(".domain-name .c3 .in-step", { 
-                        color: "#000000", 
                         duration: 1 
                     });
                 },
@@ -359,11 +354,10 @@ const HeroSection =() => {
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c3", { 
-                        backgroundColor: "#122C65", 
+                       
                         duration: 1 
                     });
                     gsap.to(".domain-name .c3 .in-step", { 
-                        color: "#ffffff", 
                         duration: 1 
                     });
                 }
@@ -401,6 +395,11 @@ const HeroSection =() => {
                 delay: 2,
                 display: "block",
             },'d')
+
+            .to(".btn_wrapper", { 
+                duration: 5, 
+                top: '90%',
+            },'a')
     
     }, []);
     
@@ -425,11 +424,18 @@ const HeroSection =() => {
     return (
         <div className="section_banner" ref={domainSectionRef}>
             <div className="hero">
-            {/* <a href="#" class="button">
-                <div className="circle-1"></div>
-                <div className="circle-2"></div>
-                <div className="circle-3"></div>
-            </a> */}
+
+                <div className="btn_wrapper">
+                    <a href="#" class="button">
+                        <div className="circle-1"></div>
+                        <div className="circle-2"></div>
+                        <div className="circle-3"></div>
+                        <span>Know More</span>  
+                    </a>
+
+                   
+                </div>
+      
 
                 <Container>
                     <div className="texts">

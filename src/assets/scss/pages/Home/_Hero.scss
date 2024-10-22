@@ -8,40 +8,62 @@
         overflow: hidden;
         background-color: $background;
 
-        .button{
-            position: absolute;
-            left: 50%;
-            top: 60%;
-            transform: translate(-50%);
-            z-index: 111;
+        .btn_wrapper{
+                position: absolute;
+                left: 50%;
+                top: 60%;
+                transform: translate(-50%);
+                z-index: 111;
+            .button{
+                position: relative;
+                background-color: #ffff;
+                .circle-1{
+                    width: 20px;
+                    height: 20px;
+                    background: var(--Pri-sec, linear-gradient(89deg, #8AFAF3 -10.35%, #122C65 108.09%)); 
+                    border-radius: 50%;
+                    position: absolute;
+                    transition: all 0.3s ease;
+                }
+                
+                .circle-2{
+                    width: 20px;
+                    height: 20px;
+                    background-color: #8AFAF3;
+                    border-radius: 50%;
+                }
+    
+                .circle-3{
+                    width: 20px;
+                    height: 20px;
+                    background-color: #122C65;
+                    border-radius: 50%;
+                }
 
-            .circle-1{
-                width: 30px;
-                height: 30px;
-                background-color: white;
-                border-radius: 50%;
-                border: 2px solid black;
+                span{
+                    display: none;
+                    transition: all 0.3S ease;
+                }
             }
-            
-            .circle-2{
-                width: 30px;
-                height: 30px;
-                background-color: rgb(255, 0, 0);
-                border-radius: 50%;
-                border: 2px solid black;
 
-            }
+            &:hover{
 
-            
-            .circle-3{
-                width: 30px;
-                height: 30px;
-                background-color: rgb(0, 225, 255);
-                border-radius: 50%;
-                border: 2px solid black;
+                .button{
+                    background-color: #122C65;
+                }
 
+                span{
+                    display: block;
+                    transition: all 0.3s ease;
+                }
+
+                .circle-1, .circle-2, .circle-3{
+                    display: none;
+                    transition: all 0.3s ease;
+                }
             }
         }
+       
 
         .bg-texts {
             h2 {
@@ -133,7 +155,9 @@
                     }
     
                     &:nth-child(1) {
-                        background: $primary;
+                        background-color: #8AFAF3;
+
+                        
     
                         .step {
                             color: $light;
@@ -141,15 +165,14 @@
                     }
     
                     &:nth-child(2) {
-                        background: $primary;
-    
+                        background: var(--Pri-sec, linear-gradient(89deg, #8AFAF3 -10.35%, #122C65 108.09%));     
                         .step {
                             color: $light;
                         }
                     }
     
                     &:nth-child(3) {
-                        background: $primary;
+                        background-color: #122C65;
     
                         .step {
                             color: $light;
@@ -167,7 +190,7 @@
                         }
     
                         h5 {
-                            color: $secondary;
+                            color: $light;
                             font-size: 32px;
                             font-style: normal;
                             font-weight: 500;
