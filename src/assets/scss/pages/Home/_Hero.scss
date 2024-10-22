@@ -84,6 +84,7 @@
                     // background:  linear-gradient(180deg, #b5f3f0 31.89%, #dbedff 78.33%);
                     text-align: start;
                     background-clip: text;
+                    opacity: 0.8;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
@@ -93,6 +94,7 @@
                     text-align: center;
                     animation: textShine2 3s linear infinite;
                     // background:  linear-gradient(180deg, #ced1d680 31.89%, #EEF3F8 78.33%);
+                    opacity: 0.6;
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -103,6 +105,7 @@
                     text-align: end;
                     animation: textShine 3s linear infinite;
                     background-clip: text;
+                    opacity: 1;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                 }
@@ -326,15 +329,12 @@
 
     0% {
         background: linear-gradient(167deg, rgba(226, 229, 235, 0.50) 31.89%, #EEF3F8 78.33%);
-        background-clip: text;
-        opacity: 1;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     50% {
-        background: linear-gradient(180deg, #b5f3f0 31.89%, #dbedff 78.33%);
-        opacity: 1;
+        background: var(--Innovation, linear-gradient(170deg, #CCFFFC 31.89%, #eaecee 78.33%));
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -346,15 +346,13 @@
     0% {
         background: linear-gradient(167deg, #fff 78.33%);
         background-clip: text;
-        opacity: 1;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     50% {
-        background: linear-gradient(180deg, rgb(204 209 218 / 68%) 31.89%, #d6eaff 78.33%);
+        background: linear-gradient(180deg, rgb(204 209 218 / 68%) 31.89%,  #CCFFFC  78.33%);
         background-clip: text;
-        opacity: 1;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
