@@ -16,7 +16,7 @@ const StartSuccess = () => {
                     className='marquee'
                     
                     modules={[Autoplay]}
-                    spaceBetween={30} 
+                    spaceBetween={10} 
                     loop={true} 
                     autoplay={{
                       delay: 0,
@@ -32,25 +32,25 @@ const StartSuccess = () => {
                         // when window width is >= 480px
                         480: {
                           slidesPerView: 2.5,
-                          spaceBetween: 15,
+                          spaceBetween: 10,
                         },
                         // when window width is >= 640px
                         640: {
                           slidesPerView: 3.5,
-                          spaceBetween: 20,
+                          spaceBetween: 10,
                         },
                         // when window width is >= 1024px
                         991: {
-                          slidesPerView: 4.5,
-                          spaceBetween: 30,
+                          slidesPerView: 4.8,
+                          spaceBetween: 10,
                         },
                         1500: {
                             slidesPerView: 5.5,
-                            spaceBetween: 30,
+                            spaceBetween: 10,
                           },
                         1600: {
-                            slidesPerView: 6,
-                            spaceBetween: 30,
+                            slidesPerView: 6.8,
+                            spaceBetween: 10,
                           },
                       }}
                 >
@@ -89,7 +89,26 @@ const StartSuccess = () => {
                             <h4><a href="#!">Start Your Success!</a></h4>
                         </div>
                     </SwiperSlide>
-                    
+                    <SwiperSlide >
+                        <div className='headings'>
+                            <h4><a href="#!">Start Your Success!</a></h4>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <div className='headings'>
+                            <h4><a href="#!">Start Your Success!</a></h4>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <div className='headings'>
+                            <h4><a href="#!">Start Your Success!</a></h4>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <div className='headings'>
+                            <h4><a href="#!">Start Your Success!</a></h4>
+                        </div>
+                    </SwiperSlide>
                    
                    
                 </Swiper>

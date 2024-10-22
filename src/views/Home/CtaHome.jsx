@@ -20,46 +20,48 @@ const CtaHome = () => {
 
     useEffect(() => {
         const element = cta.current;
-
+    
         // Create the timeline
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: element,
-                start: 'top 50%',
-                end: "bottom bottom", // Optional: Define an end point
+                start: '-70% top',
+                end: "bottom bottom", 
                 toggleActions: "play none none reverse",
                 markers: false,
                 scroller: "body",
+                scrub: 2, 
             }
         });
-
-        // Animate each image with a smooth transition
+    
+        // Animate each image with a faster transition
         tl.fromTo(
             '.img_1',
             { x: -100, opacity: 0, width: '100px', y: -29 },
-            { x: 18, opacity: 1, width: "auto", y: 0, duration: 1.87, ease: 'expoScale(0.5,7,none)' }, "SS"
+            { x: 18, opacity: 1, width: "auto", y: 0, duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
         )
             .fromTo(
                 '.img_2',
                 { y: -29, x: 68, opacity: 0, width: '100px' },
-                { y: 0, x: -14, opacity: 1, width: "auto", duration: 1.87, ease: 'expoScale(0.5,7,none)' }, "SS"
+                { y: 0, x: -14, opacity: 1, width: "auto", duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
             )
             .fromTo(
                 '.img_3',
                 { y: 29, x: -100, opacity: 0, width: '100px' },
-                { y: -29, x: 18, opacity: 1, width: "auto", duration: 1.87, ease: 'expoScale(0.5,7,none)' }, "SS"
+                { y: -29, x: 18, opacity: 1, width: "auto", duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
             )
             .fromTo(
                 '.img_4',
                 { x: 68, y: 29, opacity: 0, width: '100px' },
-                { x: -14, opacity: 1, y: -29, width: "auto", duration: 1.87, ease: 'expoScale(0.5,7,none)' }, "SS"
+                { x: -14, opacity: 1, y: -29, width: "auto", duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
             );
-
+    
         // Cleanup function to kill ScrollTrigger on component unmount
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
     }, []);
+    
 
     return (
         <div className="section mission" ref={cta}>
