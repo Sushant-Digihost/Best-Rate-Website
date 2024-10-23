@@ -449,9 +449,7 @@ const HeroSection =() => {
                 <Container>
                     <div className="texts">
                         <div className="bg-texts">
-                            {/* <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
-                            <h2 className={visibleIndex === 1 ? "visible" : ""}>Innovation</h2>
-                            <h2 className={visibleIndex === 2 ? "visible" : ""}>Vision</h2> */}
+                
                             <h2 className={activeStep === 0
                                 ? "background-innovation"
                                 : activeStep === 1
