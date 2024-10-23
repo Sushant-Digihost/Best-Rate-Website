@@ -405,20 +405,29 @@ const HeroSection =() => {
     
     
 
-    const [visibleIndex, setVisibleIndex] = useState(0); // State to track which h2 is visible
+    // const [visibleIndex, setVisibleIndex] = useState(0); // State to track which h2 is visible
+
+    // useEffect(() => {
+
+    //     setVisibleIndex(0);
+
+    //     const timer = setInterval(() => {
+    //         setVisibleIndex((prevIndex) => {
+
+    //             return (prevIndex + 1) % 3; 
+    //         });
+    //     }, 3000);
+
+    //     return () => clearInterval(timer);
+    // }, []);
+
+    const [activeStep, setActiveStep] = useState(0);
 
     useEffect(() => {
-
-        setVisibleIndex(0);
-
-        const timer = setInterval(() => {
-            setVisibleIndex((prevIndex) => {
-
-                return (prevIndex + 1) % 3; 
-            });
-        }, 3000);
-
-        return () => clearInterval(timer);
+      const interval = setInterval(() => {
+        setActiveStep((prevStep) => (prevStep + 1) % 3); // Loop through 3 steps
+      }, 2000); // Adjust the duration as needed
+      return () => clearInterval(interval);
     }, []);
 
     return (
@@ -440,9 +449,24 @@ const HeroSection =() => {
                 <Container>
                     <div className="texts">
                         <div className="bg-texts">
-                            <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
+                            {/* <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
                             <h2 className={visibleIndex === 1 ? "visible" : ""}>Innovation</h2>
-                            <h2 className={visibleIndex === 2 ? "visible" : ""}>Vision</h2>
+                            <h2 className={visibleIndex === 2 ? "visible" : ""}>Vision</h2> */}
+                            <h2 className={activeStep === 0
+                                ? "background-innovation"
+                                : activeStep === 1
+                                ? "color-eef3f8"
+                                : "color-default"}>Insight</h2>
+                            <h2 className={ activeStep === 1
+                                ? "background-insight"
+                                : activeStep === 2
+                                ? "color-eef3f8"
+                                : "color-default"}>Innovation</h2>
+                            <h2 className={ activeStep === 2
+                                ? "background-innovation"
+                                : activeStep === 0
+                                ? "color-eef3f8"
+                                : "color-default"}>Vision</h2>
                             {/* <h2 className="visible">Insight</h2>
                             <h2 className="visible">Innovation</h2>
                             <h2 className="visible">Vision</h2> */}
