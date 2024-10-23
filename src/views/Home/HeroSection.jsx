@@ -8,168 +8,6 @@ const HeroSection =() => {
 
     const domainSectionRef = useRef(null); // Create a ref for the .domain-name section
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
-
-    //     const timeline = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: domainSectionRef.current,
-    //             start: "top top",
-    //             end: "bottom bottom",
-    //             pin: true,
-    //             pinSpacing: false,
-    //             markers: true,
-    //             scrub: 20, // Increased scrub value for slower animation
-    //             // triggerHook: 0.8, // Trigger animation later
-    //         }
-    //     });
-        
-    //     timeline
-    //         .to(".hero .main-text", { 
-    //             scale: 0.6, 
-    //             opacity: 0, 
-    //             duration: 2 // Increased duration for slower animation
-    //         },'a') // Animate text first
-    //         .to(".v1", { 
-    //             y: -500, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,  
-    //         },'a') // Then scale the video after the text animation finishes
-
-    //         .to(".domain-name .c1", { 
-    //             y: -500, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-    //             onComplete: () => {
-    //                 gsap.to(".domain-name .c1", { 
-    //                     height: "52px", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c1 h5", { 
-    //                     display: "none", 
-    //                     duration: 0.4 
-    //                 });
-    //                 gsap.to(".domain-name .c1", { 
-    //                     backgroundColor: "#ffffff", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c1 .in-step", { 
-    //                     color: "#000000", 
-    //                     duration: 1 
-    //                 });
-    //             },
-    //             onReverseComplete: () => {
-    //                 gsap.to(".domain-name .c1", { 
-    //                     height: "140px", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c1 h5", { 
-    //                     display: "block", 
-    //                     duration: 0.4 
-    //                 });
-    //                 gsap.to(".domain-name .c1", { 
-    //                     backgroundColor: "#122C65", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c1 .in-step", { 
-    //                     color: "#ffffff", 
-    //                     duration: 1 
-    //                 });
-    //             }
-    //         },'b')
-    //          // Next, move the cards with a staggered effect
-    //         .to(".domain-name .tc-1", { 
-    //             y: -400, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-    //             display: "none", 
-    //         },'b')
-
-    //         .to(".domain-name .c2", { 
-    //             y: -500, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-    //             onComplete: () => {
-    //                 gsap.to(".domain-name .c2", { 
-    //                     height: "52px", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c2 h5", { 
-    //                     display: "none", 
-    //                     duration: 0.4 
-    //                 });
-    //                 gsap.to(".domain-name .c2", { 
-    //                     backgroundColor: "#ffffff", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c2 .in-step", { 
-    //                     color: "#000000", 
-    //                     duration: 1 
-    //                 });
-    //             },
-    //             onReverseComplete: () => {
-    //                 gsap.to(".domain-name .c2", { 
-    //                     height: "140px", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c2 h5", { 
-    //                     display: "block", 
-    //                     duration: 0.4 
-    //                 });
-    //                 gsap.to(".domain-name .c2", { 
-    //                     backgroundColor: "#122C65", 
-    //                     duration: 1 
-    //                 });
-    //                 gsap.to(".domain-name .c2 .in-step", { 
-    //                     color: "#ffffff", 
-    //                     duration: 1 
-    //                 });
-    //             }
-    //         },'c') 
-
-    //         .to(".domain-name .tc-2", { 
-    //             y: -300, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-    //             display: "none", 
-    //         },'c') 
-
-    //         .to(".domain-name .c3", { 
-    //             y: -500, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-              
-    //         },'d')
-    //          // Next, move the cards with a staggered effect
-    //         .to(".domain-name .tc-3", { 
-    //             y: -200, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-    //             // display: "none", 
-    //         },'d')
-
-    //         .to(".numbers", { 
-    //             y: -500, 
-    //             duration: 4, // Increased duration for slower animation
-    //             stagger: 0.3,
-    //             display: "none", 
-    //         },'a')
-
-    //         .to(".v2", { 
-    //             y: -500, 
-    //             duration: 8, // Increased duration for slower animation
-    //         },'c')
-
-    //         .to(".v3", { 
-    //             y: -500, 
-    //             duration: 8, // Increased duration for slower animation
-    //         },'d')
-
-         
-
-
-    // }, []);
-
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
     
@@ -329,11 +167,11 @@ const HeroSection =() => {
 
                 onComplete: () => {
                     gsap.to(".domain-name .c3", { 
-                        height: "52px", 
+                        height: "140px", 
                         duration: 1 
                     });
                     gsap.to(".domain-name .c3 h5", { 
-                        display: "none", 
+                        // display: "none", 
                         duration: 0.2 
                     });
                     gsap.to(".domain-name .c3", { 
@@ -370,12 +208,12 @@ const HeroSection =() => {
                 delay: 3,
                 onComplete: () => {
                     gsap.to(".domain-name .tc-3", { 
-                        opacity: 0,
+                        // opacity: 0,
                         duration: 1 
                     });
                 }
             },'d')
-    
+      
             .to(".numbers", { 
                 y: -500, 
                 duration: 3, 
@@ -404,31 +242,14 @@ const HeroSection =() => {
     }, []);
     
     
-
-    // const [visibleIndex, setVisibleIndex] = useState(0); // State to track which h2 is visible
-
-    // useEffect(() => {
-
-    //     setVisibleIndex(0);
-
-    //     const timer = setInterval(() => {
-    //         setVisibleIndex((prevIndex) => {
-
-    //             return (prevIndex + 1) % 3; 
-    //         });
-    //     }, 3000);
-
-    //     return () => clearInterval(timer);
-    // }, []);
-
     const [activeStep, setActiveStep] = useState(0);
-
+   
     useEffect(() => {
-      const interval = setInterval(() => {
-        setActiveStep((prevStep) => (prevStep + 1) % 3); // Loop through 3 steps
-      }, 2000); // Adjust the duration as needed
-      return () => clearInterval(interval);
-    }, []);
+        const interval = setInterval(() => {
+          setActiveStep((prevStep) => (prevStep + 1) % 3); // Loop through 3 steps
+        }, 2000); // Adjust the duration as needed
+        return () => clearInterval(interval);
+      }, []);
 
     return (
         <div className="section_banner" ref={domainSectionRef}>
@@ -449,7 +270,6 @@ const HeroSection =() => {
                 <Container>
                     <div className="texts">
                         <div className="bg-texts">
-                
                             <h2 className={activeStep === 0
                                 ? "background-innovation"
                                 : activeStep === 1

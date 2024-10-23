@@ -1,3 +1,4 @@
+
 // Hero
 .section_banner {
 
@@ -17,6 +18,7 @@
             .button{
                 position: relative;
                 background-color: #ffff;
+                transition: background-color 0.3s ease;
                 .circle-1{
                     width: 20px;
                     height: 20px;
@@ -313,9 +315,7 @@
    
 }
 
-
-  
-  .background-innovation {
+.background-innovation {
     background: linear-gradient(163deg, #CCFFFC 67.89%, #EEF3F8 94.33%);
     // background: linear-gradient(163deg, #0926c9 67.89%, #000000 94.33%);
     -webkit-background-clip: text;
@@ -349,3 +349,4 @@
     opacity: 1;
     /* Fully visible */
 }
+

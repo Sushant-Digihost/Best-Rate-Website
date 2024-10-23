@@ -15,57 +15,37 @@ const EcosystemBuild = () => {
         "Personalization in Digital Marketing: Strategies and Tools...",
         "Personalization in Digital Marketing: Strategies and Tools..."
     ];
+  
 
-    const Ecosystem = useRef(null);
-
-
+    const domainSectionRef = useRef(null); // Create a ref for the .domain-name section
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-
-        const mediaQuery = gsap.matchMedia();
-
-        mediaQuery.add("(min-width: 1024px)", () => {
-            const timeline = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".Ecosystem-Build",
-                    pin: true,
-                    pinSpacing: false,
-                    markers: false,
-                    scrub: 5,
-                    scroller: "body",
-                    start: 'top 0%',
-                    end: 'top -180%',
-                }
-            });
-
-            timeline.to(".ecosystem_items_grouped", {
-                y: -200,
-                opacity: 1,
-                duration: 3,
-            });
+    
+        const timeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: domainSectionRef.current,
+                start: "top top",   // Pin when the top of the section hits the top of the viewport
+                end: "bottom bottom", 
+                pin: true,
+                pinSpacing: true,    // Ensures the layout maintains space while pinned
+                scrub: 1,            // Smooth scroll trigger scrub
+                markers: true,       // Use markers to debug positioning
+            }
         });
-
-        // Debounce the resize listener for performance optimization
-        const handleResize = debounce(() => {
-            ScrollTrigger.refresh();
-            console.log("ScrollTrigger refreshed")
-        }, 200);
-
-        ScrollTrigger.refresh();
-        console.log("ScrollTrigger refreshed on load");
-
-        window.addEventListener("resize", handleResize);
-
-        return () => {
-            window.removeEventListener("resize", handleResize);
-            mediaQuery.revert();
-        };
+    
+        timeline
+            .to(".ecosystem_items_grouped", { 
+                y: -1000,  
+                duration: 2 
+            }, 'a');
+    
     }, []);
+    
 
     return (
-        <>
-            <div className="section Ecosystem-Build" ref={Ecosystem}>
+        <> 
+            <div className="section Ecosystem-Build" ref={domainSectionRef}>
                 <Container>
                     <div className="ecosystem_content">
                         <Row className='justify-content-center'>
@@ -84,9 +64,7 @@ const EcosystemBuild = () => {
                             </Col>
                         </Row>
                     </div>
-                </Container>
 
-            </div>
             <div className="ecosystem_items_grouped">
                 <div className="ecosystem_grid">
                     <div className='grid-item-1'>
@@ -187,6 +165,10 @@ const EcosystemBuild = () => {
                 </div>
 
             </div>
+                </Container>
+
+            </div>
+          
         </>
     )
 }
