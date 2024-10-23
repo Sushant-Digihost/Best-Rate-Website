@@ -30,7 +30,7 @@ const EcosystemBuild = () => {
                 pin: true,
                 pinSpacing: true,    // Ensures the layout maintains space while pinned
                 scrub: 1,            // Smooth scroll trigger scrub
-                markers: true,       // Use markers to debug positioning
+                // markers: true,
             }
         });
     

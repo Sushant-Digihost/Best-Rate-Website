@@ -103,7 +103,7 @@ const HeroSection =() => {
                 onComplete: () => {
                     gsap.to(".domain-name .c2", { 
                         height: "52px", 
-                        duration: 1 
+                        duration: 1.8
                     });
                     gsap.to(".domain-name .c2 h5", { 
                         display: "none", 
@@ -297,8 +297,7 @@ const HeroSection =() => {
                     <div className="domain-name">
                     <Row>
                         <Col sm={4}>
-                       
-
+                    
                             <div className="step-cards">
                                 <div className="card active c1">
                                     <span className="step">Step 1</span>

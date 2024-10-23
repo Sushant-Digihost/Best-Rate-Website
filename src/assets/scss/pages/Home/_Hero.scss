@@ -149,11 +149,17 @@
     
                     &:nth-child(1) {
                         background-color: #8AFAF3;
-
-                        
     
                         .step {
-                            color: $light;
+                            color: #122C65;
+                        }
+
+                        .in-step {
+                            color: #122C65;
+                        }
+
+                        h5{
+                            color: #122C65;
                         }
                     }
     
@@ -162,28 +168,44 @@
                         .step {
                             color: $light;
                         }
+
+                        .in-step {
+                            color: $light;
+                        }
+
+                        h5{
+                            color: $light;
+                        }
                     }
     
                     &:nth-child(3) {
                         background-color: #122C65;
     
                         .step {
-                            color: $light;
+                            color: #8AFAF3;
                         }
+
+                        .in-step {
+                            color: #8AFAF3;
+                        }
+
+                        h5{
+                            color: #8AFAF3;
+                        }
+
+                        
                     }
     
                     .inner-text {
                         opacity: 0;
     
                         .in-step {
-                            color: #fff;
                             font-size: 15px;
                             font-weight: 600;
                             line-height: 1.3;
                         }
     
                         h5 {
-                            color: $light;
                             font-size: 32px;
                             font-style: normal;
                             font-weight: 500;
