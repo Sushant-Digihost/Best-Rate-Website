@@ -124,28 +124,35 @@
           font-weight: 400;
           line-height: normal;
           // background: linear-gradient(
-          //   120deg,
-          //   rgba(255, 255, 255, 1) 30%,
-          //   #aaaaaa 50%,
-          //   #929191 70%,
-          //   rgba(255, 255, 255, 1) 90% // Ending with bright white
+          //   130deg,
+          //   rgb(30 29 29) 8%,
+          //   #ffffff 10%,
+          //   #ffffff 12%,
+          //   rgb(5 5 5) 15%
           // );
-          // background-size: 200%;
-          // background-clip: text;
-          // -webkit-background-clip: text;
-          // color: transparent;
-          // animation: shine-text 3s infinite;
+          background: linear-gradient(
+            130deg,
+            #d7d0cf 8%,
+            #ffffff 9%,
+            #ffffff 14%,
+            #d7d0cf 15%
+          );
+          background-size: 200%;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: shine-text 4s infinite;
         }
       }
 
-      // @keyframes shine-text {
-      //   0% {
-      //     background-position: 200%;
-      //   }
-      //   100% {
-      //     background-position: -200%;
-      //   }
-      // }
+      @keyframes shine-text {
+        0% {
+          background-position: 200%;
+        }
+        100% {
+          background-position: -200%;
+        }
+      }
 
       ul {
         display: flex;
@@ -288,51 +295,3 @@
     }
   }
 }
-
-// kfoep
-// $duration: 5s;
-// $text-color: rgba(255, 255, 255, 0.3);
-// $bgr-color: #333;
-
-// .shine {
-//   font-size: 3em;
-//   margin: 0 auto;
-//   margin-bottom: 1em;
-//   font-weight: bold;
-// }
-
-// .shine {
-//   background: #222 -webkit-gradient(
-//       linear,
-//       left top,
-//       right top,
-//       from(#222),
-//       to(#222),
-//       color-stop(0.5, #fff)
-//     ) 0 0 no-repeat;
-//   -webkit-background-size: 150px;
-//   color: $text-color;
-//   -webkit-background-clip: text;
-//   -webkit-animation-name: shine;
-//   -webkit-animation-duration: $duration;
-//   -webkit-animation-iteration-count: infinite;
-//   text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
-// }
-
-// @keyframes shine {
-//   0%,
-//   10% {
-//     background-position: -1000px;
-//   }
-//   20% {
-//     background-position: top left;
-//   }
-//   90% {
-//     background-position: top right;
-//   }
-//   100% {
-//     background-position: 1000px;
-//   }
-// }
-
-// kfoep

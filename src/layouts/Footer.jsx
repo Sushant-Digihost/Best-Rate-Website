@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 // import  {Link}  from 'react-router-dom';
+import shineEffect from "../assets/images/shine-gif.gif";
 
 const Footer = () => {
   return (
@@ -465,6 +466,7 @@ const Footer = () => {
                     <a href="#!" class="shine">
                       Best Rate
                     </a>
+                    {/* <img src={shineEffect} alt="Best Rate" /> */}
                   </h2>
                 </Col>
                 <Col sm={7}>
