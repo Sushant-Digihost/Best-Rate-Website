@@ -163,10 +163,10 @@ const  VouchSlider = () => {
                         centeredSlides={true}
                         speed={900}
                         loop={true}
-                        autoplay={{
-                            delay: 2000, // 3 seconds delay between slides
-                            disableOnInteraction: false, // Autoplay won't stop after user interactions like clicking or swiping
-                        }}
+                        // autoplay={{
+                        //     delay: 2000, // 3 seconds delay between slides
+                        //     disableOnInteraction: false, // Autoplay won't stop after user interactions like clicking or swiping
+                        // }}
                         modules={[Autoplay, Pagination]}
                         className="Vouch_slider"
                         onSlideChange={handleSlideChange}

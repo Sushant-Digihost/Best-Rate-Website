@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 // import  {Link}  from 'react-router-dom';
-// import shineEffect from "../assets/images/shine-gif.gif";
+import shineEffect from "../assets/images/shine-gif.gif";
 
 const Footer = () => {
   return (

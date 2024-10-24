@@ -1,283 +1,345 @@
 // Vouch For Us
 
 .Vouch_wrapper {
-    height: 100%;
-    position: relative;
-    margin-top: 3rem;
+  height: 100%;
+  position: relative;
+  margin-top: 3rem;
 
-    .Vouch_slider {
-        padding-bottom: 2rem;
-    }
+  .Vouch_slider {
+    padding-bottom: 0rem;
+  }
 
-    .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 95.5vh !important;
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 82.5vh !important;
 
-        .videoSlider_videoWrap {
-            position: relative;
-            flex-shrink: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.6;
-            overflow: clip;
-            transition: opacity 0.2s linear, width 0.2s cubic-bezier(0.25, 1, 0.5, 1),
-                height 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+    .videoSlider_videoWrap {
+      position: relative;
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+      overflow: clip;
+      transition: opacity 0.2s linear, width 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+        height 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 
-            .videoSlider_info_content {
-                .admin_name {
-                    color: $dark;
-                    text-align: center;
-                    font-family: $urbanist;
-                    font-size: 1.46vw;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: normal;
-                }
-
-                .admin_designation {
-                    color: rgba(0, 0, 0, 0.8);
-                    text-align: center;
-                    font-family: $urbanist;
-                    font-size: 1.17vw;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: normal;
-                    text-transform: uppercase;
-                }
-            }
-
-            .video_button {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                width: 100%;
-                border: none;
-
-                video {
-                    height: 100%;
-                    object-fit: cover;
-                    display: inline-block;
-                    vertical-align: baseline;
-                }
-
-                .button_wrap {
-                    position: absolute;
-                    display: flex;
-                    width: 3.66vw;
-                    height: 3.66vw;
-                    padding: 1.17vw;;
-                    justify-content: center;
-                    align-items: center;
-                    flex-shrink: 0;
-                    background: $primary;
-                    border-radius: 0.51vw;
-                }
-            }
+      .videoSlider_info_content {
+        .admin_name {
+          color: $dark;
+          text-align: center;
+          font-family: $urbanist;
+          font-size: 1.46vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
         }
 
-        &.swiper-slide-active {
-            height: 88.56vh !important; 
-            transition: height 0.9s ease-in-out;
-
-            .videoSlider_videoWrap {
-                opacity: 1;
-            }
+        .admin_designation {
+          color: rgba(0, 0, 0, 0.8);
+          text-align: center;
+          font-family: $urbanist;
+          font-size: 1.17vw;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
         }
-    }
+      }
 
-    .swiper-wrapper {
-        display: flex;
-        align-items: center;
-    }
-
-    .videoSlider_cornerWrap {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        pointer-events: none;
-        padding-top: 0.366vw;
-
-        .videoSlider_corners {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 73vw;
-            height: 86.2vh; 
-            margin-top: -0.80vw;
-            transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
-
-            @include min-xxl {
-                height: 87.6vh; 
-            }
-        }
-
-        .global_corners {
-            --gfs: 14.4;
-            background: linear-gradient(to right,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 0 0,
-                linear-gradient(to right,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 0 100%,
-                linear-gradient(to left,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 100% 0,
-                linear-gradient(to left,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 100% 100%,
-                linear-gradient(to bottom,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 0 0,
-                linear-gradient(to bottom,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 100% 0,
-                linear-gradient(to top,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 0 100%,
-                linear-gradient(to top,
-                    #122c65 calc(2 / var(--gfs) * 1rem),
-                    transparent calc(1 / var(--gfs) * 1rem)) 100% 100%;
-            background-repeat: no-repeat;
-            background-size: calc(18 / var(--gfs) * 1rem) calc(18 / var(--gfs) * 1rem);
-
-            @include min-xxl16 {
-                background: linear-gradient(to right,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 0 0,
-                    linear-gradient(to right,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 0 100%,
-                    linear-gradient(to left,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 100% 0,
-                    linear-gradient(to left,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 100% 100%,
-                    linear-gradient(to bottom,
-                        #122c65 calc(2 / var(--gfs) * 1rem),
-                        transparent calc(1 / var(--gfs) * 1rem)) 0 0,
-                    linear-gradient(to bottom,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 100% 0,
-                    linear-gradient(to top,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 0 100%,
-                    linear-gradient(to top,
-                        #122c65 calc(3 / var(--gfs) * 1rem),
-                        transparent calc(2 / var(--gfs) * 1rem)) 100% 100%;
-                background-size: calc(22 / var(--gfs) * 1rem) calc(22 / var(--gfs) * 1rem);
-                background-repeat: no-repeat;
-
-            }
-        }
-    }
-
-    .custom-pagination {
+      .video_button {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1.56vw;
-        transition: all 0.5s ease-in-out;
+        height: 100%;
+        width: 100%;
+        border: none;
 
-        .pagination-item {
-            color: $dark;
-            text-align: center;
-            font-family: $urbanist;
-            font-size: 1.17vw;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 1.02vw;
-            transition: all 0.5s ease-in-out;
-            position: relative;
-            display: inline-block;
-
-
-            @mixin before(){
-                content: "...";
-                width: 1.24vw;
-                height: 1.61vw;
-                font-size: 1.83vw;
-                line-height: 1.61vw;
-                position: absolute;
-            }
-
-            &.first::after{
-                @include before();
-                bottom: 0vw;
-                left: 1.46vw;
-            }
-            &.last::before{
-                @include before();
-                bottom: 0vw;
-                left: -1.46vw;
-            }
-
-            &.active {
-                background: $primary;
-                color: $secondary;
-                border-radius: 0.29vw;
-                padding: 0.58vw;
-                font-weight: 500;
-
-                &::before {
-                    @include before();
-                    top: 0vw;
-                    left:  -1.46vw;
-                    color: $dark;
-                }
-                &::after {
-                    @include before();
-                    top: 0vw;
-                    right:  -1.46vw;
-                    color: $dark;
-                }
-            }
+        video {
+          height: 100%;
+          object-fit: cover;
+          display: inline-block;
+          vertical-align: baseline;
         }
+
+        .button_wrap {
+          position: absolute;
+          display: flex;
+          width: 3.66vw;
+          height: 3.66vw;
+          padding: 1.17vw;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          background: $primary;
+          border-radius: 0.51vw;
+        }
+      }
     }
+
+    &.swiper-slide-active {
+      height: 75.56vh !important;
+      transition: height 0.9s ease-in-out;
+
+      .videoSlider_videoWrap {
+        opacity: 1;
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .videoSlider_cornerWrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    padding-top: 0.366vw;
+
+    .videoSlider_corners {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 73vw;
+      height: 73vh;
+      margin-top: 0.4vw;
+      transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+
+      // @include min-xxl {
+      //   height: 87.6vh;
+      // }
+    }
+
+    .global_corners {
+      --gfs: 14.4;
+      background: linear-gradient(
+            to right,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 0,
+        linear-gradient(
+            to right,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 100%,
+        linear-gradient(
+            to left,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 0,
+        linear-gradient(
+            to left,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 100%,
+        linear-gradient(
+            to bottom,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 0,
+        linear-gradient(
+            to bottom,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 0,
+        linear-gradient(
+            to top,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          0 100%,
+        linear-gradient(
+            to top,
+            #122c65 calc(2 / var(--gfs) * 1rem),
+            transparent calc(1 / var(--gfs) * 1rem)
+          )
+          100% 100%;
+      background-repeat: no-repeat;
+      background-size: calc(18 / var(--gfs) * 1rem) calc(18 / var(--gfs) * 1rem);
+
+      @include min-xxl16 {
+        background: linear-gradient(
+              to right,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            0 0,
+          linear-gradient(
+              to right,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            0 100%,
+          linear-gradient(
+              to left,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            100% 0,
+          linear-gradient(
+              to left,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            100% 100%,
+          linear-gradient(
+              to bottom,
+              #122c65 calc(2 / var(--gfs) * 1rem),
+              transparent calc(1 / var(--gfs) * 1rem)
+            )
+            0 0,
+          linear-gradient(
+              to bottom,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            100% 0,
+          linear-gradient(
+              to top,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            0 100%,
+          linear-gradient(
+              to top,
+              #122c65 calc(3 / var(--gfs) * 1rem),
+              transparent calc(2 / var(--gfs) * 1rem)
+            )
+            100% 100%;
+        background-size: calc(22 / var(--gfs) * 1rem)
+          calc(22 / var(--gfs) * 1rem);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .custom-pagination {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.56vw;
+    transition: all 0.5s ease-in-out;
+
+    .pagination-item {
+      color: $dark;
+      text-align: center;
+      font-family: $urbanist;
+      font-size: 1.17vw;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.02vw;
+      transition: all 0.5s ease-in-out;
+      position: relative;
+      display: inline-block;
+
+      @mixin before() {
+        content: "...";
+        width: 1.24vw;
+        height: 1.61vw;
+        font-size: 1.83vw;
+        line-height: 1.61vw;
+        position: absolute;
+      }
+
+      &.first::after {
+        @include before();
+        bottom: 0vw;
+        left: 1.46vw;
+      }
+      &.last::before {
+        @include before();
+        bottom: 0vw;
+        left: -1.46vw;
+      }
+
+      &.active {
+        background: $primary;
+        color: $secondary;
+        // border-radius: 0.29vw;
+        // padding: 0.58vw;
+        // font-weight: 500;
+        background: #122c65;
+        color: #8afaf3;
+        border-radius: 0.29vw;
+        padding: 0;
+        font-weight: 500;
+        height: 3vw;
+        width: 3vw;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          @include before();
+          // content: ".";
+          width: 0.54vw;
+          bottom: 1vw;
+          left: -1.46vw;
+          color: $dark;
+        }
+        &::after {
+          @include before();
+          // content: ".";
+          width: 0.94vw;
+          bottom: 1vw;
+          right: -1.46vw;
+          color: $dark;
+        }
+      }
+    }
+  }
 }
 
 .fullscreen-modal .modal-dialog {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
 }
 
 .fullscreen-modal .modal-content {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 .fullscreen-modal {
-    .modal-body {
-        padding: 0;
-    }
+  .modal-body {
+    padding: 0;
+  }
 
-    .close-btn {
-        position: absolute;
-        right: 2.92vw;
-        top: 1.46vw;
-        z-index: 999;
-        border: none;
-        transition: all 0.3s ease-in-out;
+  .close-btn {
+    position: absolute;
+    right: 2.92vw;
+    top: 1.46vw;
+    z-index: 999;
+    border: none;
+    transition: all 0.3s ease-in-out;
 
-        &:hover {
-            transform: rotate(180deg);
-        }
+    &:hover {
+      transform: rotate(180deg);
     }
+  }
 
-    video {
-        height: 100vh;
-        /* Fullscreen height */
-    }
+  video {
+    height: 100vh;
+    /* Fullscreen height */
+  }
 }
