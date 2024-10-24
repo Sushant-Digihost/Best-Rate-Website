@@ -18,7 +18,7 @@ const ExpertyBuild = () => {
       scrollTrigger: {
         trigger: element,
         start: "top 20%",
-        markers: true,
+        // markers: true,
         scrub: 3,
         end: "bottom 90%",
         toggleActions: "play none none reverse",
