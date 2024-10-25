@@ -22,7 +22,7 @@ const ExpertyBuild = () => {
         scrub: 3, // Allows smooth scrubbing on scroll
         toggleActions: "play none none reverse", // Already set to reverse on scroll back
         scroller: "body",
-        markers: true,
+        // markers: true,
       },
     });
 
