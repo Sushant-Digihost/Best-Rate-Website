@@ -14,7 +14,7 @@ const HeroSection =() => {
         // Total scroll length calculation based on faster animations
         const totalDuration = 5 + 3 * 3 + 3 * 3 + 3 * 3 + 5 * 2; // Adjust for faster durations
     
-        const timeline = gsap.timeline({
+        const timeline = gsap.timeline({                                                                                                                                                        
             scrollTrigger: {
                 trigger: domainSectionRef.current,
                 start: "top top",
@@ -37,8 +37,12 @@ const HeroSection =() => {
                 duration: 3, // Faster animation
                 stagger: 0.3 // Reduced stagger
             },'a') 
+
+            .to(".bg-texts h2", { 
+                visibility: "hidden",
+            },'a') 
     
-            .to(".domain-name .c1", { 
+            .to(".domain-name .c1", {  
                 y: -450, 
                 duration: 3, 
                 stagger: 0.3,
@@ -69,15 +73,17 @@ const HeroSection =() => {
                         display: "block", 
                         duration: 0.2 
                     });
-                    gsap.to(".domain-name .c1", { 
+                    gsap.to(".domain-name .c1", {  
                 
                         duration: 1 
                     });
                     gsap.to(".domain-name .c1 .in-step", { 
                         duration: 1 
                     });
+                     
                 }
             },'b')
+            
     
             .to(".domain-name .tc-1", { 
                 y: -400, 
@@ -89,7 +95,7 @@ const HeroSection =() => {
 
                         duration: 1 
                     });
-                }
+                }       
             },'b')
     
             .to(".domain-name .c2", { 

@@ -164,7 +164,7 @@
                     }
     
                     &:nth-child(2) {
-                        background: var(--Pri-sec, linear-gradient(89deg, #8AFAF3 -10.35%, #122C65 108.09%));     
+                        background: var(--Pri-sec, linear-gradient(89deg, #122C65 -10.35%, #8AFAF3 108.09% ));     
                         .step {
                             color: $light;
                         }
