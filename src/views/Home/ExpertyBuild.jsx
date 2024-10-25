@@ -8,67 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const ExpertyBuild = () => {
-  //   const expertyBuild = useRef(null);
-
-  //   useEffect(() => {
-  //     const element = expertyBuild.current;
-
-  //     // Create the ScrollTrigger
-  //     const tl = gsap.timeline({
-  //       scrollTrigger: {
-  //         trigger: element,
-  //         start: "top 20%",
-  //         // markers: true,
-  //         scrub: 5,
-  //         end: "bottom 60%",
-  //         toggleActions: "play none none reverse",
-  //         // markers: true,
-  //         // pin: true,
-  //         scroller: "body",
-  //       },
-  //     });
-
-  //     tl.fromTo(
-  //       ".heading1",
-  //       { y: 0, opacity: 1 },
-  //       {
-  //         y: 0,
-  //         opacity: 1,
-  //         // duration: 2.5,
-  //         // ease: "power4.out",
-  //       },
-  //       "SS"
-  //     );
-
-  //     tl.fromTo(
-  //       ".heading2",
-  //       { y: 350, opacity: 0 },
-  //       {
-  //         y: -10,
-  //         opacity: 1,
-  //         duration: 2.5,
-  //         ease: "power4.out",
-  //       },
-  //       "SS"
-  //     );
-
-  //     tl.fromTo(
-  //       ".heading3",
-  //       { y: 700, opacity: 0 },
-  //       {
-  //         y: -10,
-  //         opacity: 1,
-  //         duration: 2.5,
-  //         ease: "power4.out",
-  //       },
-  //       "SS"
-  //     );
-
-  //     // Cleanup function to kill ScrollTrigger on component unmount
-  //     return () => {
-  //       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //     };
-  //   }, []);
   const expertyBuild = useRef(null);
 
   useEffect(() => {
@@ -79,10 +18,11 @@ const ExpertyBuild = () => {
       scrollTrigger: {
         trigger: element,
         start: "top 20%",
-        end: "bottom 70%",
-        scrub: 5, // Allows smooth scrubbing on scroll
+        end: "bottom top",
+        scrub: 3, // Allows smooth scrubbing on scroll
         toggleActions: "play none none reverse", // Already set to reverse on scroll back
         scroller: "body",
+        markers: true,
       },
     });
 
