@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 82.5vh !important;
+    height: 92.5vh !important;
 
     .videoSlider_videoWrap {
       position: relative;
@@ -81,7 +81,7 @@
     }
 
     &.swiper-slide-active {
-      height: 75.56vh !important;
+      height: 85.56vh !important;
       transition: height 0.9s ease-in-out;
 
       .videoSlider_videoWrap {
@@ -112,8 +112,8 @@
       align-items: center;
       justify-content: center;
       width: 73vw;
-      height: 73vh;
-      margin-top: 0.4vw;
+      height: 83vh;
+      // margin-top: 0.8vw;
       transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 
       // @include min-xxl {
@@ -237,6 +237,7 @@
     justify-content: center;
     gap: 1.56vw;
     transition: all 0.5s ease-in-out;
+    margin-top: 1vw;
 
     .pagination-item {
       color: $dark;

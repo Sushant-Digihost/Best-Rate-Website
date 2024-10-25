@@ -25,7 +25,7 @@ const CtaHome = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: element,
-                start: '-70% top',
+                start: '-50% top',
                 end: "bottom bottom", 
                 toggleActions: "play none none reverse",
                 markers: false,
@@ -38,22 +38,22 @@ const CtaHome = () => {
         tl.fromTo(
             '.img_1',
             { x: -100, opacity: 0, width: '100px', y: -29 },
-            { x: 18, opacity: 1, width: "auto", y: 0, duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
+            { x: 18, opacity: 1, width: "auto", y: 0, duration: 0.5, ease: 'expoScale(0.5,7,none)' }, "SS"
         )
             .fromTo(
                 '.img_2',
                 { y: -29, x: 68, opacity: 0, width: '100px' },
-                { y: 0, x: -14, opacity: 1, width: "auto", duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
+                { y: 0, x: -14, opacity: 1, width: "auto", duration: 0.5, ease: 'expoScale(0.5,7,none)' }, "SS"
             )
             .fromTo(
                 '.img_3',
                 { y: 29, x: -100, opacity: 0, width: '100px' },
-                { y: -29, x: 18, opacity: 1, width: "auto", duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
+                { y: -29, x: 18, opacity: 1, width: "auto", duration: 0.5, ease: 'expoScale(0.5,7,none)' }, "SS"
             )
             .fromTo(
                 '.img_4',
                 { x: 68, y: 29, opacity: 0, width: '100px' },
-                { x: -14, opacity: 1, y: -29, width: "auto", duration: 0.7, ease: 'expoScale(0.5,7,none)' }, "SS"
+                { x: -14, opacity: 1, y: -29, width: "auto", duration: 0.5, ease: 'expoScale(0.5,7,none)' }, "SS"
             );
     
         // Cleanup function to kill ScrollTrigger on component unmount
