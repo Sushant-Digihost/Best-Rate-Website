@@ -7,11 +7,12 @@
     content: "";
     top: 0;
     left: 0;
-    width: 585px;
-    height: 100%;
     background-image: url(/src/assets/images/cta1.png);
+    width: 40%;
+    height: 100%;
+    // background-image: url(/src/assets/images/cta1.png);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.7;
   }
@@ -20,11 +21,11 @@
     content: "";
     top: 0;
     right: 0;
-    width: 585px;
+    width: 40%;
     height: 100%;
     background-image: url(/src/assets/images/cta2.png);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.7;
   }
@@ -32,6 +33,12 @@
     padding: 55px 0 130px;
     position: relative;
     z-index: 1;
+
+    .button {
+      font-size: 1.6vw;
+      padding: 19px 34px;
+      font-weight: 500;
+    }
     h2 {
       color: $dark;
       text-align: center;
@@ -55,7 +62,7 @@
     left: 0;
     h2 {
       opacity: 0.139;
-      color: #93B5FE;
+      color: #93b5fe;
       text-align: center;
       font-family: $ibrand;
       font-size: 22.12rem;
@@ -63,13 +70,13 @@
       font-weight: 400;
       line-height: normal;
 
-      @include min-xxl{
+      @include min-xxl {
         font-size: 25.769vw;
       }
     }
   }
 
-  .cta_image{
+  .cta_image {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -78,7 +85,7 @@
     padding-top: 4rem;
     // overflow: hidden;
 
-    .cta_img_wrap{
+    .cta_img_wrap {
       // overflow: hidden;
     }
   }
@@ -108,13 +115,13 @@
         overflow: hidden;
         position: relative;
         &.side-blog {
-            a{
-                .title{
-                    h4{
-                        -webkit-line-clamp:unset
-                    }
-                }
+          a {
+            .title {
+              h4 {
+                -webkit-line-clamp: unset;
+              }
             }
+          }
         }
         a {
           height: 100%;
@@ -205,7 +212,7 @@
     position: relative;
     background-repeat: no-repeat;
     overflow: hidden;
-    @include min-xxl16{
+    @include min-xxl16 {
       padding: 2vw;
     }
     &::before {
@@ -229,8 +236,8 @@
       display: flex;
       align-items: end;
       gap: 70px;
-      @include min-xxl16{
-        gap:5.524vw
+      @include min-xxl16 {
+        gap: 5.524vw;
       }
       .oneday {
         height: 100%;
@@ -241,10 +248,10 @@
       .oneclick-para {
         max-width: 550px;
         @include min-xxl16 {
-          max-width:60%
+          max-width: 60%;
         }
         @include min-xxl18 {
-          max-width:  50%
+          max-width: 50%;
         }
         p {
           color: $light;
@@ -259,11 +266,10 @@
             // font-size: 5rem;
             // line-height: 76px;
           }
-          @include min-xxl18{
-              // font-size: 4.7vw;
-              // line-height: 4.3vw;
+          @include min-xxl18 {
+            // font-size: 4.7vw;
+            // line-height: 4.3vw;
           }
-          
         }
       }
     }
@@ -281,59 +287,55 @@
       position: absolute;
       top: 15px;
       right: 15px;
-     z-index: 1;
+      z-index: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      transition: all .3s linear;
-      .circle{
+      transition: all 0.3s linear;
+      .circle {
         background: $light;
         border-radius: 50%;
         height: 40px;
         width: 40px;
         overflow: hidden;
         display: block;
-        transition: all  0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
         // display: flex;
         // justify-content: center;
         // align-items: center;
-        @include min-xxl16{
+        @include min-xxl16 {
           height: 7vh;
           width: 7vh;
         }
         svg {
-          transition: all  0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-          @include min-xxl16{
+          transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+          @include min-xxl16 {
             height: 7vh;
             width: 7vh;
           }
-          &.svg2{
+          &.svg2 {
             transform: translate(-44px, 0px);
-            @include min-xxl16{
-              transform: translate(-7vh ,0px);
-
+            @include min-xxl16 {
+              transform: translate(-7vh, 0px);
             }
           }
         }
       }
-
-     
     }
-    &:hover{
+    &:hover {
       // cursor: pointer;
       .arrow {
         cursor: pointer;
-        .circle{
+        .circle {
           // background: $primary;
-        
+
           svg {
             transform: translate(44px, -44px);
-            &.svg2{
+            &.svg2 {
               transform: translate(0px, -41px);
-              @include min-xxl16{
+              @include min-xxl16 {
                 transform: translate(0px, -7vh);
-
               }
               // @include min-xxl18{
               //   transform: translate(0px, -62px);
