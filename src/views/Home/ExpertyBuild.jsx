@@ -17,9 +17,9 @@ const ExpertyBuild = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "top 20%",
+        start: "top 80%",
         end: "bottom top",
-        scrub: 3, // Allows smooth scrubbing on scroll
+        scrub: 1, // Allows smooth scrubbing on scroll
         toggleActions: "play none none reverse", // Already set to reverse on scroll back
         scroller: "body",
         // markers: true,
@@ -42,7 +42,7 @@ const ExpertyBuild = () => {
       ".heading2",
       { y: 350, opacity: 0 },
       {
-        y: -10,
+        y: -20,
         opacity: 1,
         duration: 2.5,
         ease: "power4.out",
@@ -55,7 +55,7 @@ const ExpertyBuild = () => {
       ".heading3",
       { y: 700, opacity: 0 },
       {
-        y: -10,
+        y: -20,
         opacity: 1,
         duration: 2.5,
         ease: "power4.out",
