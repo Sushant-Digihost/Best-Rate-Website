@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 92.5vh !important;
+    height: 85.5vh  !important;
 
     .videoSlider_videoWrap {
       position: relative;
@@ -81,7 +81,7 @@
     }
 
     &.swiper-slide-active {
-      height: 85.56vh !important;
+      height: 77.56vh !important;
       transition: height 0.9s ease-in-out;
 
       .videoSlider_videoWrap {
@@ -112,7 +112,7 @@
       align-items: center;
       justify-content: center;
       width: 73vw;
-      height: 83vh;
+      height: 75vh;
       // margin-top: 0.8vw;
       transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 

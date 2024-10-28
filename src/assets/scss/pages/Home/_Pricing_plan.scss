@@ -3,7 +3,7 @@
 .pricing_plan {
     position: relative;
     z-index: 1;
-    padding: 70px 0 50px !important;
+    padding: 5.12vw 0 3.66vw !important;
 
     .video_wrapper {
         position: absolute;
@@ -32,27 +32,32 @@
             height: 100%;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(72px);
+            backdrop-filter: blur(5.27vw);
             z-index: 1;
         }
     }
 
     .pricing_items_group {
         display: flex;
-        gap: 70px;
-        padding: 55px;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        gap: 5.12vw;
+        padding: 4.02vw;
+        padding-top: 4.68vw;
+        padding-bottom: 4.68vw;
         color: $light;
+
+        @include min-xxl{
+            padding: 2.02vw;
+            padding-top: 4.68vw;
+        }
 
         .pricing_item {
             position: relative;
-            border-radius: 30px;
-            padding: 35px 15px;
+            border-radius: 2.19vw;
+            padding: 2.56vw 1.09vw;
             background: linear-gradient(174deg,
             rgba(0, 0, 0, 0.2) -2.06%,
             rgba(135, 135, 135, 0.2) 70.4%);
-            min-height: 440px;
+            min-height: 72.48vh;
             
             @include min-xxl{
                 min-height: 57.292vh;
@@ -67,8 +72,8 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                border-radius: 30px;
-                padding: 1px;
+                border-radius: 2.19vw;
+                padding: 0.073vw;
                 background: linear-gradient(110deg,
                         #0039ff 12%,
                         rgba(71, 64, 68, 0) 80%,
@@ -85,11 +90,11 @@
             .item_title {
                 color: $light;
                 font-family: $urbanist;
-                font-size: 24px;
+                font-size: 1.75vw;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.58vw;
 
                 @include min-xxl{
                     font-size: 1.757vw;
@@ -99,10 +104,10 @@
             .item_desc {
                 color: #d3d3d3;
                 font-family: $urbanist;
-                font-size: 16px;
+                font-size: 1.17vw;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 22px;
+                line-height: 1.61vw;
                 
                 @include min-xxl{
                     line-height: 1.611vw;
@@ -111,36 +116,36 @@
             }
 
             .price_value {
-                padding: 1rem 0;
+                padding: 1.171vw 0;
 
                 h1 {
                     color: $light;
                     font-family: $urbanist;
-                    font-size: 54px;
+                    font-size: 3.95vw;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
 
                     span {
-                        font-size: 24px;
+                        font-size: 1.75vw;
                     }
                 }
             }
 
             .bd-btn-link {
                 display: flex;
-                padding: 10px;
-                border-radius: 10px;
-                border: 1px solid #fff;
+                padding: 0.73vw;
+                border-radius: 0.73vw;
+                border: 0.073vw solid #fff;
                 justify-content: center;
                 align-items: center;
                 color: #fff;
                 font-weight: 600;
-                font-size: 16px;
+                font-size: 1.17vw;
                 transition: all 0.3s linear;
 
                 &:hover {
-                    border: 1px solid $light;
+                    border: 0.073vw solid $light;
                     background-color: $secondary;
                     color: $primary;
                     background-color: $secondary;
@@ -149,17 +154,21 @@
 
             .icon_list {
                 padding: {
-                    top: 2rem;
-                    left: 0.85rem;
+                    top: 2.34vw;
+                    left: 0.99vw;
                 }
 
                 li {
                     display: flex;
                     align-items: center;
-                    gap: 10px;
+                    gap: 0.73vw;
 
                     &:not(:last-child) {
                         margin-bottom: 1.2rem;
+                    }
+
+                    .list_item_text{
+                        font-size: 1.17vw;
                     }
                 }
             }
@@ -178,9 +187,9 @@
                     left: 0;
                     right: 0;
                     bottom: 0;
-                    border-radius: 30px;
+                    border-radius: 2.19vw;
                     /* Same border radius */
-                    padding: 1px;
+                    padding:0.073vw;
                     /* Border width */
                     background: linear-gradient(160deg,
                             #00d1ff 12%,
@@ -195,7 +204,7 @@
                 }
 
                 .bd-btn-link {
-                    border: 1px solid $light;
+                    border:0.073vw solid $light;
                     background-color: $secondary;
                     color: $primary;
                     background-color: $secondary;
@@ -214,6 +223,10 @@
                                 }
                             }
                         }
+                    }
+
+                    .list_item_text{
+                        font-size: 1.17vw;
                     }
                 }
             }

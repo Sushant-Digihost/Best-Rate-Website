@@ -206,9 +206,9 @@
 
 .oneclick {
   .oneclick-container {
-    border-radius: 30px;
+    border-radius: 2.19vw;
     background: $primary;
-    padding: 20px;
+    padding: 1.46vw;
     position: relative;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -229,15 +229,15 @@
       opacity: 0.7;
     }
     .onetext {
-      height: 80vh;
-      padding-left: 50px;
+      height: 85vh;
+      padding-left: 3.66vw;
       position: relative;
       z-index: 1;
       display: flex;
       align-items: end;
-      gap: 70px;
+      gap: 5.12vw;
       @include min-xxl16 {
-        gap: 5.524vw;
+        gap: 8.524vw;
       }
       .oneday {
         height: 100%;
@@ -246,7 +246,7 @@
         }
       }
       .oneclick-para {
-        max-width: 550px;
+        max-width: 90.60vh;
         @include min-xxl16 {
           max-width: 60%;
         }
@@ -256,11 +256,11 @@
         p {
           color: $light;
           font-family: $ibrand;
-          font-size: 3.229vw;
+          font-size: 4.538799414348462vw;
           font-style: normal;
           font-weight: 400;
-          line-height: 3.125vw; /* 114.286% */
-          letter-spacing: 1.12px;
+          line-height: 5.270863836017569vw;
+          letter-spacing: 0.08199121522693999vw;
           text-transform: capitalize;
           @include min-xxl16 {
             // font-size: 5rem;
@@ -275,18 +275,18 @@
     }
     .click-arrow {
       position: absolute;
-      top: 0;
-      right: 0;
-      padding: 10px;
-      height: 100%;
+      top: 0.732vw;
+      right: 0.732vw;
+      padding: 0.73vw;
+      height: 96%;
       img {
         height: 100%;
       }
     }
     .arrow {
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 1.9098vw;
+      right: 1.9098vw;
       z-index: 1;
       display: flex;
       justify-content: center;
@@ -296,8 +296,8 @@
       .circle {
         background: $light;
         border-radius: 50%;
-        height: 40px;
-        width: 40px;
+        height: 2.92vw;
+        width: 2.92vw;
         overflow: hidden;
         display: block;
         transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
