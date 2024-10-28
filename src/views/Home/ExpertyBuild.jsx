@@ -17,9 +17,10 @@ const ExpertyBuild = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "top 80%",
+        start: "top top",
         end: "bottom top",
-        scrub: 1, // Allows smooth scrubbing on scroll
+        scrub: 1, 
+        pin: true,
         toggleActions: "play none none reverse", // Already set to reverse on scroll back
         scroller: "body",
         // markers: true,
