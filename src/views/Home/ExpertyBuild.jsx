@@ -54,9 +54,9 @@ const ExpertyBuild = () => {
     // Heading 3: Moves from y: 700 to y: -10 on scroll
     tl.fromTo(
       ".heading3",
-      { y: 700, opacity: 0 },
+      { y: 500, opacity: 0 },
       {
-        y: -20,
+        y: -40,
         opacity: 1,
         duration: 2.5,
         ease: "power4.out",
