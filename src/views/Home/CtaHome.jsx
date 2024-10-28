@@ -54,6 +54,12 @@ const CtaHome = () => {
                 '.img_4',
                 { x: 68, y: 29, opacity: 0, width: '100px' },
                 { x: -14, opacity: 1, y: -29, width: "auto", duration: 0.5, ease: 'expoScale(0.5,7,none)' }, "SS"
+            )
+
+            .fromTo(
+                '.back-text',
+                { y: 100, opacity: 0 },
+                { y:  0, opacity: 1, duration: 0.5, ease: 'expoScale(0.5,7,none)' }
             );
     
         // Cleanup function to kill ScrollTrigger on component unmount
