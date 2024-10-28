@@ -7,6 +7,9 @@ import { ReactLenis, useLenis } from 'lenis/react'
 import 'lenis/dist/lenis.css'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Theme } from "./views/Theme";
+
 
 function App() {
   const lenis = new Lenis();
@@ -43,9 +46,16 @@ gsap.to(scrollRef.current, {
   return (
     <>
     <ReactLenis root ref={scrollRef}>
-      <Navbar />
-      <Home />
-      <Footer />
+     
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/themes" element={<Theme />} />
+        </Routes>
+        <Footer />
+      </Router>
+
     </ReactLenis>
     </>
   );

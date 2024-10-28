@@ -1,0 +1,97 @@
+.banner{
+    .heades{
+        text-align: center;
+        position: relative;
+        h2{
+            color: $dark-alt;
+            text-align: center;
+            font-family: $ibrand;
+            font-size: 3.229vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .btn-2{
+            margin-top: 3.075rem;
+            font-size: 2.083vw;
+            padding: 15px 45px;
+        }
+        .bar{
+            position: absolute;
+            right: 22%;
+            bottom: -40px;
+            height: 63px;        
+            img{
+                display: block;
+                height: 100%;
+            }
+
+        }
+    }
+    .k5container{
+        margin-top: 6.25rem;
+        position: relative;
+        h1{
+            text-align: center;
+            font-family: $ibrand;
+            font-size: 400px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 360px; /* 90% */
+            opacity: 0.1;
+            background: linear-gradient(181deg, #353535 0.54%, rgba(178, 178, 178, 0.00) 86.96%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .offertitle{
+            position: absolute;
+            top: -38px;
+            right: 76px;        
+        
+            h4{
+                color: $dark-alt;
+                text-align: center;
+                -webkit-text-stroke-width: 0.20000000298023224;
+                -webkit-text-stroke-color: $dark;
+                font-family:  $comicsans;
+                font-size:0.933vw;
+                font-style: $comicsans;
+                font-weight: 700;
+                line-height: normal;
+                max-width: 220px;
+                position: relative;
+                @include min-xxl16{
+                    font-size: 1.2vw;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    // bottom: 0;
+                    top: 8px;
+                    left: -133px;
+                    height: 100px;
+                    width: 200px;
+                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="132" height="103" viewBox=\'0 0 132 103\' fill=\'none\'><path d=\'M11.8671 72.0299C14.7801 63.6529 19.9208 56.0731 26.698 50.3802C37.2432 41.5459 51.6687 37.466 65.2904 39.4932C73.2682 40.6714 81.3619 44.1995 85.8298 50.8948C90.2886 57.6208 89.7905 67.9001 83.267 72.6858C75.8944 78.0846 64.4398 73.7048 60.1101 65.6514C55.7498 57.5889 57.1046 47.5648 60.6107 39.0981C68.4951 20.0758 87.3738 6.19562 107.777 3.91378\' stroke=\'%2314161D\' stroke-width=\'1.97812\' stroke-miterlimit=\'10\' stroke-linecap=\'round\' stroke-dasharray=\'3.95 3.95\'/><path d=\'M6.69387 87.6747C6.88989 83.2196 6.46318 77.4298 5.12729 73.366L10.4655 78.3079C10.5152 78.3171 10.5623 78.3318 10.6068 78.3522C10.6514 78.3725 10.6935 78.3985 10.7329 78.4299L18.0146 78.8056C14.1916 80.6756 9.73602 84.418 6.69387 87.6747Z\' fill=\'%2314161D\'/></svg>');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+        .prebuild-container{
+            position: absolute;
+            bottom: 70px;
+            right: 18%;
+            h3{
+                color: $primary;
+                text-align: center;
+                font-family: $ibrand;
+                font-size: 2.83vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+}
