@@ -19,7 +19,7 @@ const ExpertyBuild = () => {
         trigger: element,
         start: "top top",
         end: "bottom top",
-        scrub: 1, 
+        scrub: 1,
         pin: true,
         toggleActions: "play none none reverse", // Already set to reverse on scroll back
         scroller: "body",
@@ -43,7 +43,7 @@ const ExpertyBuild = () => {
       ".heading2",
       { y: 350, opacity: 0 },
       {
-        y: -20,
+        y: -7,
         opacity: 1,
         duration: 2.5,
         ease: "power4.out",
@@ -56,7 +56,7 @@ const ExpertyBuild = () => {
       ".heading3",
       { y: 500, opacity: 0 },
       {
-        y: -40,
+        y: -10,
         opacity: 1,
         duration: 2.5,
         ease: "power4.out",

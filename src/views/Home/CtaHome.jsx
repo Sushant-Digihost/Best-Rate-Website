@@ -30,7 +30,7 @@ const CtaHome = () => {
         markers: false,
         scroller: "body",
         scrub: 5,
-        markers: true,
+        // markers: true,
       },
     });
 
