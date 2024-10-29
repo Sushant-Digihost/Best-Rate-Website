@@ -130,12 +130,19 @@
           //   #ffffff 12%,
           //   rgb(5 5 5) 15%
           // );
+          // background: linear-gradient(
+          //   130deg,
+          //   #d7d0cf 8%,
+          //   #ffffff 9%,
+          //   #ffffff 14%,
+          //   #d7d0cf 15%
+          // );
           background: linear-gradient(
             130deg,
-            #d7d0cf 8%,
-            #ffffff 9%,
-            #ffffff 14%,
-            #d7d0cf 15%
+            #ffffff 8%,
+            #d7d0cf 9%,
+            #d7d0cf 14%,
+            #ffffff 15%
           );
           background-size: 200%;
           background-clip: text;

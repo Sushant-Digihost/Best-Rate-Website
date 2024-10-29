@@ -65,7 +65,7 @@
         bottom: 0;
         left: 0;
         width: 0;
-        height: 3%;
+        height: 2.5%;
         z-index: 0;
         // border-bottom: 1px solid #630707;
         background: linear-gradient(90deg, #122c65 0%, #8afaf3 78.57%);
@@ -81,6 +81,10 @@
         // .thumb {
         //     background: $primary;
         // }
+
+        @media (min-width: 1600px) {
+          height: 24.67vh;
+        }
 
         .icon {
           svg {
@@ -103,7 +107,7 @@
 
         &::after {
           width: 100%;
-          transition: 5s all ease;
+          transition: 6s all ease;
         }
       }
     }
@@ -119,10 +123,6 @@
       padding: 1.7vw;
       height: 100%;
       width: 100%;
-
-      // @include min-xxl{
-      //     height: 700px;
-      // }
 
       video {
         height: 100%;

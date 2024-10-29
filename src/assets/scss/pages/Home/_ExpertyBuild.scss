@@ -1,5 +1,11 @@
 .experty-build {
-  padding: 12rem 0 !important;
+  // padding: 12rem 0 !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .container-fluid {
     display: flex;
     flex-direction: column;

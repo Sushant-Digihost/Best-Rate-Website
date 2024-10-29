@@ -25,7 +25,7 @@ const ReadyToExplore = () => {
         <h2 className="heading">
           Ready to Explore? Our Latest <br /> Innovations
         </h2>
-        <Row className="align-items-center">
+        <Row className="align-items-start">
           <Col sm={6}>
             {isMounted && (
               <Swiper
@@ -37,8 +37,8 @@ const ReadyToExplore = () => {
                 spaceBetween={10}
                 // navigation={true}
                 autoplay={{
-                  delay: 5000, // 3 seconds delay between slides
-                  disableOnInteraction: false, // Autoplay won't stop after user interactions like clicking or swiping
+                  delay: 6000,
+                  disableOnInteraction: false,
                 }}
                 thumbs={thumbsSwiper ? { swiper: thumbsSwiper } : undefined}
                 modules={[Autoplay, FreeMode, Navigation, Thumbs]}
@@ -105,8 +105,8 @@ const ReadyToExplore = () => {
               slidesPerView={5}
               direction="vertical"
               autoplay={{
-                delay: 5000, // 3 seconds delay between slides
-                disableOnInteraction: false, // Autoplay won't stop after user interactions like clicking or swiping
+                delay: 6000,
+                disableOnInteraction: false,
               }}
               freeMode={true}
               watchSlidesProgress={true}

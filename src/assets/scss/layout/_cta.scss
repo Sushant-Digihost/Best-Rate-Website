@@ -246,7 +246,7 @@
         }
       }
       .oneclick-para {
-        max-width: 90.60vh;
+        max-width: 90.6vh;
         @include min-xxl16 {
           max-width: 60%;
         }
@@ -296,8 +296,8 @@
       .circle {
         background: $light;
         border-radius: 50%;
-        height: 2.92vw;
-        width: 2.92vw;
+        height: 3.92vw;
+        width: 3.92vw;
         overflow: hidden;
         display: block;
         transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -310,12 +310,15 @@
         }
         svg {
           transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+          width: 4vw;
+          height: 3.8vw;
           @include min-xxl16 {
             height: 7vh;
             width: 7vh;
           }
           &.svg2 {
-            transform: translate(-44px, 0px);
+            // transform: translate(-44px, 0px);
+            transform: translate(-4vw, 0px);
             @include min-xxl16 {
               transform: translate(-7vh, 0px);
             }
@@ -333,7 +336,7 @@
           svg {
             transform: translate(44px, -44px);
             &.svg2 {
-              transform: translate(0px, -41px);
+              transform: translate(0px, -3.8vw);
               @include min-xxl16 {
                 transform: translate(0px, -7vh);
               }

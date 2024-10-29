@@ -1,55 +1,53 @@
 // Start Sucess
 
+.start-success {
+  position: relative;
+  .marquee {
+    background-color: $primary;
+    padding: 20px 0 10px;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    .swiper-wrapper {
+      transition-timing-function: linear;
+      .swiper-slide {
+        .headings {
+          width: 100%;
+          display: flex;
+          gap: 15px;
+          padding: 10px 0;
+          flex-direction: row;
+          width: 100%;
+          flex-wrap: nowrap;
+          // animation: marquee 5s linear infinite;
 
-.start-success{
-    position: relative;
-    .marquee {
-        background-color: $primary;
-        padding: 20px 0 10px;
-        width: 100%;
-        display: flex;
-        gap: 15px;
-        overflow: hidden;
-        .swiper-wrapper{
-            transition-timing-function: linear;
-            .swiper-slide {
-                .headings {
-                    width: 100%;
-                    display: flex;
-                    gap: 15px;
-                    padding: 10px 0;
-                    flex-direction: row;
-                    width: 100%;
-                    flex-wrap: nowrap;
-                    // animation: marquee 5s linear infinite;
-        
-                    // @keyframes marquee {
-                    //     from {
-                    //         transform: translateX(0%);
-                    //     }
-        
-                    //     to {
-                    //         transform: translateX(-100%);
-                    //     }
-                    // }
-        
-                    h4 {
-                        a{
-                            color: $secondary;
-                        font-family: $ibrand;
-                        font-size: 32px;
-                        font-style: normal;
-                        width: fit-content;
-                        font-weight: 400;
-                        line-height: normal;
-                        white-space: nowrap;
-                        }
-                    }
-                }
+          // @keyframes marquee {
+          //     from {
+          //         transform: translateX(0%);
+          //     }
+
+          //     to {
+          //         transform: translateX(-100%);
+          //     }
+          // }
+
+          h4 {
+            a {
+              color: $secondary;
+              font-family: $ibrand;
+              font-size: 32px;
+              font-style: normal;
+              width: fit-content;
+              font-weight: 400;
+              line-height: normal;
+              white-space: nowrap;
             }
+          }
         }
-        
+      }
     }
+  }
 }
 
 // @keyframes marquee {

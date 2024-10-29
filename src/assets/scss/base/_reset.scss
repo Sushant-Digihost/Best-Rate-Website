@@ -26,7 +26,7 @@ html {
 }
 
 body,
-html{
+html {
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -36,7 +36,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $urbanist;
-  background: $light;
+  background: $light-alt;
   overflow-x: hidden;
   position: relative;
   h1,
@@ -102,14 +102,17 @@ body {
     font-weight: 400;
     line-height: 100%;
 
-    @include min-xxl{
-      font-size : 4.026vw
+    @include min-xxl {
+      font-size: 4.026vw;
     }
   }
 }
 
-.container-xl, .container-lg, .container-md, .container-sm, .container{
-  
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container {
   @include min-xl {
     max-width: 1260px;
   }
