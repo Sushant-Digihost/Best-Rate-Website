@@ -15,17 +15,20 @@
         &.text {
           color: $light;
           font-family: $ibrand;
-          font-size: 2.25rem;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+          @media (max-width: 992px) {
+            font-size: 2.5rem;
+          }
         }
 
         &.email {
           a {
             color: #e2e2e2;
             font-family: $urbanist;
-            font-size: 3.62rem;
+            font-size: 4.2vw;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -45,6 +48,10 @@
 
             // Apply the animation
             animation: backgroundSizeRepeatAnimation 4s ease-in-out infinite;
+
+            @media (max-width: 992px) {
+              font-size: 3.62rem;
+            }
 
             // Adding keyframes for the repeat animation
             @keyframes backgroundSizeRepeatAnimation {
@@ -78,12 +85,15 @@
       h4 {
         color: $light;
         font-family: $urbanist;
-        font-size: 1rem;
+        font-size: 1.5vw;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
         text-transform: uppercase;
         margin-bottom: 16px;
+        @media (max-width: 992px) {
+          font-size: 1rem;
+        }
       }
 
       ul {
@@ -93,7 +103,7 @@
           a {
             color: #d3d3d3;
             font-family: $urbanist;
-            font-size: 1rem;
+            font-size: 1.2vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -119,7 +129,7 @@
         a {
           color: #fff;
           font-family: $ibrand;
-          font-size: 6.75rem;
+          font-size: 6.56vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
@@ -149,6 +159,9 @@
           -webkit-background-clip: text;
           color: transparent;
           animation: shine-text 4s infinite;
+          @media (max-width: 992px) {
+            font-size: 6.75rem;
+          }
         }
       }
 
@@ -220,19 +233,25 @@
       p {
         color: #d3d3d3;
         font-family: $urbanist;
-        font-size: 0.91rem;
+        font-size: 0.99vw;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        @media (max-width: 992px) {
+          font-size: 0.91rem;
+        }
 
         a {
           color: #d3d3d3;
           font-family: $urbanist;
-          font-size: 0.91rem;
+          font-size: 0.99vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           transition: all 0.3s linear;
+          @media (max-width: 992px) {
+            font-size: 0.91rem;
+          }
 
           &:hover {
             color: $secondary;
@@ -247,11 +266,14 @@
         a {
           color: #d3d3d3;
           font-family: $urbanist;
-          font-size: 0.91rem;
+          font-size: 0.99vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           transition: all 0.3s linear;
+          @media (max-width: 992px) {
+            font-size: 0.91rem;
+          }
 
           &:hover {
             color: $secondary;
