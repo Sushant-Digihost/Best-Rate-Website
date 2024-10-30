@@ -48,7 +48,7 @@ const ExpertyBuild = () => {
         duration: 2.5,
         ease: "power4.out",
       },
-      "SS"
+       
     );
 
     // Heading 3: Moves from y: 700 to y: -10 on scroll
@@ -61,7 +61,7 @@ const ExpertyBuild = () => {
         duration: 2.5,
         ease: "power4.out",
       },
-      "SS"
+
     );
 
     // Cleanup function to kill ScrollTrigger on component unmount
