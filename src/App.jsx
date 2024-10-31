@@ -9,6 +9,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Theme } from "./views/Theme";
+import { ChooseDomain } from "./views/Domain/ChooseDomain";
+import { SearchDomain } from "./views/Domain/SearchDomain";
 
 
 function App() {
@@ -52,6 +54,8 @@ gsap.to(scrollRef.current, {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/themes" element={<Theme />} />
+          <Route path="/choose-domain" element={<ChooseDomain />} />
+          <Route path="/search-domain" element={<SearchDomain/>} />
         </Routes>
         <Footer />
       </Router>

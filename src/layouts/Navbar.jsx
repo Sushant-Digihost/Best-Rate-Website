@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import logo from "./../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,19 +14,19 @@ const Navbar = () => {
           <div className="navlinks">
             <ul>
               <li className="active">
-                <a href="#">Home</a>
+                <Link to="#">Home</Link>
               </li>
               <li>
-                <a href="#">About</a>
+                <Link to="#">About</Link>
               </li>
               <li>
-                <a href="#">Features</a>
+                <Link to="#">Features</Link>
               </li>
               <li>
-                <a href="#">Resources</a>
+                <Link to="#">Resources</Link>
               </li>
               <li>
-                <a href="#">Pricing</a>
+                <Link to="#">Pricing</Link>
               </li>
             </ul>
             <div className="auth-links">
