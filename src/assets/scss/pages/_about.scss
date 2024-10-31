@@ -1,0 +1,113 @@
+.about_section{
+    .about_content{
+        .section_heading{
+            // margin-bottom: 1.14vw;
+            .heading_title{
+                color: $dark-alt;
+                font-family: $ibrand;
+                font-size: 8.785vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                .Typewriter__cursor{
+                    margin-left: -1.83vw;
+                }
+            }
+
+            .current {
+                transition: opacity 0.5s ease;
+            }
+            
+            .inactive {
+                opacity: 0.3;
+            }
+            
+            .active {
+                opacity: 1;
+            }
+            
+            
+        }
+    }
+}
+
+#about_Content{
+
+    .title_wrap{
+
+        .title{
+            font-family: $urbanist;
+            font-size: 3.80vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 4.68vw; 
+            
+            .span_text{
+                color:$background;
+                opacity:0;
+                // transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+.content_wrap{
+
+    p{
+        margin-bottom: 0.73vw;
+        font-size: 1.17vw;
+    }
+}
+
+.about_values{
+    min-height: 100vh;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    .value_wrap{
+        text-align: center;
+        position: relative;
+        .value_heading{
+            color: rgba(2, 11, 31, 0.10);
+            font-family: $ibrand;
+            font-size: 16.25vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+        }
+        span{
+            color: $primary;
+            text-align: center;
+            font-family: $urbanist;
+            font-size: 1.75vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .left{
+            position: relative;
+            top: 0;
+            left: -100%;
+            opacity: 0;
+        }
+        .right{
+            position: relative;
+            top: 0;
+            opacity: 0;
+            right: -100%;
+        }
+
+        .value_desc{
+            opacity: 0;
+            display: block;
+            scale: 0;
+        }
+    }
+}
