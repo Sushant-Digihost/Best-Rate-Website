@@ -15,13 +15,20 @@ import { SearchDomain } from "./views/Domain/SearchDomain";
 
 
 function App() {
-  const lenis = new Lenis();
+  const lenisRef = useRef(null);
+
+  if (!lenisRef.current) {
+    lenisRef.current = new Lenis();
+  }
+
+  const lenis = lenisRef.current;
+
   const scrollRef = useRef(null);
 
 // Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
+// lenis.on('scroll', (e) => {
+//   console.log(e);
+// });
 
 // Use requestAnimationFrame to continuously update the scroll
 function raf(time) {
@@ -55,7 +62,7 @@ gsap.to(scrollRef.current, {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/themes" element={<Theme />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/About" element={<About />} />
           <Route path="/choose-domain" element={<ChooseDomain />} />
           <Route path="/search-domain" element={<SearchDomain/>} />
         </Routes>

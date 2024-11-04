@@ -6,7 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const Pricing_Plan = () => {
     return (
         <div className="section pricing_plan">
-            <div class="video_wrapper">
+            <div className="video_wrapper">
                 <video
                     autoPlay
                     muted
@@ -48,7 +48,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -76,7 +76,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -104,7 +104,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -151,7 +151,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -179,7 +179,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -207,7 +207,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -254,7 +254,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -282,7 +282,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"
@@ -310,7 +310,7 @@ const Pricing_Plan = () => {
                                         viewBox="0 0 18 18"
                                         fill="none"
                                     >
-                                        <g clip-path="url(#clip0_674_2101)">
+                                        <g clipPath="url(#clip0_674_2101)">
                                             <path
                                                 d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
                                                 fill="#0027B0"

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import logo from "./../assets/images/logo.png";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -14,26 +14,26 @@ const Navbar = () => {
           <div className="navlinks">
             <ul>
               <li className="active">
-                <Link to="#">Home</Link>
+                <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <Link to="#">About</Link>
+                <NavLink to="/About">About</NavLink>
               </li>
               <li>
-                <Link to="#">Features</Link>
+                <NavLink to="/Features">Features</NavLink>
               </li>
               <li>
-                <Link to="#">Resources</Link>
+                <NavLink to="/Resources">Resources</NavLink>
               </li>
               <li>
-                <Link to="#">Pricing</Link>
+                <NavLink to="/Pricing">Pricing</NavLink>
               </li>
             </ul>
             <div className="auth-links">
-              <a href="#" className="ali">
+              <a href="#!" className="ali">
                 Login
               </a>
-              <a href="#" className="button">
+              <a href="#!" className="button">
                 Sign Up
               </a>
             </div>

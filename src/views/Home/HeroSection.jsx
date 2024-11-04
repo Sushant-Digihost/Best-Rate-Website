@@ -220,11 +220,11 @@ const HeroSection =() => {
                 }
             },'d')
       
-            .to(".numbers", { 
-                y: -500, 
-                duration: 3, 
-                stagger: 0.3, 
-            },'a')
+            // .to(".numbers", { 
+            //     y: -500, 
+            //     duration: 3, 
+            //     stagger: 0.3, 
+            // },'a')
     
             .to(".v2", { 
                 y: -450, 
@@ -262,7 +262,7 @@ const HeroSection =() => {
             <div className="hero">
 
                 <div className="btn_wrapper">
-                    <a href="#" class="button">
+                    <a href="#" className="button">
                         <div className="circle-1"></div>
                         <div className="circle-2"></div>
                         <div className="circle-3"></div>
