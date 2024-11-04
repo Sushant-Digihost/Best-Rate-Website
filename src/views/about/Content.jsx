@@ -41,6 +41,7 @@ export const Content = () => {
         }
 
         return () => {
+            // New scrollTrigger kill
             if (contentScrollTrigger) {
                 contentScrollTrigger.kill();
             }
