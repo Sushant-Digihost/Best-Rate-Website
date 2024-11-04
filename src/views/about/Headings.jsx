@@ -21,11 +21,11 @@ export const Headings = () => {
                                     }}
                                     onInit={(typewriter) => {
                                         typewriter
-                                            .typeString(`<span className="current">Best people.</span><br/>`)
+                                            .typeString(`<span class="current">Best people.</span><br/>`)
                                             .pauseFor(800)
-                                            .typeString(`<span className="current">Best experience.</span><br/>`)
+                                            .typeString(`<span class="current">Best experience.</span><br/>`)
                                             .pauseFor(800)
-                                            .typeString(`<span className="current">Best results.</span>`)
+                                            .typeString(`<span class="current">Best results.</span>`)
                                             .start();
                                     }}
                                 />

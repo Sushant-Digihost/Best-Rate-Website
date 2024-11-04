@@ -12,7 +12,7 @@ export const Content = () => {
         const titleText = "BestRate makes building your website effortless. With our user-friendly tools, stunning designs, and SEO-ready features, your site will stand out and grow your business fast.";
 
         const clutteredText = titleText.split("").map((char) => (
-            `<span className="span_text">${char}</span>`
+            `<span class="span_text">${char}</span>`
         )).join("");
 
         setClutter(clutteredText);
