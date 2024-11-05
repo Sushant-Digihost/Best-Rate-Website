@@ -461,7 +461,7 @@ const Footer = () => {
             </div>
             <div className="social mt-xxl-4">
               <Row className="align-items-center">
-                <Col sm={5}>
+                <Col sm={6}>
                   <h2>
                     <a href="#!" class="shine">
                       Best Rate
@@ -469,7 +469,7 @@ const Footer = () => {
                     {/* <img src={shineEffect} alt="Best Rate" /> */}
                   </h2>
                 </Col>
-                <Col sm={7}>
+                <Col sm={6}>
                   <ul className="so-links">
                     <li>
                       <a href="#!" className="insta">
