@@ -125,41 +125,87 @@
       //   align-items: center;
       //   justify-content: space-between;
 
+      // h2 {
+      //   a {
+      //     color: #fff;
+      //     font-family: $ibrand;
+      //     // font-size: 6.56vw;
+      //     font-size: 10.2vw;
+      //     font-style: normal;
+      //     font-weight: 400;
+      //     line-height: normal;
+      //     // background: linear-gradient(
+      //     //   130deg,
+      //     //   rgb(30 29 29) 8%,
+      //     //   #ffffff 10%,
+      //     //   #ffffff 12%,
+      //     //   rgb(5 5 5) 15%
+      //     // );
+      //     // background: linear-gradient(
+      //     //   130deg,
+      //     //   #d7d0cf 8%,
+      //     //   #ffffff 9%,
+      //     //   #ffffff 14%,
+      //     //   #d7d0cf 15%
+      //     // );
+      //     // background: linear-gradient(
+      //     //   130deg,
+      //     //   #ffffff 8%,
+      //     //   #d7d0cf 9%,
+      //     //   #d7d0cf 14%,
+      //     //   #ffffff 15%
+      //     // );
+      //     background: linear-gradient(
+      //       130deg,
+      //       #ffffff 5%,
+      //       #9a9a9a 10%,
+      //       #989898 10%,
+      //       #979797 11%,
+      //       #b2b2b2 20%,
+      //       #ffffff 24%
+      //     );
+      //     background-size: 200%;
+      //     background-clip: text;
+      //     -webkit-background-clip: text;
+      //     color: transparent;
+      //     animation: shine-text 4s infinite;
+      //     @media (max-width: 992px) {
+      //       font-size: 6.75rem;
+      //     }
+      //   }
+      // }
+
+      // @keyframes shine-text {
+      //   0% {
+      //     background-position: 200%;
+      //   }
+      //   100% {
+      //     background-position: -200%;
+      //   }
+      // }
+
       h2 {
         a {
           color: #fff;
           font-family: $ibrand;
-          // font-size: 6.56vw;
           font-size: 10.2vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
-          // background: linear-gradient(
-          //   130deg,
-          //   rgb(30 29 29) 8%,
-          //   #ffffff 10%,
-          //   #ffffff 12%,
-          //   rgb(5 5 5) 15%
-          // );
-          // background: linear-gradient(
-          //   130deg,
-          //   #d7d0cf 8%,
-          //   #ffffff 9%,
-          //   #ffffff 14%,
-          //   #d7d0cf 15%
-          // );
           background: linear-gradient(
             130deg,
-            #ffffff 8%,
-            #d7d0cf 9%,
-            #d7d0cf 14%,
-            #ffffff 15%
+            #ffffff 5%,
+            #9a9a9a 10%,
+            #989898 10%,
+            #979797 11%,
+            #b2b2b2 20%,
+            #ffffff 24%
           );
           background-size: 200%;
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
-          animation: shine-text 4s infinite;
+          animation: shine-text 7.5s linear infinite;
           @media (max-width: 992px) {
             font-size: 6.75rem;
           }
@@ -296,7 +342,8 @@
       text-align: center;
       transition: 0.5s all ease;
       &:hover {
-        width: 300px;
+        // width: 300px;
+        width: 22.5vw;
       }
       &.insta {
         &:hover {
