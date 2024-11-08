@@ -29,9 +29,6 @@
           box-shadow: none;
           outline: none;
           border-radius: 10px;
-          &:hover {
-            // background-color: #45a049;
-          }
         }
         .dropdown-content {
           position: absolute;
@@ -238,8 +235,6 @@
                         align-items: center;
                         justify-content: space-between;
                         transition: all 0.5s linear;
-                        &:hover {
-                        }
                         &.selected {
                           font-weight: bold;
                         }
@@ -406,9 +401,6 @@
                 position: absolute;
                 z-index: -1;
                 right: 0;
-                svg {
-                  // height: 40px;
-                }
               }
             }
             .readmore {
