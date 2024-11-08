@@ -72,8 +72,6 @@ export const SearchDomain = () => {
         const handlescroll =()=>{
             const currentsrollpos = window.pageYOffset;
             const sectiontop = document.getElementsByClassName("sroll").offsetTop;
-
-
             if(currentsrollpos>prevscrollpos){
                 setisvisible(false);
             } else{
