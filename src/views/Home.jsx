@@ -11,6 +11,7 @@ import HomeBlog from "./Home/HomeBlog";
 import Pricing_Plan from "./Home/Pricing_Plan";
 import CtaHome from "./Home/CtaHome";
 import { PremiumElement } from "./Home/PremiumElement";
+import { Innovation } from "./Home/Innovation";
 
 
 
@@ -22,7 +23,8 @@ const Home = () => {
       <ExpertyBuild />
       <ReadyToExplore />
       <StartSuccess />
-      <EcosystemBuild />
+      <Innovation/>
+      {/* <EcosystemBuild /> */}
       <VouchSlider />
       <OneclickCta />
       <PremiumElement/>
