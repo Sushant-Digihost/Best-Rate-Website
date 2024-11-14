@@ -85,3 +85,31 @@
     left: 100%;
   }
 }
+
+.button2 {
+  padding: 12px 24px;
+  gap: 10px;
+  color: $secondary;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: $primary;
+  border: 1px solid $primary;
+  overflow: hidden;
+  text-align: center;
+  font-family: $urbanist;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.36px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  cursor: pointer;
+  @include min-xxl {
+    font-size: 1.288vw;
+  }
+}

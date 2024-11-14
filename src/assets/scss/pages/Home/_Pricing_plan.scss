@@ -238,4 +238,75 @@
             }
         }
     }
+
+    &.plan{
+        .pricing_items_group{
+            color: #5E5E5E;
+
+            .pricing_item{
+                background: linear-gradient(167deg, rgba(209, 209, 209, 0.20) 11.04%, rgba(240, 244, 249, 0.20) 102.72%);
+                transition: all 0.3s ease-in-out;
+                &::before{
+                    content: none;
+                }
+                .item_title, .item_desc, .price_value h1{
+                    color: #5E5E5E;
+                }
+
+                .bd-btn-link{
+                    border: 1px solid #5E5E5E;
+                    color: #5E5E5E;
+
+                }
+
+                &.active{
+                    background: linear-gradient(173deg, rgba(255, 255, 255, 0.20) -14.73%, rgba(255, 255, 255, 0.08) 66.37%);
+                    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.10);
+                    overflow: hidden;
+
+                    .svg-item{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                    }
+
+                    .item_title, .price_value h1{
+                        color: $primary;
+                    }
+
+                    .bd-btn-link{
+                        color: $secondary;
+                        background-color: $primary;
+                        border: 1px solid $primary;
+                    }
+
+                    .item_desc, .list_item_text{
+                        color: $dark;
+                    }
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border-radius: 2.19vw;
+                        padding: 0.073vw;
+                        background: var(--hower-border, linear-gradient(187deg, rgba(0, 31, 99, 0) 37.6%, #122c65 79.95%, #42ffff 100.76%));
+                        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                        -webkit-mask-composite: destination-out;
+                        mask-composite: exclude;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            
+        }
+    }
 }

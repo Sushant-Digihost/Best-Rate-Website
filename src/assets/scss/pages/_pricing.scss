@@ -1,0 +1,353 @@
+.features {
+    .toggleFeatures {
+        .button {}
+    }
+
+    .features_wrapper {
+        opacity: 0;
+        // overflow: hidden;
+        transition: opacity 0.35s ease-in-out;
+
+        &.show {
+            opacity: 1;
+            transition: opacity 0.35s ease-in-out;
+        }
+    }
+}
+
+.plandetails {
+    .box_wrapper {
+        margin-top: 9.060955518945635vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.7569546120058566vw;
+    }
+
+    .plan-box {
+        border-radius: 2.19vw;
+        border: 0.073vw solid #e2e3e4;
+        padding: 1.464vw;
+        position: relative;
+        z-index: 1;
+        min-width: 31.234261vw;
+        width: 31.234261vw;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        // flex-basis: calc(50% - 31.234261vw);
+        box-sizing: border-box;
+
+        .svg-container {
+            margin-bottom: 3.29vh;
+        }
+
+        .box_title {
+            color: $primary;
+            font-family: $urbanist;
+            font-size: 1.46vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 1.648vh;
+        }
+
+        .box_desc {
+            color: #5E5E5E;
+            font-family: $urbanist;
+            font-size: 1.17vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.61vw;
+        }
+
+        &.active {
+            border-radius: 2.19vw;
+            border: 0.073vw solid transparent;
+            background: $light;
+            box-shadow: 0vw 0.14vw 3.22vw 0vw rgba(0, 0, 0, 0.10);
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: url(src/assets/images/pricing/pricing_bg.png);
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
+                right: 0;
+                top: 0;
+                border-radius: 2.19vw;
+                z-index: -1;
+            }
+        }
+
+        &:nth-child(3) {
+            margin-left: 21.961932650073205vw;
+
+            @include min-xxl(){
+                margin-left: 15vw;
+            }
+        }
+
+        &:nth-child(5) {
+            margin-left: 9.882869692532942vw;
+            @include min-xxl(){
+                margin-left: 4.88287vw;
+            }
+        }
+
+
+    }
+
+    .plan-box1 {
+        width: 39%;
+        margin-left: 5vw;
+
+        p {
+            color: $dark-alt;
+            font-family: $urbanist;
+            font-size: 1.264vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.71vw;
+
+        }
+    }
+}
+
+
+.price_desc {
+    width: 48vw;
+    height: 100%;
+    align-self: center;
+
+    h6 {
+        color: $dark;
+        font-family: $urbanist;
+        font-size: 1.46vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.90vw;
+        position: relative;
+        
+        span{
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+
+            .custom-tooltip {
+                position: relative;
+                padding: 1.46vw 1.09vw;
+                background-color: $primary;
+                color: $light !important;
+                border-radius: 0.73vw;
+                white-space: nowrap;
+                box-shadow: 0px 0.29vw 0.585vw rgba(0, 0, 0, 0.2);
+                z-index: 1111;
+                width: 20vw;
+                min-width: 20vw;
+                transition: all 0.3s ease-in-out;
+                // overflow: hidden;
+                word-wrap: break-word; 
+                text-wrap: wrap;
+                margin-left: 1vw;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 1.098vw;
+                    height: 1.098vw;
+                    background-color: $primary;
+                    left: -2%;
+                    bottom: 15%;
+                    transform: rotate(45deg);
+                    z-index: -1;
+                }
+                
+                p{
+                    line-height: 1.46vw;
+                    font-size: 1.02vw;
+                    color: $light !important;
+
+                }
+              }
+              
+
+            svg{
+                margin-left: 0.2vw;
+                width: 0.8784773060029283vw;
+                height: 0.8784773060029283vw ;
+            }
+
+        }
+    }
+
+    .title {
+        padding-left: 4vw;
+    }
+}
+
+.d-column {
+    width: 33.33%;
+    padding: 0vw 1.46vw 0vw;
+
+    .buy-now-btn {
+        a {
+            width: 100%;
+            border-radius: 1.024vw;
+        }
+    }
+
+    &.active {
+        background-color: #EBEDF1;
+    }
+}
+
+.features_wrapper {
+    .feature_content {
+
+        .feature_table {
+            position: relative;
+            margin-top: 7.90vh;
+
+            .table_wrap {
+                position: sticky;
+                top: 0;
+                z-index: 1100;
+                padding-top: 2.94vh;
+                margin: 0px auto 2.94vh;
+                background-color: $background;
+            }
+
+            .table_margin {
+
+                .d-column {
+                    padding: 2.12vw 1.46vw 2.12vw;
+                    width: 33.33%;
+                    border-radius: 1.46vw;
+
+                    .title {
+                        color: $primary;
+                        font-family: $urbanist;
+                        font-size: 1.75vw;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 2.34vw;
+                        margin-bottom: 0.73vw;
+                    }
+
+                    .price {
+                        margin-bottom: 4.11vh;
+
+                        h3 {
+                            color: $dark;
+                            font-family: $urbanist;
+                            font-size: 3.07vw;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 3.36vw;
+
+                            span {
+                                font-size: 1.95vw;
+                                line-height: 3.36vw;
+                                display: inline-block;
+                                margin-right: .21vw;
+                            }
+                        }
+                    }
+
+                    .buy-now-btn {
+                        a {
+                            width: 100%;
+                            border-radius: 1.024vw;
+                        }
+                    }
+
+                    &.active {
+                        background-color: #EBEDF1;
+                    }
+                }
+            }
+
+            .pricing_values {
+
+                .accordion {
+
+                    .accordion-item {
+                        color: $dark;
+                        background-color: transparent;
+                        border: none;
+
+                        .accordion-header {
+                            font-size: 1.75vw;
+
+                            .accordion-button {
+                                background-color: transparent;
+                                color: $primary;
+                                font-family: $urbanist;
+                                font-style: normal;
+                                font-size: 1.75vw;
+                                font-weight: 700;
+                                line-height: 1.90vw;
+                                box-shadow: none;
+                                border-bottom: $background 1px solid;
+                                transition: all 0.3s ease-in-out;
+
+
+                                &::before {
+                                    content: '';
+                                    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"%3E%3Cpath d="M22.4545 19H13.555H5.54103C4.16967 19 3.48398 17.4822 4.45537 16.5924L11.855 9.81452C13.0407 8.72849 14.9692 8.72849 16.1548 9.81452L18.969 12.3922L23.5545 16.5924C24.5116 17.4822 23.8259 19 22.4545 19Z" fill="%23122C65"/%3E%3C/svg%3E');
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    width: 2.05vw;
+                                    height: 2.05vw;
+                                    margin-right: .71vw;
+                                    transition: transform 0.3s ease-in-out;
+                                    transform: rotate(180deg);
+
+                                }
+
+                                &::after {
+                                    content: none;
+                                }
+
+                                &:not(.collapsed) {
+                                    border-bottom: #AAA 1px solid;
+                                    &::before{
+                                        transform: rotate(0deg);
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                        .accordion-body {
+                            padding: 0;
+
+                            .FeatureRow {
+
+
+                                .d-column {
+                                    width: 33.33%;
+                                    text-align: center;
+                                    padding: 0vw 1vw;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    height: 10vh;
+
+                                    &.active, &:nth-child(2) {
+                                        background-color: #EBEDF1;
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
