@@ -38,6 +38,30 @@ export const Content = () => {
                     ease: "slow(9.5, 9.5)",
                 })
             });
+
+            const timeline = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".content_wrap",
+                    start: "-50% top",
+                    end: "bottom bottom",
+                    // markers: true,
+                    scrub: 5,
+                }
+            });
+
+            timeline.from(".content_wrap .heading", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "slow(9.5, 9.5)",
+            })
+            .from(".content_wrap p", {
+                opacity: 0,
+                y: 30,
+                stagger: 0.2,
+                duration: 1,
+                ease: "slow(9.5, 9.5)",
+            }, "-=0.5");
         }
 
         return () => {

@@ -40,12 +40,12 @@
             font-family: $urbanist;
             font-size: 3.80vw;
             font-style: normal;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 4.68vw; 
             
             .span_text{
-                color:$background;
-                opacity:0;
+                color:$dark;
+                opacity:0.2;
                 // transition: all 0.3s ease;
             }
         }

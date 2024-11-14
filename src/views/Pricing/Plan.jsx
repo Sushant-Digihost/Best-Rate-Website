@@ -86,7 +86,7 @@ function Plan() {
         <div className="section pricing_plan plan">
             <Container>
                 <div className="section_heading position-relative z-1">
-                    <h2 className="heading text-dark">Pricing Plans</h2>
+                    <h2 className="heading">Pricing Plans</h2>
                 </div>
                 <div className="pricing_items_group">
                     {pricingPlans.map((plan, index) => (

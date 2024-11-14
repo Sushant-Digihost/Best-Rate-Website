@@ -109,7 +109,7 @@ export const Features = () => {
           {showFeatures && (
             <div className='feature_content'>
               <div className="section_heading position-relative z-1">
-                <h2 className="heading text-dark">Compare all plan features</h2>
+                <h2 className="heading">Compare all plan features</h2>
               </div>
               <div className="feature_table">
                 <div className="table_wrap">
