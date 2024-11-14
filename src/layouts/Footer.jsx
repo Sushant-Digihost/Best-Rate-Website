@@ -463,7 +463,7 @@ const Footer = () => {
               <Row className="align-items-center">
                 <Col sm={6}>
                   <h2>
-                    <a href="#!" class="shine">
+                    <a href="#!" className="shine">
                       Best Rate
                     </a>
                     {/* <img src={shineEffect} alt="Best Rate" /> */}
