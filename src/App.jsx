@@ -63,8 +63,8 @@ gsap.to(scrollRef.current, {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/themes" element={<Theme />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Pricing" element={<Pricing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/choose-domain" element={<ChooseDomain />} />
           <Route path="/search-domain" element={<SearchDomain/>} />
         </Routes>
