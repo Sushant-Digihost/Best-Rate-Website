@@ -3,6 +3,14 @@ import search from "./../../assets/images/icons/search.svg"
 
 export const SearchDomain = () => {
 
+    let [addcart, setAddcart] = useState(false);
+
+    const handleAddToCart = () => {
+        if(!addcart){
+            setAddcart(true);
+        }
+    }
+
     const domainlist=[
         {
             domain:"diigiihost.in",
@@ -94,6 +102,7 @@ export const SearchDomain = () => {
     },[prevscrollpos]);
 
   return (
+    <>
     <section className="section searchdomain">
         <div className="container">
             <div className="row justify-content-center">
@@ -126,7 +135,7 @@ export const SearchDomain = () => {
                     <div className="domainprize">
                         <h4><span>₹</span>1,199/<span className='yr'>yr</span></h4>
                         <div className="premium-btn">
-                            <a href="#!" className="button btn-2">Add To Cart</a>
+                            <a href="#!" className="button btn-2" onClick={handleAddToCart}>Add To Cart</a>
                         </div>
                     </div>
                 </div>
@@ -226,5 +235,23 @@ export const SearchDomain = () => {
             </div>
         </div>
     </section>
+    <div className={`fixed-container ${addcart ? '' : 'd-none'}`}>
+        <div className="container">
+            <div className="d-flex align-items-center justify-content-between">
+                <div className="cart_desc">
+                    <div className="d-flex align-items-center">
+                        <div className="cart_icon">
+                            <img src="src/assets/images/icons/addcart.gif" alt="cart_icon" className='img-fluid' />
+                        </div>
+                        <span>1 item added to cart</span>
+                    </div>
+                </div>
+                <div className="cart-btn">
+                    <a href="" className="button2">Complete Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </>
   )
 }
