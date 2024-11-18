@@ -15,6 +15,7 @@ import { ChooseDomain } from "./views/Domain/ChooseDomain";
 import { SearchDomain } from "./views/Domain/SearchDomain";
 import { AddToCart } from "./views/AddToCart";
 import CtaHome from "./views/Home/CtaHome";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const lenisRef = useRef(null);
