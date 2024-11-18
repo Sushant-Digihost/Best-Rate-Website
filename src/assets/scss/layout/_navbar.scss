@@ -89,5 +89,110 @@
         }
       }
     }
+    .userlog{
+      display: flex;
+      align-items: center;
+      ul{
+        display: flex;
+        gap: 20px ;
+        li{
+          align-items: center;
+          display: flex;
+          a{
+            position: relative;
+            padding: 8px;
+            border-radius: 10px;
+            background: #FFF;
+            img{
+              height: 27px;
+              width: 27px;
+            }
+            .span{
+              position: absolute;
+              background: #122C65;
+              color: #ffffff;
+              height: 20px;
+              width: 20px;
+              top: 3px;
+              right: 0px;
+              border-radius: 50%;
+              font-size: 13px;
+              justify-content: center;
+              place-items: center;
+              display: flex;
+            }
+          }
+          .dropdown{
+            .btn{
+              background-color: transparent ;
+              border: none;
+              color: #303030;
+              text-align: center;
+              font-family: $urbanist;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px; /* 114.286% */
+              padding: 5px 10px;
+              transition: all .3s linear;
+              
+              &.dropdown-toggle::after{
+                display: none;
+              }
+              .userprofile{
+                img{
+                  height: 42px;
+                  width: auto;
+                  border-radius: 50%;
+                  -webkit-border-radius: 50%;
+                  -moz-border-radius: 50%;
+                  -ms-border-radius: 50%;
+                  -o-border-radius: 50%;
+                  margin-right: 10px;
+                }
+              }
+            }
+            .dropdown-menu{
+              border: none;
+              margin-top: 5px;
+              border-radius: 10px;
+              background: #FFF;
+              box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.05);
+              padding: 0;
+              width: 100%;
+              max-width: 250px;
+              
+              a{
+                &:first-child{
+                  padding-top: 15px;
+                }
+                &:last-child{
+                  padding-bottom:15px ;
+                }
+                color: $dark;
+                font-family: $urbanist;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: capitalize;
+                padding: 7px 17px;
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-between;
+                &:active{
+                  background-color: #fff;
+                }
+              }
+            }
+            &:hover,&.show{
+              .btn{
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

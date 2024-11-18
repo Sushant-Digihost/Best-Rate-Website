@@ -13,6 +13,7 @@ import { About } from "./views/About";
 import { Pricing } from "./views/Pricing";
 import { ChooseDomain } from "./views/Domain/ChooseDomain";
 import { SearchDomain } from "./views/Domain/SearchDomain";
+import { AddToCart } from "./views/AddToCart";
 
 
 function App() {
@@ -67,6 +68,7 @@ gsap.to(scrollRef.current, {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/choose-domain" element={<ChooseDomain />} />
           <Route path="/search-domain" element={<SearchDomain/>} />
+          <Route path="/add-to-cart" element={<AddToCart/>} />
         </Routes>
         <Footer />
       </Router>
