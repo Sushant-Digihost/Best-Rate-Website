@@ -24,10 +24,10 @@ const CtaHome = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
-        start: "-30% top",
-        end: "top top",
+        start: "-40% top",
+        end: "10% -120%",
         toggleActions: "play none none reverse",
-        markers: false,
+        // markers: true,
         scroller: "body",
         scrub: 5,
         // markers: true,
