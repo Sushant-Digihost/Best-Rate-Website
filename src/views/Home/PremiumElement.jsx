@@ -55,6 +55,24 @@ export const PremiumElement = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  const slidesData = [
+    { src: review, label: "Review" },
+    { src: callaction, label: "Call to action" },
+    { src: file, label: "Tab" },
+    { src: location, label: "Google map" },
+    { src: table, label: "Pricing table" },
+    { src: share, label: "Social icons" },
+    { src: list, label: "List" },
+  ];
+  
+  // Swiper configurations
+  const swiperConfigs = [
+    { slidesPerView: 6, rtl: false },
+    { slidesPerView: 6, rtl: true },
+    { slidesPerView: 6, rtl: false },
+    { slidesPerView: 6, rtl: true },
+  ];
   return (
     <>
       <section className="premium-element section pt-lg-0" ref={premium}>
@@ -73,279 +91,32 @@ export const PremiumElement = () => {
             </div>
           </div>
           <div className="element-slider">
-            <div className="slider slider-1 mt-0">
-              <Swiper
-                modules={[Autoplay]}
-                spaceBetween={15}
-                //   slidesPerView={'auto'}
-                loop={true}
-                speed={4000}
-                slidesPerView={7}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                }}
-              >
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={review} alt="" />
-                    <span>Review</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={callaction} alt="" />
-                    <span>Call to action</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={file} alt="" />
-                    <span>Tab</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={location} alt="" />
-                    <span>Google map</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={table} alt="" />
-                    <span>Pricing table</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={callaction} alt="" />
-                    <span>Call to action</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={share} alt="" />
-                    <span>Social icons</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={location} alt="" />
-                    <span>Google map</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={list} alt="" />
-                    <span>List</span>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="slider slider-1">
-              <Swiper
-                modules={[Autoplay]}
-                spaceBetween={15}
-                slidesPerView={7}
-                loop={true}
-                style={{ direction: "rtl" }}
-                speed={4000}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                }}
-              >
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Review</span>
-                    <img src={review} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Call to action</span>
-                    <img src={callaction} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Tab</span>
-                    <img src={file} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Google map</span>
-                    <img src={location} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Pricing table</span>
-                    <img src={table} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Call to action</span>
-                    <img src={callaction} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Social icons</span>
-                    <img src={share} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Google map</span> <img src={location} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>List</span>
-                    <img src={list} alt="" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="slider slider-1">
-              <Swiper
-                modules={[Autoplay]}
-                spaceBetween={15}
-                slidesPerView={7}
-                loop={true}
-                speed={4000}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                }}
-              >
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={review} alt="" />
-                    <span>Review</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={callaction} alt="" />
-                    <span>Call to action</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={file} alt="" />
-                    <span>Tab</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={location} alt="" />
-                    <span>Google map</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={table} alt="" />
-                    <span>Pricing table</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={callaction} alt="" />
-                    <span>Call to action</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={share} alt="" />
-                    <span>Social icons</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={location} alt="" />
-                    <span>Google map</span>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <img src={list} alt="" />
-                    <span>List</span>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="slider slider-1">
-              <Swiper
-                modules={[Autoplay]}
-                spaceBetween={15}
-                slidesPerView={7}
-                loop={true}
-                speed={4000}
-                style={{ direction: "rtl" }}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                }}
-              >
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Review</span>
-                    <img src={review} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Call to action</span>
-                    <img src={callaction} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Tab</span>
-                    <img src={file} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Google map</span>
-                    <img src={location} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Pricing table</span>
-                    <img src={table} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Call to action</span> <img src={callaction} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Social icons</span>
-                    <img src={share} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>Google map</span>
-                    <img src={location} alt="" />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="icon-container">
-                    <span>List</span>
-                    <img src={list} alt="" />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
+            {swiperConfigs.map((config, index) => (
+              <div className="slider slider-1" key={index}>
+                <Swiper
+                  modules={[Autoplay]}
+                  spaceBetween={15}
+                  slidesPerView={config.slidesPerView}
+                  loop={true}
+                  speed={4000}
+                  style={config.rtl ? { direction: "rtl" } : {}}
+                  autoplay={{
+                    delay: 0,
+                    disableOnInteraction: false,
+                  }}
+                >
+                  {slidesData.map((slide, i) => (
+                    <SwiperSlide key={i}>
+                      <div className="icon-container">
+                        {!config.rtl && <img src={slide.src} alt="" />}
+                        <span>{slide.label}</span>
+                        {config.rtl && <img src={slide.src} alt="" />}
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            ))}
           </div>
           <div className="premium-btn">
             <a href="#!" className="button btn-2">
