@@ -4,8 +4,8 @@ import logo from "./../assets/images/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import cart from "./../assets/images/icons/cart.svg";
 import user from "./../assets/images/user.png";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="logo">
             <img src={logo} alt="logo" />
           </div>
-          {/* <div className="navlinks">
+          <div className="navlinks">
             <ul>
               <li>
                 <NavLink to="/">Home</NavLink>
@@ -41,8 +41,8 @@ const Navbar = () => {
                 Sign Up
               </a>
             </div>
-          </div> */}
-          <div className="userlog">
+          </div>
+          {/* <div className="userlog">
             <ul>
               <li><a href="#!"><img src={cart} alt="" />  <div className="span">
                   <span>2</span>
@@ -77,7 +77,7 @@ const Navbar = () => {
               </Dropdown>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </Container>
     </nav>

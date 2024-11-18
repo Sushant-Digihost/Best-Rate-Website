@@ -18,48 +18,50 @@ import CtaHome from "./views/Home/CtaHome";
 
 function App() {
   const lenisRef = useRef(null);
-
-  if (!lenisRef.current) {
-    lenisRef.current = new Lenis();
-  }
-
-  const lenis = lenisRef.current;
-
   const scrollRef = useRef(null);
 
-  // Listen for the scroll event and log the event data
-  // lenis.on('scroll', (e) => {
-  //   console.log(e);
-  // });
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis();
+    lenisRef.current = lenis;
 
-  // Use requestAnimationFrame to continuously update the scroll
-  function raf(time) {
-    lenis.raf(time);
+    // Create the animation frame loop
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
     requestAnimationFrame(raf);
-  }
 
-  requestAnimationFrame(raf);
+    // Cleanup on unmount
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
-  // Initialize ScrollTrigger plugin
-  gsap.registerPlugin(ScrollTrigger);
+  useEffect(() => {
+    // Initialize ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
 
-  // Use ScrollTrigger to animate elements on scroll
-  gsap.to(scrollRef.current, {
-    scrollTrigger: {
-      trigger: scrollRef.current,
-      start: "top top",
-      end: "+=1000",
-      scrub: true,
-      pin: true,
-      snap: 1 / 10, // Snap each section into place
-    },
-  });
+    // Animate the scrollRef element
+    if (scrollRef.current) {
+      gsap.to(scrollRef.current, {
+        scrollTrigger: {
+          trigger: scrollRef.current,
+          start: "top top",
+          end: "+=1000",
+          scrub: true,
+          pin: true,
+          snap: 1 / 10, // Snap each section into place
+        },
+      });
+    }
+  }, []);
 
   return (
     <>
-      <div ref={scrollRef}>
+      <ReactLenis root ref={scrollRef}>
         <Router>
-          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -74,7 +76,7 @@ function App() {
           <CtaHome />
           <Footer />
         </Router>
-      </div>
+      </ReactLenis>
     </>
   );
 }

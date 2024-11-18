@@ -13,24 +13,21 @@ import CtaHome from "./Home/CtaHome";
 import { PremiumElement } from "./Home/PremiumElement";
 import { Innovation } from "./Home/Innovation";
 
-
-
 const Home = () => {
   return (
     <>
-      <BrowseBtn/>
+      <BrowseBtn />
       <HeroSection />
       <ExpertyBuild />
       <ReadyToExplore />
       <StartSuccess />
-      <Innovation/>
+      <Innovation />
       {/* <EcosystemBuild /> */}
       <VouchSlider />
       <OneclickCta />
-      <PremiumElement/>
+      <PremiumElement />
       <HomeBlog />
       <Pricing_Plan />
-      <CtaHome />
     </>
   );
 };
