@@ -6,10 +6,18 @@ import cart from "./../assets/images/icons/cart.svg";
 import user from "./../assets/images/user.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  // Define routes where the class should be added
+  const routesWithClass = ["/add-to-cart"];
+
+  // Check if the current route matches
+  const isActive = routesWithClass.includes(location.pathname);
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isActive ? "second-navbar" : ""}`}>
       <Container>
         <div className="navbar-content">
           <div className="logo">

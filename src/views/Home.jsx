@@ -1,5 +1,4 @@
 import React from "react";
-import BrowseBtn from "./Home/BrowseBtn";
 import HeroSection from "./Home/HeroSection";
 import ExpertyBuild from "./Home/ExpertyBuild";
 import ReadyToExplore from "./Home/ReadyToExplore";
@@ -16,7 +15,6 @@ import { Innovation } from "./Home/Innovation";
 const Home = () => {
   return (
     <>
-      <BrowseBtn />
       <HeroSection />
       <ExpertyBuild />
       <ReadyToExplore />

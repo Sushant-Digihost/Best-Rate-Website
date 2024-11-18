@@ -16,6 +16,7 @@ import { SearchDomain } from "./views/Domain/SearchDomain";
 import { AddToCart } from "./views/AddToCart";
 import CtaHome from "./views/Home/CtaHome";
 import ScrollToTop from "./components/ScrollToTop";
+import BrowseBtn from "./views/Home/BrowseBtn";
 
 function App() {
   const lenisRef = useRef(null);
@@ -62,6 +63,7 @@ function App() {
         <Router>
           <ScrollToTop />
           <Navbar />
+          <BrowseBtn />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/themes" element={<Theme />} />
