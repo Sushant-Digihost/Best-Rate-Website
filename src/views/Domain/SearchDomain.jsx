@@ -151,68 +151,70 @@ export const SearchDomain = () => {
                 return (
                   <div className="col-lg-4">
                     <div className="domcon">
-                      <h3>
-                        {name}
-                        <span>.{extension}</span>
-                      </h3>
-                      <div className="prize">
-                        <h4>
-                          <span className="old-prize">
-                            <del>
+                      <div className="domcon-body">
+                        <h3>
+                          {name}
+                          <span>.{extension}</span>
+                        </h3>
+                        <div className="prize">
+                          <h4>
+                            <span className="old-prize">
+                              <del>
+                                <span className="rup">₹</span>
+                                {data.oldprize}
+                              </del>
+                            </span>
+                            <span className="currnt">
                               <span className="rup">₹</span>
-                              {data.oldprize}
-                            </del>
-                          </span>
-                          <span className="currnt">
-                            <span className="rup">₹</span>
-                            {data.current}/<span className="year">yr</span>
-                          </span>
-                        </h4>
-                        <span className="offer">for first year</span>
-                      </div>
-                      <div className="premium-btn">
-                        <a href="#!" className="button2 btn-2">
-                          Make It Yours
-                        </a>
-                      </div>
-                      <hr />
-                      <div className="features">
-                        <ul>
-                          {data.features.map((list) => (
-                            <li>
-                              <span>
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                >
-                                  <g clipPath="url(#clip0_1714_8900)">
-                                    <path
-                                      d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
-                                      fill="#122C65"
-                                    />
-                                    <path
-                                      d="M13.5617 7.09271L8.68666 11.9676C8.54041 12.1139 8.34842 12.1875 8.15643 12.1875C7.96445 12.1875 7.77246 12.1139 7.62621 11.9676L5.18875 9.53017C4.89542 9.23697 4.89542 8.76291 5.18875 8.46971C5.48195 8.17638 5.95587 8.17638 6.24921 8.46971L8.15643 10.3769L12.5013 6.03226C12.7944 5.73892 13.2684 5.73892 13.5617 6.03226C13.8549 6.32545 13.8549 6.79938 13.5617 7.09271Z"
-                                      fill="#8AFAF3"
-                                    />
-                                  </g>
-                                  <defs>
-                                    <clipPath id="clip0_1714_8900">
-                                      <rect
-                                        width="18"
-                                        height="18"
-                                        fill="white"
+                              {data.current}/<span className="year">yr</span>
+                            </span>
+                          </h4>
+                          <span className="offer">for first year</span>
+                        </div>
+                        <div className="premium-btn">
+                          <a href="#!" className="button2 btn-2">
+                            Make It Yours
+                          </a>
+                        </div>
+                        <hr />
+                        <div className="features">
+                          <ul>
+                            {data.features.map((list) => (
+                              <li>
+                                <span>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="18"
+                                    height="18"
+                                    viewBox="0 0 18 18"
+                                    fill="none"
+                                  >
+                                    <g clipPath="url(#clip0_1714_8900)">
+                                      <path
+                                        d="M9 0C4.0372 0 0 4.0372 0 9C0 13.9628 4.0372 18 9 18C13.9628 18 18 13.9628 18 9C18 4.0372 13.9628 0 9 0Z"
+                                        fill="#122C65"
                                       />
-                                    </clipPath>
-                                  </defs>
-                                </svg>
-                              </span>
-                              {list}
-                            </li>
-                          ))}
-                        </ul>
+                                      <path
+                                        d="M13.5617 7.09271L8.68666 11.9676C8.54041 12.1139 8.34842 12.1875 8.15643 12.1875C7.96445 12.1875 7.77246 12.1139 7.62621 11.9676L5.18875 9.53017C4.89542 9.23697 4.89542 8.76291 5.18875 8.46971C5.48195 8.17638 5.95587 8.17638 6.24921 8.46971L8.15643 10.3769L12.5013 6.03226C12.7944 5.73892 13.2684 5.73892 13.5617 6.03226C13.8549 6.32545 13.8549 6.79938 13.5617 7.09271Z"
+                                        fill="#8AFAF3"
+                                      />
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_1714_8900">
+                                        <rect
+                                          width="18"
+                                          height="18"
+                                          fill="white"
+                                        />
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                </span>
+                                {list}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
