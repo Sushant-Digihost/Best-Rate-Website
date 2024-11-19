@@ -387,16 +387,16 @@ export const AddToCart = () => {
                                     <Accordion.Body>
                                        <div className="inputgroup">
                                             <input type="inpute" className="form-control" id="promo" value={promo} onChange={codeinpute} placeholder="Enter promo"/>
-                                            <button className={!isvalisdpromo  ? "btn" : "btn active"} onClick={handelapply} type="button" id="apply">{isApplied && isvalisdpromo  ? "Applied" : "Apply"}</button>
+                                            <button className={!isvalisdpromo  ? "btn" : "btn active"} onClick={handelapply} type="button" id="apply">{ isvalisdpromo  ? "Applied" : "Apply"}</button>
                                        </div>
                                        <div className={promo === "" ? "d-none":"codeworning"}>
-                                            {isApplied && isvalisdpromo &&(   
+                                            { isvalisdpromo &&(   
                                                  <div className="valid">
                                                 <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7386 2.20059C13.061 2.49098 13.089 2.99004 12.8012 3.31528L5.34775 11.7363C5.19927 11.9041 4.98692 12 4.76398 12C4.54104 12 4.32868 11.9041 4.18021 11.7363L1.19883 8.3679C0.91097 8.04264 0.938978 7.54358 1.26139 7.25316C1.58379 6.96285 2.07853 6.99106 2.36639 7.31632L4.76398 10.0252L11.6337 2.26368C11.9215 1.93844 12.4162 1.91019 12.7386 2.20059Z" fill="#008000"/>
                                                 </svg></span><p><span>VALID PROMO CODE</span>. You're getting the best price we've got.</p>
                                             </div>)}
-                                            {isApplied && !isvalisdpromo &&(
+                                            {!isvalisdpromo &&(
                                                  <div className="in valid">
                                                  <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                  <path d="M10.64 8.00051L15.5898 3.0507C16.1367 2.50379 16.1367 1.61713 15.5898 1.07108L14.9299 0.411203C14.3829 -0.135871 13.4962 -0.135871 12.9502 0.411203L8.00051 5.36085L3.0507 0.410178C2.50379 -0.136726 1.61713 -0.136726 1.07108 0.410178L0.410178 1.07005C-0.136726 1.61713 -0.136726 2.50379 0.410178 3.04984L5.36085 8.00051L0.411203 12.9502C-0.135871 13.4972 -0.135871 14.3839 0.411203 14.9299L1.07108 15.5898C1.61798 16.1367 2.50465 16.1367 3.0507 15.5898L8.00051 10.64L12.9502 15.5898C13.4972 16.1367 14.3839 16.1367 14.9299 15.5898L15.5898 14.9299C16.1367 14.3829 16.1367 13.4962 15.5898 12.9502L10.64 8.00051Z" fill="#fd2727"/>
@@ -428,7 +428,7 @@ export const AddToCart = () => {
                                 <h4>{promoitem.codetitle}</h4>
                                 <div className="ogcode">
                                     <h4>{promoitem.code}</h4>
-                                    <button class="cpy-btn" type='button' onClick={()=>hadelcopy(promoitem.code)}>{ promo === promoitem.code && isApplied && isvalisdpromo ? "Applied" : "Apply"}</button>
+                                    <button class="cpy-btn" type='button' onClick={()=>hadelcopy(promoitem.code)}>{ promo === promoitem.code && isvalisdpromo ? "Applied" : "Apply"}</button>
                                 </div>
                             </div>
                             ))
