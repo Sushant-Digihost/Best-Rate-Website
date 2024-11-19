@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import search from "./../../assets/images/icons/search.svg";
+import addcartimg from "./../../assets/images/icons/addcart.gif";
 
 export const SearchDomain = () => {
   let [addcart, setAddcart] = useState(false);
@@ -320,7 +321,7 @@ export const SearchDomain = () => {
               <div className="d-flex align-items-center">
                 <div className="cart_icon">
                   <img
-                    src="src/assets/images/icons/addcart.gif"
+                    src={addcartimg}
                     alt="cart_icon"
                     className="img-fluid"
                   />
@@ -329,7 +330,7 @@ export const SearchDomain = () => {
               </div>
             </div>
             <div className="cart-btn">
-              <a href="" className="button22">
+              <a href="" className="button2">
                 Complete Checkout
               </a>
             </div>

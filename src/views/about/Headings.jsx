@@ -1,5 +1,6 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
+import about_img from './../../assets/images/about_img.png';
 
 export const Headings = () => {
     return (
@@ -35,7 +36,7 @@ export const Headings = () => {
                 </div>
             </div>
             <div className="section_image">
-                <img src="src/assets/images/about_img.png" alt="About_img" className='img-fluid' />
+                <img src={about_img} alt="About_img" className='img-fluid' />
             </div>
 
         </>
