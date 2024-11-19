@@ -33,7 +33,6 @@ const CtaHome = () => {
         start: "-40% top",
         end: "10% -120%",
         toggleActions: "play none none reverse",
-        // markers: true,
         scroller: "body",
         scrub: 5,
         // markers: true,

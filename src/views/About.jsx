@@ -4,6 +4,7 @@ import { Content } from './about/Content';
 import { Values } from './about/Values';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap } from 'gsap';
+import CtaHome from './Home/CtaHome';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +20,7 @@ export const About = () => {
             <Headings />
             <Content />
             <Values />
+            <CtaHome/>
         </>
     );
 };

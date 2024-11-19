@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect  } from 'react';
 import { Container } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const InfoIcon = ({ width = 12, height = 12, fill = "#9C9C9C" }) => {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -94,8 +99,37 @@ export const Features = () => {
   const [showFeatures, setShowFeatures] = useState(false);
 
   const toggleFeatures = () => {
-    setShowFeatures(!showFeatures);
+    setShowFeatures(!showFeatures); 
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+      console.log(toggleFeatures  , "scroll refreshed after 3 seconds")
+    }, 1000);
   }
+  useLayoutEffect(() => {
+    // Get all accordion buttons
+    const accordions = document.querySelectorAll(".accordion-button");
+
+    console.log(accordions, "Accordions found");
+
+
+    const handleAccordionClick = () => {
+      ScrollTrigger.refresh();
+      console.log("ScrollTrigger refreshed after accordion click");
+    };
+
+    // Add click event listener to each accordion
+    accordions.forEach((accordion) =>
+      accordion.addEventListener("click", handleAccordionClick)
+    );
+
+    // Cleanup: Remove event listeners on component unmount
+    return () => {
+      accordions.forEach((accordion) =>
+        accordion.removeEventListener("click", handleAccordionClick)
+      );
+    };
+  }, []);
 
   return (
     <div className={`section features pt-lg-0 ${showFeatures ? '' : 'pb-0'}` }>

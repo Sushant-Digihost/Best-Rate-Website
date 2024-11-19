@@ -9,6 +9,12 @@ import theme3 from "./../../assets/images/theme/theme3.png";
 import theme4 from "./../../assets/images/theme/theme4.png";
 import theme5 from "./../../assets/images/theme/theme5.png";
 
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export const ThemeList = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Themes");
@@ -22,9 +28,19 @@ export const ThemeList = () => {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+      console.log(setIsOpen, "scroll refreshed after 3 seconds")
+    }, 2000);
   };
   const toggleDropdown1 = () => {
     setIsOpen1(!isOpen1);
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+      console.log(setIsOpen1, "scroll refreshed after 3 seconds")
+    }, 2000);
   };
 
   // Close dropdown when clicking outside
