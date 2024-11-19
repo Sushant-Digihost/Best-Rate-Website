@@ -109,27 +109,56 @@
           display: flex;
           a{
             position: relative;
-            padding: 8px;
             border-radius: 10px;
-            background: #FFF;
-            img{
-              height: 27px;
-              width: 27px;
+            padding: 1px;
+            overflow: hidden;
+           
+            &::after{
+                content: "";
+                position: absolute;
+                height: 115%;
+                width: 115%;
+                top: 0;
+                left: 0;
+                border-radius: 0px;
+                // border: 1px solid var(--hower-border, rgba(0, 31, 99, 0.00));
+                background: var(--hower-border, linear-gradient(187deg, rgba(0, 31, 99, 0.00) 37.6%, #122C65 79.95%, #42FFFF 100.76%));
+                background-repeat: no-repeat;
+                animation: cardrotate 2s ease-out infinite;
+                -webkit-animation: cardrotate 2s ease-out infinite;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                -ms-border-radius: 0px;
+                -o-border-radius: 0px;
+                background-size: cover;
             }
-            .span{
-              position: absolute;
-              background: #122C65;
-              color: #ffffff;
-              height: 20px;
-              width: 20px;
-              top: 3px;
-              right: 0px;
-              border-radius: 50%;
-              font-size: 13px;
-              justify-content: center;
-              place-items: center;
-              display: flex;
+            
+            .cardbg{
+              background: #FFF;
+              border-radius: 10px;
+              padding: 8px;
+              position: relative;
+              z-index: 1;
+              img{
+                height: 27px;
+                width: 27px;
+              }
+              .span{
+                position: absolute;
+                background: #122C65;
+                color: #ffffff;
+                height: 20px;
+                width: 20px;
+                top: 5px;
+                right: 3px;
+                border-radius: 50%;
+                font-size: 13px;
+                justify-content: center;
+                place-items: center;
+                display: flex;
+              }
             }
+          
           }
           .dropdown{
             .btn{
@@ -204,4 +233,18 @@
       }
     }
   }
+}
+@keyframes cardrotate {
+  0% {
+    rotate: 0;
+  }
+
+  60% {
+    rotate: 360deg;
+  }
+  to{
+    rotate: 360deg;
+  }
+
+  
 }

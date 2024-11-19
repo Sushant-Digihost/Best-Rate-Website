@@ -52,9 +52,13 @@ const Navbar = () => {
           </div>
           <div className="userlog">
             <ul>
-              <li><a href="#!"><img src={cart} alt="" />  <div className="span">
-                  <span>2</span>
-                </div></a>
+              <li><a href="#!">
+                  <div className="cardbg">
+                    <img src={cart} alt="" />  <div className="span">
+                      <span >2</span>
+                    </div>
+                  </div>
+                </a>
               
               </li>
               <li>   

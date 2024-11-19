@@ -74,7 +74,6 @@ function App() {
             <Route path="/search-domain" element={<SearchDomain />} />
             <Route path="/add-to-cart" element={<AddToCart />} />
           </Routes>
-          <CtaHome />
           <Footer />
         </Router>
       </div>
