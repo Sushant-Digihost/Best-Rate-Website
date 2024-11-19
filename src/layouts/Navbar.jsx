@@ -50,7 +50,7 @@ const Navbar = () => {
               </a>
             </div>
           </div>
-          {/* <div className="userlog">
+          <div className="userlog">
             <ul>
               <li><a href="#!"><img src={cart} alt="" />  <div className="span">
                   <span>2</span>
@@ -85,7 +85,7 @@ const Navbar = () => {
               </Dropdown>
               </li>
             </ul>
-          </div> */}
+          </div>
         </div>
       </Container>
     </nav>

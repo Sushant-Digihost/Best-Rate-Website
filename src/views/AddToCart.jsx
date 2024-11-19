@@ -7,7 +7,101 @@ export const AddToCart = () => {
     const [iscode, setiscode] = useState("0");
     const [lgShow, setLgShow] = useState(false);
     const [promo, setpromo] = useState("");
-    const [isApplied, setApplied] = useState(false)
+    const [isApplied, setApplied] = useState(false);
+    const [featuredata, setfeaturedata] = useState(
+        [
+        {
+            feacturetitle:"Dynamic",
+            feacture:[
+               {
+                "title":"Website Insurance",
+                "price": 799,
+                status:"default"
+               },
+               {
+                "title":"Website Development",
+                "price": 799,
+                status:"delete"
+               },
+               {
+                "title":"Web Hosting",
+                "price": 799,
+                status:"add"
+               },
+               {
+                "title":"Up to 5 Static Pages",
+                "price": 799,
+                status:"add"
+               },
+               {
+                "title":"Up to 3 Contact Forms",
+                "price": 799,
+                status:"default"
+               },
+            ]
+        },
+        {
+            feacturetitle:"Security and maintainance",
+            feacture:[
+               {
+                "title":"Website Insurance",
+                "price": 799,
+                status:"default"
+               },
+               {
+                "title":"Website Development",
+                "price": 799,
+                status:"add"
+               },
+               {
+                "title":"Web Hosting",
+                "price": 799,
+                status:"added"
+               },
+               {
+                "title":"Up to 5 Static Pages",
+                "price": 799,
+                status:"delete"
+               },
+               {
+                "title":"Up to 3 Contact Forms",
+                "price": 799,
+                status:"default"
+               },
+            ]
+        },
+        {
+            feacturetitle:"Hosting and Domain",
+            feacture:[
+               {
+                "title":"Website Insurance",
+                "price": 799,
+                status:"add"
+               },
+               {
+                "title":"Website Development",
+                "price": 799,
+                status:"default"
+               },
+               {
+                "title":"Web Hosting",
+                "price": 799,
+                status:"delete"
+               },
+               {
+                "title":"Up to 5 Static Pages",
+                "price": 799,
+                status:"default"
+               },
+               {
+                "title":"Up to 3 Contact Forms",
+                "price": 799,
+                status:"default"
+               },
+            ]
+        },
+        ]
+    )
 
     const handelcode=(e)=>{
         setiscode("1")
@@ -69,6 +163,31 @@ export const AddToCart = () => {
         setpromo(e.target.value) 
         setApplied(false)
     }
+    const handlebuttonclick = (sectionindex, subindex, action) => {
+        setfeaturedata((prevfeactureData) => {
+            const updatedfeaturedata = prevfeactureData.map((section, index) => {
+                if (index === sectionindex) {
+                    // Create a new array for the `feacture`
+                    const updatedfeacture = [...section.feacture];
+    
+                    if (action === "add") {
+                        updatedfeacture[subindex].status = "added";
+                    } else if (action === "delete") {
+                        updatedfeacture.splice(subindex, 1); // Delete the specific element
+                    }
+    
+                    // Return the updated section with the modified `feacture` array
+                    return { ...section, feacture: updatedfeacture };
+                }
+    
+                // Return unmodified sections
+                return section;
+            });
+    
+            return updatedfeaturedata;
+        });
+    };
+    
 
     const isvalisdpromo = promocode.some((item)=>item.code === promo);
 
@@ -325,7 +444,6 @@ export const AddToCart = () => {
         onHide={() => setLgShow(false)}
         aria-labelledby="example-modal-sizes-title-lg"
         className='mod1'
-        scrollable="true"
       >
         <Modal.Header closeButton>
           
@@ -337,8 +455,95 @@ export const AddToCart = () => {
                     <p>Best for organizations or personalities looking for a dynamic presence and constantly.</p>
                 </div>
                 <div className="list1">
-                    <Accordion defaultActiveKey={['0']} alwaysOpen>
-                        <Accordion.Item eventKey="0">
+                    <Accordion defaultActiveKey={[0]} alwaysOpen>
+                        {
+                            featuredata.map((data,sectionindex)=>(
+                                <Accordion.Item eventKey={sectionindex}>
+                                    <Accordion.Header>{data.feacturetitle}</Accordion.Header>
+                                    <Accordion.Body>
+                                        <div className={`listbody ${sectionindex}`}>
+                                            <ul>
+                                                {data.feacture.map((list,subindex)=>(
+                                                    <li key={subindex}>
+                                                        <h4>{list.title}</h4> 
+                                                        <div className="prise">
+                                                            <h4><span>₹</span>{list.price}</h4>
+                                                            {
+                                                                list.status === "add" && (
+                                                                    <button  className="add" onClick={()=>handlebuttonclick(sectionindex,subindex, "add" )}>
+
+                                                                        <svg className='' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                            <g clip-path="url(#clip0_2146_7234)">
+                                                                            <path d="M18 2C20.206 2 22 3.794 22 6V18C22 20.206 20.206 22 18 22H6C3.794 22 2 20.206 2 18V6C2 3.794 3.794 2 6 2H18ZM18 0H6C2.686 0 0 2.686 0 6V18C0 21.314 2.686 24 6 24H18C21.314 24 24 21.314 24 18V6C24 2.686 21.314 0 18 0Z" fill="#122C65"/>
+                                                                            <path d="M12 18C11.448 18 11 17.553 11 17V7C11 6.448 11.448 6 12 6C12.552 6 13 6.448 13 7V17C13 17.553 12.552 18 12 18Z" fill="#122C65"/>
+                                                                            <path d="M6 11.9968C6 11.4448 6.447 10.9968 7 10.9968H17C17.552 10.9968 18 11.4448 18 11.9968C18 12.5488 17.552 12.9968 17 12.9968H7C6.447 12.9968 6 12.5488 6 11.9968Z" fill="#122C65"/>
+                                                                            </g>
+                                                                            <defs>
+                                                                            <clipPath id="clip0_2146_7234">
+                                                                            <rect width="24" height="24" fill="white"/>
+                                                                            </clipPath>
+                                                                            </defs>
+                                                                        </svg>
+                                                                    
+                                                                    </button>
+                                                                )
+                                                            }
+                                                            {
+                                                                list.status === "delete" && (
+                                                                    <button  className="delete" onClick={()=>handlebuttonclick(sectionindex,subindex, "delete" )}>
+
+                                                                    
+                                                                        <svg className='' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                                            <g clip-path="url(#clip0_2146_7258)">
+                                                                                <path d="M18 2C20.206 2 22 3.794 22 6V18C22 20.206 20.206 22 18 22H6C3.794 22 2 20.206 2 18V6C2 3.794 3.794 2 6 2H18ZM18 0H6C2.686 0 0 2.686 0 6V18C0 21.314 2.686 24 6 24H18C21.314 24 24 21.314 24 18V6C24 2.686 21.314 0 18 0Z" fill="#F34235"/>
+                                                                                <path d="M6 12C6 11.448 6.447 11 7 11H17C17.552 11 18 11.448 18 12C18 12.552 17.552 13 17 13H7C6.447 13 6 12.552 6 12Z" fill="#F34235"/>
+                                                                            </g>
+                                                                            <defs>
+                                                                                <clipPath id="clip0_2146_7258">
+                                                                                <rect width="24" height="24" fill="white"/>
+                                                                                </clipPath>
+                                                                            </defs>
+                                                                        </svg>
+                                                                        
+                                                                    </button>
+                                                                )
+                                                            }
+                                                            {
+                                                                 list.status === "default" && (
+                                                                    <button  className="default" onClick={()=>handlebuttonclick(sectionindex,subindex, "default" )} >
+
+                                                              
+                                                                
+                                                                        <svg className='' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                                            <path d="M4.59502 10.4821C4.48047 10.5973 4.32419 10.6616 4.16185 10.6616C3.99951 10.6616 3.84322 10.5973 3.72868 10.4821L0.269259 7.02209C-0.089753 6.66307 -0.089753 6.08091 0.269259 5.72257L0.702429 5.28929C1.06155 4.93028 1.64304 4.93028 2.00205 5.28929L4.16185 7.4492L9.99792 1.61301C10.357 1.254 10.9391 1.254 11.2975 1.61301L11.7307 2.04629C12.0897 2.4053 12.0897 2.98735 11.7307 3.3458L4.59502 10.4821Z" fill="#9D9D9D"/>
+                                                                        </svg>
+                                                                    
+                                                                    </button>
+                                                                 )
+                                                            }
+                                                           {
+                                                            list.status === "added" && (
+                                                            <button  className="added">
+
+                                                            <svg className='' width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect width="24" height="24" rx="3" fill="#122C65"/>
+                                                                <path d="M10.595 16.4837C10.4805 16.5989 10.3242 16.6632 10.1618 16.6632C9.99951 16.6632 9.84322 16.5989 9.72868 16.4837L6.26926 13.0237C5.91025 12.6647 5.91025 12.0825 6.26926 11.7242L6.70243 11.2909C7.06155 10.9319 7.64304 10.9319 8.00205 11.2909L10.1618 13.4508L15.9979 7.6146C16.357 7.25558 16.9391 7.25558 17.2975 7.6146L17.7307 8.04788C18.0897 8.40689 18.0897 8.98894 17.7307 9.34739L10.595 16.4837Z" fill="#8AFAF3"/>
+                                                            </svg>
+                                                            </button>
+                                                            )
+                                                           }
+                                                            
+                                                        </div>
+                                                    </li>
+                                                ))}    
+                                            </ul>
+                                        </div>
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            ))
+                        }
+                       
+                        {/* <Accordion.Item eventKey="0">
                             <Accordion.Header>Dynamic</Accordion.Header>
                             <Accordion.Body>
                                 <div className="listbody">
@@ -393,18 +598,10 @@ export const AddToCart = () => {
                                         <li><h4>Website Designing</h4> 
                                         <div className="prise">
                                             <h4><span>₹</span>799</h4>
-                                            <a href="#!" className='add'>
+                                            <a href="#!" className='add select'>
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_2146_7234)">
-                                                    <path d="M18 2C20.206 2 22 3.794 22 6V18C22 20.206 20.206 22 18 22H6C3.794 22 2 20.206 2 18V6C2 3.794 3.794 2 6 2H18ZM18 0H6C2.686 0 0 2.686 0 6V18C0 21.314 2.686 24 6 24H18C21.314 24 24 21.314 24 18V6C24 2.686 21.314 0 18 0Z" fill="#122C65"/>
-                                                    <path d="M12 18C11.448 18 11 17.553 11 17V7C11 6.448 11.448 6 12 6C12.552 6 13 6.448 13 7V17C13 17.553 12.552 18 12 18Z" fill="#122C65"/>
-                                                    <path d="M6 11.9968C6 11.4448 6.447 10.9968 7 10.9968H17C17.552 10.9968 18 11.4448 18 11.9968C18 12.5488 17.552 12.9968 17 12.9968H7C6.447 12.9968 6 12.5488 6 11.9968Z" fill="#122C65"/>
-                                                    </g>
-                                                    <defs>
-                                                    <clipPath id="clip0_2146_7234">
-                                                    <rect width="24" height="24" fill="white"/>
-                                                    </clipPath>
-                                                    </defs>
+                                                    <rect width="24" height="24" rx="3" fill="#122C65"/>
+                                                    <path d="M10.595 16.4837C10.4805 16.5989 10.3242 16.6632 10.1618 16.6632C9.99951 16.6632 9.84322 16.5989 9.72868 16.4837L6.26926 13.0237C5.91025 12.6647 5.91025 12.0825 6.26926 11.7242L6.70243 11.2909C7.06155 10.9319 7.64304 10.9319 8.00205 11.2909L10.1618 13.4508L15.9979 7.6146C16.357 7.25558 16.9391 7.25558 17.2975 7.6146L17.7307 8.04788C18.0897 8.40689 18.0897 8.98894 17.7307 9.34739L10.595 16.4837Z" fill="#8AFAF3"/>
                                                 </svg>
                                             </a>
                                         </div>
@@ -545,7 +742,7 @@ export const AddToCart = () => {
                                     </ul>
                                 </div>
                             </Accordion.Body>
-                        </Accordion.Item>
+                        </Accordion.Item> */}
                      
                     </Accordion>
                 

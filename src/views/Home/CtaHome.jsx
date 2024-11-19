@@ -13,9 +13,15 @@ import img1 from "./../../assets/images/pricing/i1.png";
 import img2 from "./../../assets/images/pricing/i2.png";
 import img3 from "./../../assets/images/pricing/i3.png";
 import img4 from "./../../assets/images/pricing/i4.png";
+import { useLocation } from "react-router";
 
 const CtaHome = () => {
   const cta = useRef(null);
+  const ctalocation = useLocation();
+
+  const ctaroutes = ["/add-to-cart","/choose-domain","/search-domain"];
+
+  const isctaactive = ctaroutes.includes(location.pathname);
 
   useEffect(() => {
     const element = cta.current;
@@ -101,7 +107,7 @@ const CtaHome = () => {
   }, []);
 
   return (
-    <div className="section mission" ref={cta}>
+    <div className={`section mission ${isctaactive ? "d-none":""}`} ref={cta}>
       <Container>
         <div className="cta_image">
           <div className="d-flex justify-content-center">

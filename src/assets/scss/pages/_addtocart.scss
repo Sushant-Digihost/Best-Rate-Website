@@ -4,7 +4,7 @@
             color: var(--Heading, #020B1F);
             text-align: left;
             font-family: $ibrand;
-            font-size: 42px;
+            font-size: 3.02vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -26,7 +26,7 @@
                 .catagiry{
                     color: #FFF;
                     font-family: $urbanist;
-                    font-size: 12px;
+                    font-size: 0.878vw;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
@@ -40,7 +40,7 @@
                 h3{
                     color: var(--Primary, #122C65);
                     font-family: $urbanist;
-                    font-size: 26px;
+                    font-size:  1.903vw;
                     font-style: normal;
                     font-weight: 700;
                     line-height: normal;
@@ -49,10 +49,10 @@
                 p{
                     color: #1D1E20;
                     font-family: $urbanist;
-                    font-size: 16px;
+                    font-size: 1.17vw;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: 22px; /* 137.5% */
+                    line-height: normal; /* 137.5% */
                   
                 }
                 .offer{
@@ -66,16 +66,16 @@
                         align-items: center;
                         color: var(--Primary, #122C65);
                         font-family: $urbanist;
-                        font-size: 14px;
+                        font-size: 1.02vw;
                         font-style: normal;
                         font-weight: 500;
-                        line-height: 22px; /* 157.143% */
+                        line-height: normal; /* 157.143% */
                         margin-bottom: 10px;
                     }
                     .offdis{
                         color: #000;
                         font-family: $urbanist;
-                        font-size: 12px;
+                        font-size: 0.878vw;
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
@@ -95,14 +95,14 @@
                 .prize{
                     color: #000;
                     font-family: $urbanist;
-                    font-size: 16px;
+                    font-size: 1.17vw;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
                     .yr{
                         color: #000;
                         font-family: $urbanist;
-                        font-size: 14px;
+                        font-size: 1.02vw;
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
@@ -127,21 +127,21 @@
                     h4{
                         color: var(--Primary, #122C65);
                         font-family: $urbanist;
-                        font-size: 24px;
+                        font-size: 1.756vw;
                         font-style: normal;
                         font-weight: 600;
-                        line-height: 30px; /* 125% */
+                        line-height: normal; /* 125% */
                         span{
-                            font-size: 16px;
+                            font-size: 1.17vw;
                         }
                     }
                     p{
                         color: #000;
                         font-family: $urbanist;
-                        font-size: 18px;
+                        font-size: 1.31vw;
                         font-style: normal;
                         font-weight: 600;
-                        line-height: 30px; /* 166.667% */
+                        line-height: normal; /* 166.667% */
                     }
                     .tool{
                         display: flex;
@@ -174,7 +174,7 @@
                         padding:10px 100px 10px 10px;
                         color: var(--Primary, #122C65);
                         font-family: $urbanist;
-                        font-size: 20px;
+                        font-size: 1.464vw;
                         font-style: normal;
                         font-weight: 600;
                         line-height: normal;
@@ -211,33 +211,33 @@
                         align-items: center;
                         color: var(--Primary, #122C65);
                         font-family: $urbanist;
-                        font-size: 14px;
+                        font-size: 1.02vw;
                         font-style: normal;
                         font-weight: 500;
-                        line-height: 22px; /* 157.143% */
+                        line-height: normal; /* 157.143% */
                         height: fit-content;
                     }
                     .pri{
                         h4{
                             color: #122C65;
                             font-family: $urbanist;
-                            font-size: 24px;
+                            font-size: 1.756vw;
                             font-style: normal;
                             font-weight: 600;
                             line-height: normal;
                             span{
-                                font-size: 16px;
+                                font-size: 1.17vw;
                             }
                         }
                         del{
                             color: #6D7081;
                             font-family:$urbanist;
-                            font-size: 16px;
+                            font-size: 1.17vw;
                             font-style: normal;
                             font-weight: 500;
                             line-height: normal;
                             span{
-                                font-size: 12px;
+                                font-size: 1.02vw;
                             }
                         }
                     }
@@ -247,7 +247,7 @@
                 p{
                     color: #6D7081;
                 font-family: $urbanist;
-                font-size: 16px;
+                font-size: 1.17vw;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
@@ -273,7 +273,7 @@
                 color: #1D1E20;
                 text-align: right;
                 font-family: $urbanist;
-                font-size: 20px;
+                font-size: 1.464vw;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
@@ -292,7 +292,7 @@
                             background: #EEF3F8;
                             color: #1D1E20;
                             font-family: $urbanist;
-                            font-size: 20px;
+                            font-size: 1.464vw;
                             font-style: normal;
                             font-weight: 600;
                             line-height: normal;
@@ -314,14 +314,14 @@
                                 h4{
                                     color: #1D1E20;
                                     font-family: $urbanist;
-                                    font-size: 16px;
+                                    font-size: 1.17vw;
                                     font-style: normal;
                                     font-weight: 600;
-                                    line-height: 22px; /* 137.5% */
+                                    line-height: normal; /* 137.5% */
                                     span{
                                         color: var(--Primary, #122C65);
                                         font-family: $urbanist;
-                                        font-size: 12px;
+                                        font-size:  0.87vw;
                                         font-style: normal;
                                         font-weight: 600;
                                         line-height: normal;
@@ -337,10 +337,10 @@
                                 h4{
                                     color: #122C65;
                                     font-family: $urbanist;
-                                    font-size: 16px;
+                                    font-size: 1.17vw;
                                     font-style: normal;
                                     font-weight: 700;
-                                    line-height: 22px; /* 137.5% */
+                                    line-height: normal; /* 137.5% */
                                 }
                             }
                         }
@@ -360,7 +360,7 @@
                         .accordion-button{
                             color: var(--Primary, #122C65);
                             font-family: $urbanist;
-                            font-size: 16px;
+                            font-size: 1.17vw;
                             font-style: normal;
                             font-weight: 600;
                             padding: 0 10px;
@@ -415,7 +415,7 @@
                                     color: #FFF;
                                     text-align: center;
                                     font-family: $urbanist;
-                                    font-size: 18px;
+                                    font-size: 1.31vw;
                                     font-style: normal;
                                     font-weight: 600;
                                     line-height: normal;
@@ -449,10 +449,10 @@
                                         span{
                                             color: #008000;
                                             font-family: $urbanist;
-                                            font-size: 14px;
+                                            font-size: 1.02vw;
                                             font-style: normal;
                                             font-weight: 600;
-                                            line-height: 20px;
+                                            line-height: normal;
                                             text-transform: capitalize;
                                         }
                                     }
@@ -464,7 +464,7 @@
                                 a{
                                     color: var(--Primary, #122C65);
                                     font-family:  $urbanist;
-                                    font-size: 16px;
+                                    font-size: 1.17vw;
                                     font-style: normal;
                                     font-weight: 600;
                                     line-height: normal;
@@ -497,7 +497,7 @@
             h4{
                 color: #000;
                 font-family:  $urbanist;
-                font-size: 16px;
+                font-size: 1.17vw;
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
@@ -516,7 +516,7 @@
                 h4{
                     color: #000;
                     font-family:  $urbanist;
-                    font-size: 16px;
+                    font-size: 1.17vw;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
@@ -524,7 +524,7 @@
                 .cpy-btn{
                     color: #122C65;
                     font-family: $urbanist;
-                    font-size: 16px;
+                    font-size: 1.17vw;
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
@@ -554,19 +554,19 @@
             h3{
                 color: #122C65;
                 font-family:  $urbanist;
-                font-size: 32px;
+                font-size: 2.34vw;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 32px; /* 100% */
+                line-height: normal; /* 100% */
                 margin-bottom: 10px;
             }
             p{
                 color: #000;
                 font-family:  $urbanist;
-                font-size: 16px;
+                font-size: 1.17vw;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 22px; /* 137.5% */
+                line-height: normal; /* 137.5% */
             }
         }
     
@@ -586,10 +586,10 @@
                         background: #ffffff;
                         color: #122C65;
                         font-family: $urbanist;
-                        font-size: 22px;
+                        font-size:  1.61vw;
                         font-style: normal;
                         font-weight: 700;
-                        line-height: 26px; /* 118.182% */
+                        line-height: normal; /* 118.182% */
                         &:focus{
                             box-shadow: none;
                         }
@@ -618,10 +618,10 @@
                                     h4{
                                         color: #000;
                                         font-family:  $urbanist;
-                                        font-size: 18px;
+                                        font-size: 1.31vw;
                                         font-style: normal;
                                         font-weight: 500;
-                                        line-height: 26px; /* 144.444% */
+                                        line-height: normal; /* 144.444% */
                                     }
                                     .prise{
                                         display: flex;
@@ -630,20 +630,20 @@
                                         h4{
                                             color: #000;
                                             font-family:  $urbanist;
-                                            font-size: 20px;
+                                            font-size: 1.46vw;
                                             font-style: normal;
                                             font-weight: 700;
-                                            line-height: 30px;
+                                            line-height: normal;
                                             span{
                                                 color: #000;
                                                 font-family: "Overlock SC";
-                                                font-size: 14px;
+                                                font-size:  1.02vw;
                                                 font-style: normal;
                                                 font-weight: 400;
-                                                line-height: 30px; /* 214.286% */
+                                                line-height: normal; /* 214.286% */
                                             }
                                         }
-                                        a{
+                                        button{
                                             height: 24px;
                                             width: 24px;
                                             display: flex;
@@ -651,12 +651,15 @@
                                             align-items: center;
                                             border-radius: 3px;
                                             background: #E9E9E9;
+                                            box-shadow: none;
+                                            border: none;
                                             &.add{
                                                 background: transparent;
                                             }
                                             &.delete{
                                                 background: transparent;
                                             }
+                                           
                                        }
                                     }
                                 }
@@ -672,10 +675,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: 32px;
         a{
             color: #122C65;
             font-family: $urbanist;
-            font-size: 18px;
+            font-size:  1.317vw;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
@@ -683,13 +687,13 @@
         }
         h4{
             color: #000;
-            font-family: Urbanist;
-            font-size: 42px;
+            font-family: $urbanist;
+            font-size: 3.07vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 46px;
+            line-height: normal;
             span{
-                font-size: 24px;
+                font-size: 1.75vw;
             }
         }
     }

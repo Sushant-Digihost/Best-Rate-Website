@@ -3,7 +3,16 @@
   position: relative;
   padding: 15px 0;
   background-color: $background;
-
+  &.second-navbar{
+    .navbar-content{
+      .navlinks{
+        display: none;
+      }
+      .userlog{
+        display: flex;
+      }
+    }
+  }
   .container {
     position: relative;
 
@@ -90,7 +99,7 @@
       }
     }
     .userlog{
-      display: flex;
+      display: none;
       align-items: center;
       ul{
         display: flex;
