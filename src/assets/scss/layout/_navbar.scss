@@ -113,7 +113,8 @@
             padding: 1px;
             overflow: hidden;
            
-            &::after{
+            &.cart{
+              &::after{
                 content: "";
                 position: absolute;
                 height: 115%;
@@ -131,6 +132,7 @@
                 -ms-border-radius: 0px;
                 -o-border-radius: 0px;
                 background-size: cover;
+            }
             }
             
             .cardbg{
@@ -239,12 +241,10 @@
     rotate: 360deg;
   }
 
-  60% {
+  100% {
     rotate: 45deg;
   }
-  to{
-    rotate: 360deg;
-  }
+
 
   
 }

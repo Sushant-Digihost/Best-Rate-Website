@@ -52,7 +52,7 @@ const Navbar = () => {
           </div>
           <div className="userlog">
             <ul>
-              <li><a href="#!">
+              <li><a href="#!" className="cart">
                   <div className="cardbg">
                     <img src={cart} alt="" />  <div className="span">
                       <span >2</span>
