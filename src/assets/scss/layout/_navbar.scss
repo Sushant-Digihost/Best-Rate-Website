@@ -236,11 +236,11 @@
 }
 @keyframes cardrotate {
   0% {
-    rotate: 0;
+    rotate: 360deg;
   }
 
   60% {
-    rotate: 360deg;
+    rotate: 45deg;
   }
   to{
     rotate: 360deg;

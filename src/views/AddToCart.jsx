@@ -339,7 +339,7 @@ export const AddToCart = () => {
                                 
                             </div> 
                             <div className="btn_wrap mt-4 pb-0 text-center">
-                                <a href="#!" className="button btn w-100 ">
+                                <a href="#!" className="button  w-100 ">
                                     Complete Checkout
                                 </a>
                             </div>
@@ -415,7 +415,7 @@ export const AddToCart = () => {
                             </Accordion>
                         </div>
                         <div className="btn_wrap mt-4 pb-0 text-center">
-                            <a href="#!" className="button btn w-100 ">
+                            <a href="#!" className="button  w-100 ">
                                 Continue
                             </a>
                         </div>
@@ -428,7 +428,7 @@ export const AddToCart = () => {
                                 <h4>{promoitem.codetitle}</h4>
                                 <div className="ogcode">
                                     <h4>{promoitem.code}</h4>
-                                    <button class="cpy-btn" type='button' onClick={()=>hadelcopy(promoitem.code)}>Copy</button>
+                                    <button class="cpy-btn" type='button' onClick={()=>hadelcopy(promoitem.code)}>{ promo === promoitem.code && isApplied && isvalisdpromo ? "Applied" : "Apply"}</button>
                                 </div>
                             </div>
                             ))
@@ -436,6 +436,11 @@ export const AddToCart = () => {
                       
                     </div>
                 </div>
+            </div>
+            <div className="continueshoping">
+                <a href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6536 7.54643C11.3814 7.23421 10.9076 7.20176 10.5954 7.47395L6.0071 11.474C5.8438 11.6164 5.75 11.8226 5.75 12.0393C5.75 12.2561 5.8438 12.4622 6.0071 12.6046L10.5954 16.6046C10.9076 16.8768 11.3814 16.8444 11.6536 16.5322C11.9258 16.2199 11.8933 15.7462 11.5811 15.474L8.5016 12.7893H17.5C17.9142 12.7893 18.25 12.4535 18.25 12.0393C18.25 11.6251 17.9142 11.2893 17.5 11.2893H8.5016L11.5811 8.60461C11.8933 8.33242 11.9258 7.85865 11.6536 7.54643Z" fill="#122C65"/>
+                    </svg>Continue shopping</a>
             </div>
         </div>
         <Modal

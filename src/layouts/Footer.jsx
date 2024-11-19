@@ -2,12 +2,18 @@ import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 // import  {Link}  from 'react-router-dom';
 import shineEffect from "../assets/images/shine-gif.gif";
+import { useLocation } from "react-router";
 
 const Footer = () => {
+  const footer1 = useLocation();
+
+  const footerroutes = ["/add-to-cart"];
+  
+  const isfooteractive = footerroutes.includes(footer1.pathname);
   return (
     <>
-      <div className="footer">
-        <div className="footer-cta">
+      <div className={`footer ${isfooteractive ? "isuserlog":""}`}>
+        <div className="footer-cta useractive">
           <Container>
             <div className="content">
               <h3 className="text">Looking for help?</h3>
@@ -17,7 +23,7 @@ const Footer = () => {
             </div>
           </Container>
         </div>
-        <div className="footer-liks">
+        <div className="footer-liks useractive">
           <Container>
             <div className="row">
               <div className="col-lg-2 col-md-3">
@@ -250,7 +256,7 @@ const Footer = () => {
         </div>
         <div className="footer-liks">
           <Container>
-            <div className="footer-box">
+            <div className="footer-box useractive">
               <h4>Industries We serve</h4>
               <div className="row">
                 <div className="col-lg-2 col-md-3">
@@ -459,7 +465,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="social mt-xxl-4">
+            <div className="social mt-xxl-4 useractive">
               <Row className="align-items-center">
                 <Col sm={6}>
                   <h2>
@@ -503,7 +509,7 @@ const Footer = () => {
                 © Copyright 2024 <a href="#!">DiigiiHost.</a> ALL RIGHTS
                 RESERVED.
               </p>
-              <div className="term">
+              <div className="term useractive">
                 <a href="#!">Terms of Use</a>
                 <a href="#!">Privacy Policy</a>
               </div>

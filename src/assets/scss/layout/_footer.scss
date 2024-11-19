@@ -329,6 +329,31 @@
       }
     }
   }
+  &.isuserlog{
+    .footer-liks{
+      padding: 0;
+      .copyright{
+        p{
+          color: $light;
+        font-family: $urbanist;
+        font-size: 1.1713vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        a{
+          color: $light;
+          font-size: 1.1713vw;
+          font-style: normal;
+          font-weight: 600;
+        }
+        }
+      }
+    }
+    .useractive{
+      display: none !important;
+    }
+  }
+  
 }
 
 .social {
