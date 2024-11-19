@@ -21,6 +21,7 @@ import BrowseBtn from "./views/Home/BrowseBtn";
 function App() {
   const lenisRef = useRef(null);
 
+
   if (!lenisRef.current) {
     lenisRef.current = new Lenis();
   }
@@ -73,7 +74,6 @@ function App() {
             <Route path="/search-domain" element={<SearchDomain />} />
             <Route path="/add-to-cart" element={<AddToCart />} />
           </Routes>
-
           <CtaHome />
           <Footer />
         </Router>
