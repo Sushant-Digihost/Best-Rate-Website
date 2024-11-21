@@ -17,10 +17,11 @@ import { AddToCart } from "./views/AddToCart";
 import CtaHome from "./views/Home/CtaHome";
 import ScrollToTop from "./components/ScrollToTop";
 import BrowseBtn from "./views/Home/BrowseBtn";
+import Layout from "./layouts/Layout";
+import { Features } from "./views/Pricing/Features";
 
 function App() {
   const lenisRef = useRef(null);
-
 
   if (!lenisRef.current) {
     lenisRef.current = new Lenis();
@@ -62,19 +63,34 @@ function App() {
     <>
       <div ref={scrollRef}>
         <Router>
-          <ScrollToTop />
-          <Navbar />
-          <BrowseBtn />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/themes" element={<Theme />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/choose-domain" element={<ChooseDomain />} />
-            <Route path="/search-domain" element={<SearchDomain />} />
-            <Route path="/add-to-cart" element={<AddToCart />} />
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/themes" element={<Theme />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/choose-domain" element={<ChooseDomain />} />
+              <Route path="/search-domain" element={<SearchDomain />} />
+              <Route path="/add-to-cart" element={<AddToCart />} />
+              <Route path="/features" element={<Features />} />
+              <Route
+                path="/resources"
+                element={
+                  <div
+                    style={{
+                      height: "500px",
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    Resource Page
+                  </div>
+                }
+              />
+            </Route>
           </Routes>
-          <Footer />
         </Router>
       </div>
     </>

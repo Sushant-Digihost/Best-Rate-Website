@@ -1,124 +1,124 @@
 .innovation {
-    .col-container {
-        margin-top: 4.3rem;
-        height: 80vh;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        .colums {
-            align-content: end;
-            transition: all 0.3s linear;
-            position: relative;
-            &.right {
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    width: 1px;
-                    background: #d6d6d6;
-                    height: var(--before-height, 0);
-                }
-            }
-            &.left {
-                &::before {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    width: 1px;
-                    background: #d6d6d6;
-                    height: 100%;
-                    height: var(--before-height, 0);
-                }
-            }
-            .col {
-                padding: 1rem;
-                position: relative;
-                z-index: 11;
-                .ecosystem_item_icon {
-                    margin-bottom: 2.18rem;
-                    opacity: 0;
-                    transition: all 0.3s linear;
-                    svg{
-                        height: 2.19vw;
-                        width: 2.19vw;
-                    }
-                }
-                p {
-                    color: $primary;
-                    font-family: $urbanist;
-                    font-size: 1.75vw;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 2.19vw; 
-                    transition: all 0.3s linear;
-                }
-            }
-            &:hover {
-                background: $light;
-                border-radius: 30px;
-                -webkit-border-radius: 30px;
-                -moz-border-radius: 30px;
-                -ms-border-radius: 30px;
-                -o-border-radius: 30px;
-                box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.10);
-                overflow: hidden;
-                &.right {
-                    &::before {
-                        background: $light;
-                        background-repeat: no-repeat;
-                    }
-                }
-                &.left {
-                    &::before {
-                        background: $light;
-                        background-repeat: no-repeat;
-                    }
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    width: 100%;
-                    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22256%22%20height%3D%22225%22%20viewBox%3D%220%200%20256%20225%22%20fill%3D%22none%22%3E%3Cg%20filter%3D%22url(%23filter0_f_2099_6780)%22%3E%3Cpath%20d%3D%22M-271.834%20-94.068C-252.395%20-164.712%20-161.964%20-213.284%20-91.3198%20-193.845C-20.6761%20-174.405%20129.289%20-38.5512%20109.849%2032.0925C90.4097%20102.736%20-91.0733%2081.4183%20-161.717%2061.9787C-232.361%2042.539%20-291.274%20-23.4243%20-271.834%20-94.068Z%22%20fill%3D%22%23DDFFFD%22/%3E%3C/g%3E%3Cdefs%3E%3Cfilter%20id%3D%22filter0_f_2099_6780%22%20x%3D%22-419.59%22%20y%3D%22-342.157%22%20width%3D%22675.162%22%20height%3D%22567.051%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22/%3E%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22/%3E%3CfeGaussianBlur%20stdDeviation%3D%2272%22%20result%3D%22effect1_foregroundBlur_2099_6780%22/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") !important;
-                    height: 100%;
-                    background-repeat: no-repeat;
-                }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22288%22%20height%3D%22337%22%20viewBox%3D%220%200%20288%20337%22%20fill%3D%22none%22%3E%3Cg%20filter%3D%22url(%23filter0_f_2099_6779)%22%3E%3Cpath%20d%3D%22M521.319%20319.412C501.879%20390.055%20411.448%20438.628%20340.804%20419.189C270.16%20399.749%20120.195%20263.895%20139.635%20193.251C159.075%20122.608%20340.558%20143.925%20411.201%20163.365C481.845%20182.805%20540.758%20248.768%20521.319%20319.412Z%22%20fill%3D%22%23DDFFFD%22/%3E%3C/g%3E%3Cdefs%3E%3Cfilter%20id%3D%22filter0_f_2099_6779%22%20x%3D%22-6.08789%22%20y%3D%220.449219%22%20width%3D%22675.162%22%20height%3D%22567.052%22%20filterUnits%3D%22userSpaceOnUse%22%20color-interpolation-filters%3D%22sRGB%22%3E%3CfeFlood%20flood-opacity%3D%220%22%20result%3D%22BackgroundImageFix%22/%3E%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22/%3E%3CfeGaussianBlur%20stdDeviation%3D%2272%22%20result%3D%22effect1_foregroundBlur_2099_6779%22/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
-                    height: 100%;
-                    right: 0;
-                    background-repeat: no-repeat;
-                    background-position: bottom right;
-                }
-
-                .col {
-                    .ecosystem_item_icon {
-                        opacity: 1;
-                    }
-                    p {
-                        transform: translateY(-20px);
-                        -webkit-transform: translateY(-20px);
-                        -moz-transform: translateY(-20px);
-                        -ms-transform: translateY(-20px);
-                        -o-transform: translateY(-20px);
-                    }
-                }
-            }
-            &:hover + .colums{
-                &.right {
-                    &::before {
-                        display: none;
-                    }
-                }
-                &.left {
-                    &::before {
-                        display: none;
-                    }
-                }
-            }
+  .col-container {
+    margin-top: 4.3rem;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    .colums {
+      align-content: end;
+      transition: all 0.3s linear;
+      position: relative;
+      &.right {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 1px;
+          background: #d6d6d6;
+          height: var(--before-height, 0);
         }
+      }
+      &.left {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 1px;
+          background: #d6d6d6;
+          height: 100%;
+          height: var(--before-height, 0);
+        }
+      }
+      .col {
+        padding: 1rem;
+        position: relative;
+        z-index: 11;
+        .ecosystem_item_icon {
+          margin-bottom: 2.18rem;
+          opacity: 0;
+          transition: all 0.3s linear;
+          svg {
+            height: 2.19vw;
+            width: 2.19vw;
+          }
+        }
+        p {
+          color: $primary;
+          font-family: $urbanist;
+          font-size: 1.75vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 2.19vw;
+          transition: all 0.3s linear;
+        }
+      }
+      &:hover {
+        background: $light;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        box-shadow: 0px 2px 44px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        &.right {
+          &::before {
+            background: $light;
+            background-repeat: no-repeat;
+          }
+        }
+        &.left {
+          &::before {
+            background: $light;
+            background-repeat: no-repeat;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 100%;
+          background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22256%22%20height%3D%22225%22%20viewBox%3D%220%200%20256%20225%22%20fill%3D%22none%22%3E%3Cg%20filter%3D%22url(%23filter0_f_2099_6780)%22%3E%3Cpath%20d%3D%22M-271.834%20-94.068C-252.395%20-164.712%20-161.964%20-213.284%20-91.3198%20-193.845C-20.6761%20-174.405%20129.289%20-38.5512%20109.849%2032.0925C90.4097%20102.736%20-91.0733%2081.4183%20-161.717%2061.9787C-232.361%2042.539%20-291.274%20-23.4243%20-271.834%20-94.068Z%22%20fill%3D%22%23DDFFFD%22/%3E%3C/g%3E%3Cdefs%3E%3Cfilter%20id%3D%22filter0_f_2099_6780%22%20x%3D%22-419.59%22%20y%3D%22-342.157%22%20width%3D%22675.162%22%20height%3D%22567.051%22%20filterUnits%3D%22userSpaceOnUse%22%20colorInterpolationFilters%3D%22sRGB%22%3E%3CfeFlood%20floodOpacity%3D%220%22%20result%3D%22BackgroundImageFix%22/%3E%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22/%3E%3CfeGaussianBlur%20stdDeviation%3D%2272%22%20result%3D%22effect1_foregroundBlur_2099_6780%22/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") !important;
+          height: 100%;
+          background-repeat: no-repeat;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22288%22%20height%3D%22337%22%20viewBox%3D%220%200%20288%20337%22%20fill%3D%22none%22%3E%3Cg%20filter%3D%22url(%23filter0_f_2099_6779)%22%3E%3Cpath%20d%3D%22M521.319%20319.412C501.879%20390.055%20411.448%20438.628%20340.804%20419.189C270.16%20399.749%20120.195%20263.895%20139.635%20193.251C159.075%20122.608%20340.558%20143.925%20411.201%20163.365C481.845%20182.805%20540.758%20248.768%20521.319%20319.412Z%22%20fill%3D%22%23DDFFFD%22/%3E%3C/g%3E%3Cdefs%3E%3Cfilter%20id%3D%22filter0_f_2099_6779%22%20x%3D%22-6.08789%22%20y%3D%220.449219%22%20width%3D%22675.162%22%20height%3D%22567.052%22%20filterUnits%3D%22userSpaceOnUse%22%20colorInterpolationFilters%3D%22sRGB%22%3E%3CfeFlood%20floodOpacity%3D%220%22%20result%3D%22BackgroundImageFix%22/%3E%3CfeBlend%20mode%3D%22normal%22%20in%3D%22SourceGraphic%22%20in2%3D%22BackgroundImageFix%22%20result%3D%22shape%22/%3E%3CfeGaussianBlur%20stdDeviation%3D%2272%22%20result%3D%22effect1_foregroundBlur_2099_6779%22/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
+          height: 100%;
+          right: 0;
+          background-repeat: no-repeat;
+          background-position: bottom right;
+        }
+
+        .col {
+          .ecosystem_item_icon {
+            opacity: 1;
+          }
+          p {
+            transform: translateY(-20px);
+            -webkit-transform: translateY(-20px);
+            -moz-transform: translateY(-20px);
+            -ms-transform: translateY(-20px);
+            -o-transform: translateY(-20px);
+          }
+        }
+      }
+      &:hover + .colums {
+        &.right {
+          &::before {
+            display: none;
+          }
+        }
+        &.left {
+          &::before {
+            display: none;
+          }
+        }
+      }
     }
+  }
 }

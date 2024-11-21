@@ -17,7 +17,7 @@ import FixedVideo from "./../assets/images/video/fixed-btn-animation.mp4";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis, useLenis } from "lenis/react";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -44,30 +44,27 @@ export const Hero = () => {
   const [visibleIndex, setVisibleIndex] = useState(0); // State to track which h2 is visible
 
   useEffect(() => {
-   
     setVisibleIndex(0);
 
-   
     const timer = setInterval(() => {
       setVisibleIndex((prevIndex) => {
-      
-        return (prevIndex + 1) % 3; 
+        return (prevIndex + 1) % 3;
       });
-    }, 3000); 
+    }, 3000);
 
-    return () => clearInterval(timer); 
+    return () => clearInterval(timer);
   }, []);
 
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
-  })
-  
+  });
+
   return (
     <div className="hero">
       <Container>
         <div className="texts">
           <div className="bg-texts">
-          <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
+            <h2 className={visibleIndex === 0 ? "visible" : ""}>Insight</h2>
             <h2 className={visibleIndex === 1 ? "visible" : ""}>Innovation</h2>
             <h2 className={visibleIndex === 2 ? "visible" : ""}>Vision</h2>
           </div>
@@ -160,7 +157,7 @@ export const ExpertyBuild = () => {
       {
         y: 0,
         duration: 1, // Increase duration for smoothness
-        ease: 'expoScale(0.5,7,none)',
+        ease: "expoScale(0.5,7,none)",
       },
       "SS"
     );
@@ -172,7 +169,7 @@ export const ExpertyBuild = () => {
         y: -20,
         opacity: 1,
         duration: 1,
-        ease: 'expoScale(0.5,7,none)',
+        ease: "expoScale(0.5,7,none)",
       },
       "SS"
     );
@@ -184,7 +181,7 @@ export const ExpertyBuild = () => {
         y: -20,
         opacity: 1,
         duration: 1,
-        ease: 'expoScale(0.5,7,none)',
+        ease: "expoScale(0.5,7,none)",
       },
       "<0.2"
     );
@@ -215,7 +212,6 @@ export const ExpertyBuild = () => {
             <h4>Delivered within 24hrs</h4>
             <h4 className="headingss">Know More</h4>
           </a>
-
         </div>
       </Container>
     </div>
@@ -402,14 +398,14 @@ export const ReadyToExplore = () => {
                       fill="none"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M20.3333 5.89613C17.7918 5.89613 14.3792 6.17506 11.9924 6.40653C11.002 6.50258 10.229 7.2872 10.1523 8.28192C9.915 11.3613 9.58065 16.3534 9.58065 19.9987C9.58065 23.644 9.915 28.6362 10.1523 31.7155C10.229 32.7102 11.002 33.4949 11.9924 33.5909C14.3792 33.8224 17.7918 34.1012 20.3333 34.1012C22.8748 34.1012 26.2875 33.8224 28.6743 33.5909C29.6647 33.4949 30.4377 32.7102 30.5143 31.7155C30.7517 28.6362 31.086 23.644 31.086 19.9987C31.086 16.3534 30.7517 11.3613 30.5143 8.28192C30.4377 7.2872 29.6647 6.50258 28.6743 6.40653C26.2875 6.17506 22.8748 5.89613 20.3333 5.89613ZM11.7417 3.85455C14.1349 3.62248 17.6558 3.33203 20.3333 3.33203C23.0108 3.33203 26.5318 3.62248 28.925 3.85455C31.1715 4.07241 32.9158 5.85878 33.0875 8.08611C33.3248 11.1665 33.6667 16.2456 33.6667 19.9987C33.6667 23.7519 33.3248 28.8309 33.0875 31.9114C32.9158 34.1387 31.1715 35.925 28.925 36.1429C26.5318 36.3749 23.0108 36.6654 20.3333 36.6654C17.6558 36.6654 14.1349 36.3749 11.7417 36.1429C9.49515 35.925 7.75092 34.1387 7.57923 31.9114C7.3418 28.8309 7 23.7519 7 19.9987C7 16.2456 7.3418 11.1665 7.57923 8.08611C7.75092 5.85878 9.49515 4.07241 11.7417 3.85455Z"
                         fill="#020B1F"
                       />
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M17.3223 28.5476C17.3223 27.8396 17.9001 27.2656 18.6126 27.2656H22.0536C22.7661 27.2656 23.3439 27.8396 23.3439 28.5476C23.3439 29.2556 22.7661 29.8296 22.0536 29.8296H18.6126C17.9001 29.8296 17.3223 29.2556 17.3223 28.5476Z"
                         fill="#020B1F"
                       />
@@ -440,8 +436,8 @@ export const ReadyToExplore = () => {
                       fill="none"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M1.66797 4.59785C1.66797 3.89876 2.2458 3.33203 2.95859 3.33203H4.22242C6.609 3.33203 8.6221 5.07503 8.91812 7.3977L9.26037 10.0831H33.656C35.497 10.0831 36.9071 11.6891 36.634 13.4748L34.789 25.5395C34.4415 27.8115 32.4515 29.4924 30.109 29.4924H13.6662C11.3237 29.4924 9.33374 27.8115 8.98627 25.5395L6.8447 11.5367L6.84039 11.5059L6.35682 7.7117C6.22227 6.65595 5.30722 5.86368 4.22242 5.86368H2.95859C2.2458 5.86368 1.66797 5.29695 1.66797 4.59785ZM9.61969 12.6147L11.5389 25.164C11.6969 26.1967 12.6014 26.9607 13.6662 26.9607H30.109C31.1738 26.9607 32.0783 26.1967 32.2363 25.164L34.0813 13.0993C34.1203 12.8441 33.919 12.6147 33.656 12.6147H9.61969Z"
                         fill="#020B1F"
                       />
@@ -484,8 +480,8 @@ export const ReadyToExplore = () => {
                         fill="#020B1F"
                       />
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M29.168 6.66667C29.168 8.96785 31.0335 10.8333 33.3346 10.8333C35.6358 10.8333 37.5013 8.96785 37.5013 6.66667C37.5013 4.36548 35.6358 2.5 33.3346 2.5C31.0335 2.5 29.168 4.36548 29.168 6.66667ZM31.668 6.66667C31.668 7.58713 32.4141 8.33333 33.3346 8.33333C34.2551 8.33333 35.0013 7.58713 35.0013 6.66667C35.0013 5.7462 34.2551 5 33.3346 5C32.4141 5 31.668 5.7462 31.668 6.66667Z"
                         fill="#020B1F"
                       />
@@ -546,7 +542,7 @@ export const Home_Blog = () => {
           <div className="row">
             <div className="col md-6 col-lg-4">
               <div className="blog_item">
-              <div className="item_arrow">
+                <div className="item_arrow">
                   <div className="circle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -574,7 +570,6 @@ export const Home_Blog = () => {
                       />
                     </svg>
                   </div>
-                 
                 </div>
                 <div className="item_content">
                   <div className="flex_wrap">
@@ -591,7 +586,7 @@ export const Home_Blog = () => {
             </div>
             <div className="col md-6 col-lg-4">
               <div className="blog_item">
-              <div className="item_arrow">
+                <div className="item_arrow">
                   <div className="circle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -619,7 +614,6 @@ export const Home_Blog = () => {
                       />
                     </svg>
                   </div>
-                 
                 </div>
                 <div className="item_content">
                   <div className="flex_wrap">
@@ -636,7 +630,7 @@ export const Home_Blog = () => {
             </div>
             <div className="col md-6 col-lg-4">
               <div className="blog_item">
-              <div className="item_arrow">
+                <div className="item_arrow">
                   <div className="circle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -664,7 +658,6 @@ export const Home_Blog = () => {
                       />
                     </svg>
                   </div>
-                 
                 </div>
                 <div className="item_content">
                   <div className="flex_wrap">

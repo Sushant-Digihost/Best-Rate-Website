@@ -34,7 +34,7 @@ const ReadyToExplore = () => {
                   "--swiper-pagination-color": "#fff",
                 }}
                 loop={true}
-                spaceBetween={10}
+                spaceBetween={9}
                 // navigation={true}
                 autoplay={{
                   delay: 6000,
@@ -102,7 +102,7 @@ const ReadyToExplore = () => {
               onSwiper={setThumbsSwiper}
               loop={true}
               spaceBetween={10}
-              slidesPerView={5}
+              slidesPerView={4}
               direction="vertical"
               autoplay={{
                 delay: 6000,

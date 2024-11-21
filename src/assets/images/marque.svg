@@ -14,13 +14,13 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_f_463_1166" x="-195" y="-207" width="2104" height="799" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_f_463_1166" x="-195" y="-207" width="2104" height="799" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="90" result="effect1_foregroundBlur_463_1166"/>
 </filter>
-<filter id="filter1_f_463_1166" x="-195" y="-207" width="1904" height="1391" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter1_f_463_1166" x="-195" y="-207" width="1904" height="1391" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="90" result="effect1_foregroundBlur_463_1166"/>
 </filter>

@@ -14,7 +14,7 @@ import { Innovation } from "./Home/Innovation";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <HeroSection />
       <ExpertyBuild />
       <ReadyToExplore />
@@ -26,7 +26,7 @@ const Home = () => {
       <PremiumElement />
       <HomeBlog />
       <Pricing_Plan />
-    </>
+    </div>
   );
 };
 
