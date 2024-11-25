@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-
+import { Link } from 'react-router-dom';    
 // Define a separate PlanItem component to avoid redundancy
 function PlanItem({ title, description, price, features, isActive, onMouseEnter, onMouseLeave }) {
     return (
@@ -32,7 +32,7 @@ function PlanItem({ title, description, price, features, isActive, onMouseEnter,
                     <h1><span>₹</span>{price}</h1>
                 </div>
             </div>
-            <a href="#!" className="bd-btn-link">Get Started</a>
+            <Link to="/choose-domain" className="bd-btn-link">Get Started</Link>
             <ul className="icon_list unordered_list_block">
                 {features.map((feature, index) => (
                     <li key={index}>

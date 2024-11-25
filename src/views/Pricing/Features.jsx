@@ -1,9 +1,10 @@
-import React, { useState, useLayoutEffect  } from 'react';
+import React, { useState, useLayoutEffect, useEffect ,useRef } from 'react';
 import { Container } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link,useLocation } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +13,7 @@ const InfoIcon = ({ width = 12, height = 12, fill = "#9C9C9C" }) => {
 
   return (
     <div
+    
       style={{ position: "relative", display: "inline-block", top:"-1.71vh" }}
       onMouseEnter={() => setShowTooltip(true)}
       onMouseLeave={() => setShowTooltip(false)}
@@ -97,6 +99,18 @@ const FeatureRow = ({ title, icons }) => (
 );
 export const Features = () => {
   const [showFeatures, setShowFeatures] = useState(false);
+  const location = useLocation();
+  const feacturesectionref = useRef(null);
+
+  useEffect(()=>{
+    if(location.hash === "#features-prize"){
+      setShowFeatures(true);
+
+      setTimeout(() => {  
+        feacturesectionref.current?.scrollIntoView({behavior:"smooth",block:"start"})
+      }, 0);
+    } 
+  },[location.hash])
 
   const toggleFeatures = () => {
     setShowFeatures(!showFeatures); 
@@ -132,14 +146,14 @@ export const Features = () => {
   }, []);
 
   return (
-    <div className={`section features pt-lg-0 ${showFeatures ? '' : 'pb-0'}` }>
+    <div  className={`section features pt-lg-0 ${showFeatures ? '' : 'pb-0'}` }>
       <Container>
         <div className="text-center pb-lg-3 toggleFeatures">
           <button className="button" onClick={toggleFeatures}>
             {showFeatures ? 'Close Full list of features' : "Open Full list of features"}
           </button>
         </div>
-        <div className={`features_wrapper ${showFeatures ? 'show mt-5' : ''}`}>
+        <div id='features-prize' ref={feacturesectionref} className={`features_wrapper ${showFeatures ? 'show mt-5' : ''}`}>
           {showFeatures && (
             <div className='feature_content'>
               <div className="section_heading position-relative z-1">
@@ -158,7 +172,7 @@ export const Features = () => {
                             <h3><span>₹</span>799</h3>
                           </div>
                           <div className="buy-now-btn">
-                            <a href="" className="button2">Buy Now</a>
+                            <Link to="/choose-domain" className="button2">Buy Now</Link>
                           </div>
                         </div>
                         <div className="d-column active">
@@ -167,7 +181,7 @@ export const Features = () => {
                             <h3><span>₹</span>1,199</h3>
                           </div>
                           <div className="buy-now-btn">
-                            <a href="" className="button2">Buy Now</a>
+                          <Link to="/choose-domain" className="button2">Buy Now</Link>
                           </div>
                         </div>
                         <div className="d-column">
@@ -176,7 +190,7 @@ export const Features = () => {
                             <h3><span>₹</span>11,199</h3>
                           </div>
                           <div className="buy-now-btn">
-                            <a href="" className="button2">Buy Now</a>
+                          <Link to="/choose-domain" className="button2">Buy Now</Link>
                           </div>
                         </div>
                       </div>

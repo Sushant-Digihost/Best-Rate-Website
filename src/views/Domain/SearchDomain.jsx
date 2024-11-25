@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from "react";
 import search from "./../../assets/images/icons/search.svg";
 import addcartimg from "./../../assets/images/icons/addcart.gif";
+import { useLocation } from "react-router";
 
 export const SearchDomain = () => {
   let [addcart, setAddcart] = useState(false);
+  const [searchquery, setSearchquery] = useState("");
+  const location = useLocation();
+  const {searchQuery: initialQuiry} = location.state || {};
+
+  useEffect(()=>{
+    if(initialQuiry){
+      setSearchquery(initialQuiry);
+    }
+  },[initialQuiry])
+
+  const handelsearch = (e) => {
+     setSearchquery(e.target.value);
+  }
 
   const handleAddToCart = () => {
     if (!addcart) {
@@ -110,7 +124,7 @@ export const SearchDomain = () => {
             <div className="row justify-content-center">
               <div className="col-lg-8">
                 <div className="search">
-                  <input type="search" placeholder="simplyhappypets.in" />
+                  <input type="search" value={searchquery} onChange={handelsearch} placeholder="simplyhappypets.in" />
                   <div className="serchicon">
                     <img src={search} alt="search" />
                   </div>

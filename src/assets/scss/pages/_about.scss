@@ -62,7 +62,7 @@
 
 .about_values{
     min-height: 100vh;
-    height: 100vh;
+    height: 100vh !important;
     position: relative;
     display: flex;
     align-items: center;

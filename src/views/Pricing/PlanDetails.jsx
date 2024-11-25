@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 
 export const PlanDetails = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [hoveredIndex, sethoveredIndex] = useState(0);
 
     // Data for each plan
     const plans = [
@@ -72,17 +73,34 @@ export const PlanDetails = () => {
                     </svg>`,
         },
     ];
-    const planCount = plans.length;
+    // const planCount = plans.length;
 
     // Function to change active class every 5 seconds
-    useEffect(() => {
-        let interval = setInterval(() => {
-            setActiveIndex((prevIndex) => (prevIndex + 1) % planCount); 
-        }, 4000); 
+    // useEffect(() => {
+    //     let interval = setInterval(() => {
+    //         setActiveIndex((prevIndex) => (prevIndex + 1) % planCount); 
+    //     }, 4000); 
 
-        return () => clearInterval(interval);
-    }, [planCount]);
+    //     return () => clearInterval(interval);
+    // }, [planCount]);
 
+    useEffect(()=>{
+        if(hoveredIndex == null){
+            const interval = setInterval(() => {
+                setActiveIndex((prevIndex)=>(prevIndex + 1) % plans.length);
+            }, 3000);
+            return () => clearInterval(interval);
+        }
+    },[hoveredIndex,plans.length])
+
+
+    const handleMouseEnter=(index)=>{
+        sethoveredIndex(index);
+        setActiveIndex(index);
+    }
+    const handleMouseLeave=()=>{
+        sethoveredIndex(null);
+    }
 
     return (
         <div className="plandetails section">
@@ -95,6 +113,8 @@ export const PlanDetails = () => {
                         <div
                             key={index}
                             className={`plan-box ${activeIndex === index ? 'active' : ''}`}
+                            onMouseEnter={()=> handleMouseEnter(index)}
+                            onMouseLeave={handleMouseLeave}
                         >
                             <div
                                 className="svg-container d-inline-block"

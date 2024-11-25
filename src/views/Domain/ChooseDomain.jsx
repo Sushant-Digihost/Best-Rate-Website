@@ -1,12 +1,22 @@
 import { React, useState } from "react";
 import search from "./../../assets/images/icons/search.svg";
+import { useNavigate } from "react-router";
 
 export const ChooseDomain = () => {
   const [buystatus, setbuystatus] = useState("buy");
 
+  const [query, setquery] = useState("");
+  const navigate = useNavigate();
+
   const buyevent = (status) => {
     setbuystatus(status);
   };
+
+  const handelkeypress = (event) => {
+    if(event.key === "Enter" && query !== "") {
+      navigate(`/search-domain`,{state:{searchQuery:query}})
+    }
+  }
   return (
     <section className="section choosedomain">
       <div className="container">
@@ -71,7 +81,13 @@ export const ChooseDomain = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="search">
-                <input type="search" placeholder="simplyhappypets.in" />
+                <input 
+                type="search" 
+                placeholder="simplyhappypets.in"
+                value={query}
+                onChange={(e)=>setquery(e.target.value)}
+                onKeyPress={handelkeypress}
+                />
                 <div className="serchicon">
                   <img src={search} alt="search" />
                 </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import FixedVideo from "./../../assets/images/video/fixed-btn-animation.mp4";
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const Pricing_Plan = () => {
@@ -35,9 +36,9 @@ const Pricing_Plan = () => {
                                 </h1>
                             </div>
                         </div>
-                        <a href="#!" className="bd-btn-link">
+                        <Link to="/pricing#features-prize" className="bd-btn-link">
                             Get Started
-                        </a>
+                        </Link>
                         <ul className="icon_list unordered_list_block">
                             <li>
                                 <span className="list_item_icon">
@@ -138,9 +139,9 @@ const Pricing_Plan = () => {
                                 </h1>
                             </div>
                         </div>
-                        <a href="#!" className="bd-btn-link">
+                        <Link to="/pricing#features-prize" className="bd-btn-link">
                             Get Started
-                        </a>
+                        </Link>
                         <ul className="icon_list unordered_list_block">
                             <li>
                                 <span className="list_item_icon">
@@ -241,9 +242,9 @@ const Pricing_Plan = () => {
                                 </h1>
                             </div>
                         </div>
-                        <a href="#!" className="bd-btn-link">
+                        <Link to="/pricing#features-prize" className="bd-btn-link">
                             Get Started
-                        </a>
+                        </Link>
                         <ul className="icon_list unordered_list_block">
                             <li>
                                 <span className="list_item_icon">
