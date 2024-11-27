@@ -2,22 +2,23 @@ import React, { useEffect, useState } from "react";
 import search from "./../../assets/images/icons/search.svg";
 import addcartimg from "./../../assets/images/icons/addcart.gif";
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 export const SearchDomain = () => {
   let [addcart, setAddcart] = useState(false);
   const [searchquery, setSearchquery] = useState("");
   const location = useLocation();
-  const {searchQuery: initialQuiry} = location.state || {};
+  const { searchQuery: initialQuiry } = location.state || {};
 
-  useEffect(()=>{
-    if(initialQuiry){
+  useEffect(() => {
+    if (initialQuiry) {
       setSearchquery(initialQuiry);
     }
-  },[initialQuiry])
+  }, [initialQuiry]);
 
   const handelsearch = (e) => {
-     setSearchquery(e.target.value);
-  }
+    setSearchquery(e.target.value);
+  };
 
   const handleAddToCart = () => {
     if (!addcart) {
@@ -124,7 +125,12 @@ export const SearchDomain = () => {
             <div className="row justify-content-center">
               <div className="col-lg-8">
                 <div className="search">
-                  <input type="search" value={searchquery} onChange={handelsearch} placeholder="simplyhappypets.in" />
+                  <input
+                    type="search"
+                    value={searchquery}
+                    onChange={handelsearch}
+                    placeholder="simplyhappypets.in"
+                  />
                   <div className="serchicon">
                     <img src={search} alt="search" />
                   </div>
@@ -334,19 +340,15 @@ export const SearchDomain = () => {
             <div className="cart_desc">
               <div className="d-flex align-items-center">
                 <div className="cart_icon">
-                  <img
-                    src={addcartimg}
-                    alt="cart_icon"
-                    className="img-fluid"
-                  />
+                  <img src={addcartimg} alt="cart_icon" className="img-fluid" />
                 </div>
                 <span>1 item added to cart</span>
               </div>
             </div>
             <div className="cart-btn">
-              <a href="" className="button2">
+              <Link to="/add-to-cart" className="button2">
                 Complete Checkout
-              </a>
+              </Link>
             </div>
           </div>
         </div>
