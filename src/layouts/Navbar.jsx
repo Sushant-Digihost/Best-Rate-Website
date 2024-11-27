@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className={`navbar ${isActive ? "second-navbar" : ""}`}>
       <Container>
         <div className="navbar-content">
-          <div className="logo">
+          <div className="logo ">
             <Link to='/'> <img src={logo} alt="logo" /></Link>
           </div>
           <div className="navlinks">
