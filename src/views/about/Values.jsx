@@ -14,7 +14,7 @@ export const Values = () => {
         const scrollConfig = {
             start: "top top",
             end: "200% 90%",
-            scrub: 3,
+            scrub: 2.5,
             pin: true,
             toggleActions: "play none none reverse",
             scroller: "body",

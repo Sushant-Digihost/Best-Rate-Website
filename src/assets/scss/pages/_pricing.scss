@@ -265,6 +265,42 @@
                             width: 100%;
                             border-radius: 1.024vw;
                         }
+                        &.fixed-btn{
+                            display: flex;
+                            justify-content: center;
+                            a{
+                                background-color: transparent;
+                                border: none;
+                                color: $primary;
+                                font-weight: 700;
+                                font-family: $urbanist;
+                                width: fit-content;
+                                padding: 6px 11px;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 0;
+                                    height: 2.5%;
+                                    z-index: 0;
+                                    background: $primary;
+                                    transition: 0.5s all ease;
+                                }
+                            }
+                            &:hover{
+                                a{
+                                    &::after{
+                                        width: 100%;
+                                        transition: 0.5s all ease;
+                                        -webkit-transition: 0.5s all ease;
+                                        -moz-transition: 0.5s all ease;
+                                        -ms-transition: 0.5s all ease;
+                                        -o-transition: 0.5s all ease;
+}
+                                }
+                            }
+                        }
                     }
 
                     &.active {

@@ -171,7 +171,7 @@ export const Features = () => {
                           <div className="price">
                             <h3><span>₹</span>799</h3>
                           </div>
-                          <div className="buy-now-btn">
+                          <div className="buy-now-btn fixed-btn">
                             <Link to="/choose-domain" className="button2">Buy Now</Link>
                           </div>
                         </div>
@@ -180,7 +180,7 @@ export const Features = () => {
                           <div className="price">
                             <h3><span>₹</span>1,199</h3>
                           </div>
-                          <div className="buy-now-btn">
+                          <div className="buy-now-btn fixed-btn">
                           <Link to="/choose-domain" className="button2">Buy Now</Link>
                           </div>
                         </div>
@@ -189,7 +189,7 @@ export const Features = () => {
                           <div className="price">
                             <h3><span>₹</span>11,199</h3>
                           </div>
-                          <div className="buy-now-btn">
+                          <div className="buy-now-btn fixed-btn">
                           <Link to="/choose-domain" className="button2">Buy Now</Link>
                           </div>
                         </div>
@@ -338,6 +338,32 @@ export const Features = () => {
                       </Accordion.Body>
                     </Accordion.Item>
                   </Accordion>
+                  <div className="prising-new-btn">
+                    <div className="d-flex align-items-stretch">
+                      <div className="price_desc">
+                      </div>
+                      <div className="d-flex align-items-stretch gap-2 w-100">
+                        <div className="d-column">
+                          
+                          <div className="buy-now-btn">
+                            <Link to="/choose-domain" className="button2">Buy Now</Link>
+                          </div>
+                        </div>
+                        <div className="d-column active">
+                          
+                          <div className="buy-now-btn">
+                          <Link to="/choose-domain" className="button2">Buy Now</Link>
+                          </div>
+                        </div>
+                        <div className="d-column">
+                          
+                          <div className="buy-now-btn">
+                          <Link to="/choose-domain" className="button2">Buy Now</Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
               </div>
