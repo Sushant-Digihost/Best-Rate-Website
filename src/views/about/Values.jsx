@@ -16,6 +16,7 @@ export const Values = () => {
       end: "200% 90%",
       scrub: 3,
       pin: true,
+      //   pinSpacing: false,
       toggleActions: "play none none reverse",
       scroller: "body",
     };

@@ -21,7 +21,10 @@ const Navbar = () => {
       <Container>
         <div className="navbar-content">
           <div className="logo ">
-            <Link to='/'> <img src={logo} alt="logo" /></Link>
+            <Link to="/">
+              {" "}
+              <img src={logo} alt="logo" />
+            </Link>
           </div>
           <div className="navlinks">
             <ul>
@@ -32,7 +35,7 @@ const Navbar = () => {
                 <NavLink to="/about">About</NavLink>
               </li>
               <li>
-                <NavLink to="#!">Features</NavLink>
+                <NavLink to="/features">Features</NavLink>
               </li>
               <li>
                 <NavLink to="/resources">Resources</NavLink>

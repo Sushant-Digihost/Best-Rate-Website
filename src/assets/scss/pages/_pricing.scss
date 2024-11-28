@@ -1,5 +1,9 @@
 .plan {
   padding: 5.12vw 0 1vw !important;
+
+  @media (min-width: 1400px) {
+    padding: 5.12vw 0 3vw !important;
+  }
 }
 .features {
   .toggleFeatures {

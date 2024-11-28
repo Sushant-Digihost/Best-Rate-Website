@@ -19,6 +19,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import BrowseBtn from "./views/Home/BrowseBtn";
 import Layout from "./layouts/Layout";
 import { Features } from "./views/Pricing/Features";
+import { IoIosArrowUp } from "react-icons/io";
 
 function App() {
   const lenisRef = useRef(null);
@@ -72,7 +73,22 @@ function App() {
               <Route path="/choose-domain" element={<ChooseDomain />} />
               <Route path="/search-domain" element={<SearchDomain />} />
               <Route path="/add-to-cart" element={<AddToCart />} />
-              <Route path="/features" element={<Features />} />
+              <Route
+                path="/features"
+                element={
+                  <div
+                    style={{
+                      height: "500px",
+                      width: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    Features Page
+                  </div>
+                }
+              />
               <Route
                 path="/resources"
                 element={
