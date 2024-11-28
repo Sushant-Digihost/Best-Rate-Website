@@ -57,7 +57,7 @@ export const Innovation = () => {
             ".colums .col2 ",
             { y: 0, opacity: 0 },
             {
-              y: -170,
+              y: -185,
               opacity: 1,
               duration: 2,
               delay: 0.7,
@@ -68,7 +68,7 @@ export const Innovation = () => {
             ".colums .col3 ",
             { y: 0, opacity: 0 },
             {
-              y: -86,
+              y: -70,
               opacity: 1,
               duration: 2,
               delay: 0.7,
@@ -79,7 +79,7 @@ export const Innovation = () => {
             ".colums .col4 ",
             { y: 0, opacity: 0 },
             {
-              y: -255,
+              y: -240,
               opacity: 1,
               duration: 2,
               delay: 0.7,
@@ -90,7 +90,7 @@ export const Innovation = () => {
             ".colums .col5 ",
             { y: 0, opacity: 0 },
             {
-              y: -163,
+              y: -143,
               opacity: 1,
               duration: 2,
               delay: 0.7,

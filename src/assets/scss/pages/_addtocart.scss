@@ -45,6 +45,9 @@
                     font-weight: 700;
                     line-height: normal;
                     margin-bottom: 13px;
+                    @media (min-width:1600px){
+                        font-size:1.703vw;
+                    }
                 }
                 p{
                     color: #1D1E20;
@@ -424,6 +427,9 @@
                                     font-weight: 600;
                                     line-height: normal;
                                     letter-spacing: 0.36px;
+                                    @media (min-width:1600px) {
+                                        font-size: 1.10vw;
+                                    }
                                     &:hover{
                                         background: $primary;
                                         color: $light;
@@ -544,10 +550,19 @@
         a{
             color: var(--Primary, #122C65);
             font-family: $urbanist;
-            font-size: 20px;
+            font-size: 1.364vw;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            @media (min-width:1600px) {
+                font-size: 1.464vw;
+            }
+            svg{
+               @media (min-width:1600px) {
+                height: 40px;
+                width: 40px;
+               }
+            }
         }
     }
  

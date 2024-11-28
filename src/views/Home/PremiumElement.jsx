@@ -43,7 +43,7 @@ export const PremiumElement = () => {
       ".premium-btn",
       { y: 250, opacity: 0 },
       {
-        y: -50,
+        y: -10,
         opacity: 1,
         duration: 2.5,
         delay: 0.7,

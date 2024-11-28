@@ -109,6 +109,9 @@
             line-height: normal;
             text-transform: capitalize;
             transition: all 0.3s linear;
+            @media (min-width:1600px) {
+              font-size: 1vw;
+            }
           }
 
           &:hover {
