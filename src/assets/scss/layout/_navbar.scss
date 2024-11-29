@@ -107,6 +107,7 @@
         li{
           align-items: center;
           display: flex;
+          padding: 10px;
           a{
             position: relative;
             border-radius: 10px;
@@ -117,22 +118,22 @@
               &::after{
                 content: "";
                 position: absolute;
-                height: 115%;
-                width: 115%;
-                top: 0;
-                left: 0;
+                height: 130%;
+                width: 130%;
+                top: -9px;
+                left: -9px;
                 border-radius: 0px;
-                // border: 1px solid var(--hower-border, rgba(0, 31, 99, 0.00));
+                //border: 1px solid var(--hower-border, rgba(0, 31, 99, 0.00));
                 background: var(--hower-border, linear-gradient(187deg, rgba(0, 31, 99, 0.00) 37.6%, #122C65 79.95%, #42FFFF 100.76%));
                 background-repeat: no-repeat;
                 animation: cardrotate 2s ease-out infinite;
-                -webkit-animation: cardrotate 2s ease-out infinite;
-                -webkit-border-radius: 0px;
+                -webkit-border-radius: 50%;
                 -moz-border-radius: 0px;
                 -ms-border-radius: 0px;
                 -o-border-radius: 0px;
                 background-size: cover;
-            }
+                transform: rotate(88deg);
+}
             }
             
             .cardbg{
@@ -142,8 +143,8 @@
               position: relative;
               z-index: 1;
               img{
-                height: 27px;
-                width: 27px;
+                height: 30px;
+                width: 30px;
               }
               .span{
                 position: absolute;
@@ -240,10 +241,14 @@
   0% {
     rotate: 360deg;
   }
-
+ 
   100% {
-    rotate: 45deg;
-  }
+    transform: rotate(88deg);
+    -webkit-transform: rotate(88deg);
+    -moz-transform: rotate(88deg);
+    -ms-transform: rotate(88deg);
+    -o-transform: rotate(88deg);
+}
 
 
   

@@ -14,8 +14,8 @@
   .cardrow {
     gap: 20px 0;
     .addcard {
-      //   border-radius: 20px;
-      //   padding: 20px;
+      //border-radius: 20px;
+      //padding: 20px;
       border-radius: 0.8vw;
       padding: 1.27vw;
       background: #fff;
@@ -50,6 +50,9 @@
           @media (min-width: 1400px) {
             font-size: 1.703vw;
           }
+          @media (min-width: 1600px) {
+            font-size: 1.503vw;
+          }
         }
         p {
           color: #1d1e20;
@@ -58,6 +61,9 @@
           font-style: normal;
           font-weight: 500;
           line-height: normal; /* 137.5% */
+          @media (min-width: 1600px) {
+            font-size: 1.10vw;
+          }
         }
         .offer {
           margin-top: 17px;

@@ -12,11 +12,22 @@ export const ChooseDomain = () => {
     setbuystatus(status);
   };
 
-  const handelkeypress = (event) => {
-    if(event.key === "Enter" && query !== "") {
+  // const handelkeypress = (event) => {
+  //   if(event.key === "Enter" && query !== "") {
+  //     navigate(`/search-domain`,{state:{searchQuery:query}})
+  //   }
+  // }
+   const heandelsearch =()=>{
+    if(query.trim() !== ""){
       navigate(`/search-domain`,{state:{searchQuery:query}})
     }
-  }
+   }
+
+   const handelkeydown =(event)=>{
+    if(event.key ==="Enter"){
+      heandelsearch();
+    }
+   }
   return (
     <section className="section choosedomain">
       <div className="container">
@@ -86,9 +97,9 @@ export const ChooseDomain = () => {
                 placeholder="simplyhappypets.in"
                 value={query}
                 onChange={(e)=>setquery(e.target.value)}
-                onKeyPress={handelkeypress}
+                onKeyDown={handelkeydown}
                 />
-                <div className="serchicon">
+                <div className="serchicon" onClick={heandelsearch}>
                   <img src={search} alt="search" />
                 </div>
               </div>
