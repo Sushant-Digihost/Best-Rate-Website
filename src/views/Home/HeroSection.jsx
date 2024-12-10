@@ -109,7 +109,7 @@ const HeroSection = () => {
               duration: 1,
             });
           },
-        },
+        }, 
         "b"
       )
 
@@ -251,36 +251,59 @@ const HeroSection = () => {
       //     stagger: 0.3,
       // },'a')
 
+        .to(
+          ".v2",
+          {
+            y: -450,
+            duration: 5,
+            delay: 2,
+            display: "block",
+          },
+          "c"
+        )
+
+        .to(
+          ".v3",
+          {
+            y: -450,
+            duration: 5,
+            delay: 2,
+            display: "block",
+          },
+          "d"
+        )
+
       .to(
-        ".v2",
+        ".AppLink",
         {
-          y: -450,
-          duration: 5,
-          delay: 2,
-          display: "block",
+          duration: 2,
+          top: "85%",
+          width: "15rem",
         },
-        "c"
+        "a"
       )
 
       .to(
-        ".v3",
+        ".AppLink .AppSvg",
         {
-          y: -450,
-          duration: 5,
-          delay: 2,
-          display: "block",
+          x: 50,
         },
-        "d"
+        "a"
       )
 
       .to(
-        ".btn_wrapper",
+        ".AppLink .PageDownloadButton-buttonLabel",
         {
-          duration: 5,
-          top: "90%",
+          visibility: "hidden",
+          opacity: 0,
+          y: 50,
         },
         "a"
       );
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   const [activeStep, setActiveStep] = useState(0);
@@ -295,14 +318,62 @@ const HeroSection = () => {
   return (
     <div className="section_banner" ref={domainSectionRef}>
       <div className="hero">
-        <div className="btn_wrapper">
-          <a href="#" className="button">
-            <div className="circle-1"></div>
-            <div className="circle-2"></div>
-            <div className="circle-3"></div>
-            <span>Know More</span>
-          </a>
-        </div>
+        {/* <div className="btn_wrapper">
+            <a href="#" className="button">
+                <div className="circle-1"></div>
+                <div className="circle-2"></div>
+                <div className="circle-3"></div>
+                <span>Know More</span>
+            </a>
+        </div> */}
+
+        <a href="#!" className="AppLink PageDownloadButton-button ButtonHover">
+          <div className="PageDownloadButton-bg">
+            <div className="PageDownloadButton-inner">
+              <span className="AppSvg PageDownloadButton-buttonIcon">
+                <svg
+                  viewBox="0 0 56 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g>
+                    <path
+                      d="M14.4718 27.9453C21.9121 27.9453 27.9437 21.9134 27.9437 14.4726C27.9437 7.0319 21.9121 1 14.4718 1C7.03155 1 1 7.0319 1 14.4726C1 21.9134 7.03155 27.9453 14.4718 27.9453Z"
+                      fill="#FBE74E"
+                      stroke="#001405"
+                      stroke-width="2"
+                      stroke-miterlimit="10"
+                    ></path>
+                  </g>
+                  <g>
+                    <path
+                      d="M27.4719 27.9453C34.9121 27.9453 40.9437 21.9134 40.9437 14.4726C40.9437 7.0319 34.9121 1 27.4719 1C20.0316 1 14 7.0319 14 14.4726C14 21.9134 20.0316 27.9453 27.4719 27.9453Z"
+                      fill="#FFCADC"
+                      stroke="#001405"
+                      stroke-width="2"
+                      stroke-miterlimit="10"
+                    ></path>
+                  </g>
+                  <g>
+                    <path
+                      d="M41.4719 27.9453C48.9121 27.9453 54.9437 21.9134 54.9437 14.4726C54.9437 7.0319 48.9121 1 41.4719 1C34.0316 1 28 7.0319 28 14.4726C28 21.9134 34.0316 27.9453 41.4719 27.9453Z"
+                      fill="#9DC4F5"
+                      stroke="#001405"
+                      stroke-width="2"
+                      stroke-miterlimit="10"
+                    ></path>
+                  </g>
+                </svg>
+              </span>
+              <div
+                data-v-1d492dfd
+                className="PageDownloadButton-buttonLabel --desktop-text-20 --mobile-text-16 --fw-600"
+              >
+                <span>Know More</span>
+              </div>
+            </div>
+          </div>
+        </a>
 
         <Container>
           <div className="texts">

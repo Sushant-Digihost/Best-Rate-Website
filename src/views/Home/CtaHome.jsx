@@ -93,11 +93,11 @@ const CtaHome = () => {
         "SS"
       )
 
-      .fromTo(
-        '.back-text',
-        { y: 100, opacity: 0 },
-        { y:  0, opacity: 1, duration: 0.5, ease: 'expoScale(0.5,7,none)', delay: 1  },
-    );
+    //   .fromTo(
+    //     '.back-text',
+    //     { y: 100, opacity: 0 },
+    //     { y:  0, opacity: 1, ease: 'power2.out' },
+    // );
 
     // Cleanup function to kill ScrollTrigger on component unmount
     return () => {

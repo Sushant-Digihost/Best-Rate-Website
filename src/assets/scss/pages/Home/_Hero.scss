@@ -240,7 +240,7 @@
           border-radius: 40px;
           overflow: hidden;
           border: 3px solid black;
-          width: 90%;
+          width: 85%;
           position: absolute;
 
           video {
@@ -358,4 +358,90 @@
   visibility: visible;
   opacity: 1;
   /* Fully visible */
+}
+
+.AppLink {
+  border-radius: 6rem;
+  color: #0f0f0f;
+  overflow: hidden;
+  padding: 0 4rem;
+  position: absolute;
+  top: 60% ;
+  left: 50%;
+  transform: translate(-50%);
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+
+
+  .PageDownloadButton-bg {
+    background-color: #122c65;
+    border: 2px solid #122c65;
+    border-radius: 6rem;
+    height: 100%;
+    width: 100%;
+    // z-index: -1;
+
+    .PageDownloadButton-inner {
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+      height: 100%;
+      height: 3.5rem;
+      justify-content: center;
+      left: 0;
+      padding: 0 2rem;
+      position: absolute;
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 2;
+
+      .AppSvg {
+        display: block;
+        flex: none;
+        height: 1.6rem;
+        width: 3.3rem;
+        svg {
+          height: 100%;
+          overflow: visible;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .PageDownloadButton-buttonLabel[data-v-1d492dfd] {
+    transition: color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    display: inline-block;
+    color: $secondary;
+  }
+
+  &.hover {
+    .PageDownloadButton-buttonLabel {
+      animation: MoveUpInitial-1d492dfd 0.2s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards,
+        MoveUpEnd-1d492dfd 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s forwards;
+      color: #fff;
+    }
+
+    @keyframes MoveUpInitial-1d492dfd {
+      to {
+        opacity: 0;
+        transform: translate3d(0, -6rem, 0);
+      }
+    }
+
+    @keyframes MoveUpEnd-1d492dfd {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 5rem, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+  }
 }
