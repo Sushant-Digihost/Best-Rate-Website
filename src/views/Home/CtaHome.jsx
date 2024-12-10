@@ -25,20 +25,20 @@ const CtaHome = () => {
 
   useEffect(() => {
     const element = cta.current;
-
+  
     // Create the timeline
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: element,
         start: "-40% top",
-        end: "10% -120%",
+        end: "bottom bottom",
         toggleActions: "play none none reverse",
         scroller: "body",
-        scrub: 5,
+        scrub: 3, // Faster scroll response
         // markers: true,
       },
     });
-
+  
     // Animate each image with a faster transition
     tl.fromTo(
       ".img_1",
@@ -48,8 +48,8 @@ const CtaHome = () => {
         opacity: 1,
         width: "auto",
         y: 0,
-        duration: 0.5,
-        ease: "expoScale(0.5,7,none)",
+        duration: 0.2, // Reduced duration
+        ease: "power1.out", // Faster easing
       },
       "SS"
     )
@@ -61,8 +61,8 @@ const CtaHome = () => {
           x: -14,
           opacity: 1,
           width: "auto",
-          duration: 0.5,
-          ease: "expoScale(0.5,7,none)",
+          duration: 0.2, // Reduced duration
+          ease: "power1.out", // Faster easing
         },
         "SS"
       )
@@ -74,8 +74,8 @@ const CtaHome = () => {
           x: 18,
           opacity: 1,
           width: "auto",
-          duration: 0.5,
-          ease: "expoScale(0.5,7,none)",
+          duration: 0.2, // Reduced duration
+          ease: "power1.out", // Faster easing
         },
         "SS"
       )
@@ -87,23 +87,18 @@ const CtaHome = () => {
           opacity: 1,
           y: -29,
           width: "auto",
-          duration: 0.5,
-          ease: "expoScale(0.5,7,none)",
+          duration: 0.2, // Reduced duration
+          ease: "power1.out", // Faster easing
         },
         "SS"
-      )
-
-    //   .fromTo(
-    //     '.back-text',
-    //     { y: 100, opacity: 0 },
-    //     { y:  0, opacity: 1, ease: 'power2.out' },
-    // );
-
+      );
+  
     // Cleanup function to kill ScrollTrigger on component unmount
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+  
 
   return (
     <div className={`section mission ${isctaactive ? "d-none":""}`} ref={cta}>
