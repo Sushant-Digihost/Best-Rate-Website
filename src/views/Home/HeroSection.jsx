@@ -7,8 +7,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger plug
 const HeroSection = () => {
   const domainSectionRef = useRef(null); // Create a ref for the .domain-name section
 
+
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
+    let AppLink = document.querySelector(".AppLink")
+    let AppSvg = document.querySelector(".AppLink .AppSvg")
+    let buttonLabel = document.querySelector(".AppLink .PageDownloadButton-buttonLabel")
 
     // Total scroll length calculation based on faster animations
     const totalDuration = 5 + 3 * 3 + 3 * 3 + 3 * 3 + 5 * 2; // Adjust for faster durations
@@ -109,7 +114,7 @@ const HeroSection = () => {
               duration: 1,
             });
           },
-        }, 
+        },
         "b"
       )
 
@@ -251,40 +256,46 @@ const HeroSection = () => {
       //     stagger: 0.3,
       // },'a')
 
-        .to(
-          ".v2",
-          {
-            y: -450,
-            duration: 5,
-            delay: 2,
-            display: "block",
-          },
-          "c"
-        )
-
-        .to(
-          ".v3",
-          {
-            y: -450,
-            duration: 5,
-            delay: 2,
-            display: "block",
-          },
-          "d"
-        )
+      .to(
+        ".v2",
+        {
+          y: -450,
+          duration: 5,
+          delay: 2,
+          display: "block",
+        },
+        "c"
+      )
 
       .to(
-        ".AppLink",
+        ".v3",
+        {
+          y: -450,
+          duration: 5,
+          delay: 2,
+          display: "block",
+        },
+        "d"
+      )
+
+      .to(
+        AppLink,
         {
           duration: 2,
           top: "85%",
           width: "15rem",
+
+          onComplete: () => {
+            // Activate hover effects after this animation completes
+            AppLink.addEventListener("mouseenter", handleMouseEnter);
+            AppLink.addEventListener("mouseleave", handleMouseLeave);
+          },
         },
         "a"
       )
 
       .to(
-        ".AppLink .AppSvg",
+        AppSvg,
         {
           x: 50,
         },
@@ -292,17 +303,48 @@ const HeroSection = () => {
       )
 
       .to(
-        ".AppLink .PageDownloadButton-buttonLabel",
+        buttonLabel,
         {
           visibility: "hidden",
           opacity: 0,
-          y: 50,
+          x: 50,
         },
         "a"
       );
 
+          // Add hover effects
+     const handleMouseEnter = () => {
+      gsap.to(AppLink, {
+        width: "auto",
+      });
+      gsap.to(AppSvg, {
+        x: 0,
+      });
+      gsap.to(buttonLabel, {
+        visibility: "visible" ,
+        opacity: 1,
+        x: 0,
+      });
+    };
+
+    const handleMouseLeave = () => {
+      gsap.to(AppLink, {
+        width: "15rem", // Reset to original width
+      });
+      gsap.to(AppSvg, {
+        x: 50,// Reset to original width
+      });
+      gsap.to(buttonLabel, {
+        visibility: "hidden",
+        opacity: 0,
+        x: -50,
+      });
+    };
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      AppLink.removeEventListener("mouseenter", handleMouseEnter);
+      AppLink.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
@@ -383,8 +425,8 @@ const HeroSection = () => {
                   activeStep === 0
                     ? "background-innovation"
                     : activeStep === 1
-                    ? "color-eef3f8"
-                    : "color-default"
+                      ? "color-eef3f8"
+                      : "color-default"
                 }
               >
                 Insight
@@ -394,8 +436,8 @@ const HeroSection = () => {
                   activeStep === 1
                     ? "background-insight"
                     : activeStep === 2
-                    ? "color-eef3f8"
-                    : "color-default"
+                      ? "color-eef3f8"
+                      : "color-default"
                 }
               >
                 Innovation
@@ -405,8 +447,8 @@ const HeroSection = () => {
                   activeStep === 2
                     ? "background-innovation"
                     : activeStep === 0
-                    ? "color-eef3f8"
-                    : "color-default"
+                      ? "color-eef3f8"
+                      : "color-default"
                 }
               >
                 Vision
