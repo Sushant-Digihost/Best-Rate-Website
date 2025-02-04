@@ -3,5 +3,79 @@
     height: 100vh;
     position: relative;
 
+    .div_container{
+        position: relative;
     
+        &::before{
+            content: '';
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            z-index: 5;
+            opacity: 0.8;
+            background: linear-gradient(147deg, #001F63 26.64%, #5C00F3 120.1%);
+        }
+    }
+
+    .sign_in_container{
+        width: 80%;
+        min-height: 60vh;
+        background-color: white;
+        position: absolute;
+        z-index: 6;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 30px;
+        padding: 30px;
+
+        .left_continaer{
+
+            .logo{
+                width: 100px;
+            }
+
+            h1 {
+                color: #122C65;
+                font-family: Urbanist;
+                font-size: 34px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            p{
+                color: #303030;
+                font-family: Urbanist;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+
+        .right_continaer{
+
+            .google{
+                display: inline-flex;
+                height: 48px;
+                padding: 14px 120px 14px 120px;
+                justify-content: flex-end;
+                align-items: center;
+                flex-shrink: 0;
+                border-radius: 10px;
+                border: 1px solid #DBDBDB;
+                background: #FFF;
+
+                h2{
+                    color: #393939;
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+                }
+            }
+        }
+    }
 }
