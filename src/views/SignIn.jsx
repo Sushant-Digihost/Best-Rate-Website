@@ -112,7 +112,7 @@ const SignIn = () => {
             <div className="right_continaer">
               {!showStepForm && (
                 <div className="first-show-buttons">
-                  <div className="google"  onClick={handleShowForm}>
+                  <div className="google" onClick={handleShowForm}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
@@ -298,7 +298,21 @@ const SignIn = () => {
                   )}
 
                   {/* Navigation Buttons */}
-                  <div className="d-flex justify-content-between mt-4 w-100">
+                  <div
+                    className={`${
+                      step === 1
+                        ? "d-flex justify-content-end  mt-4 w-100 align-items-center"
+                        : "d-flex justify-content-between mt-4 w-100 align-items-center"
+                    }`}
+                  >
+                    {step === 1 && (
+                      <Link
+                        to="/sign-up"
+                        className="text-button fw-semibold me-3"
+                      >
+                        Sign Up
+                      </Link>
+                    )}
                     {step > 1 && (
                       <button className="text-button" onClick={prevStep}>
                         <svg

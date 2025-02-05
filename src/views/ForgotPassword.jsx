@@ -187,7 +187,21 @@ const ForgotPassword = () => {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="d-flex justify-content-between mt-4 w-100">
+                <div
+                  className={`${
+                    step === 1
+                      ? "d-flex justify-content-end  mt-4 w-100 align-items-center"
+                      : "d-flex justify-content-between mt-4 w-100 align-items-center"
+                  }`}
+                >
+                  {step === 1 && (
+                    <Link
+                      to="/sign-in"
+                      className="text-button fw-semibold me-3"
+                    >
+                      Sign In
+                    </Link>
+                  )}
                   {step > 1 && (
                     <button className="text-button" onClick={prevStep}>
                       <svg
