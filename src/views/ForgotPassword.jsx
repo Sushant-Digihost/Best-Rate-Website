@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 // import Form from "react-bootstrap/Form";
 
-const SignIn = () => {
+const ForgotPassword = () => {
   const [step, setStep] = useState(1);
   const [showStepForm, setShowStepForm] = useState("");
 
@@ -303,4 +303,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default ForgotPassword;

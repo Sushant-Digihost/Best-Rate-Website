@@ -22,6 +22,7 @@ import { Features } from "./views/Pricing/Features";
 import { IoIosArrowUp } from "react-icons/io";
 import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
+import ForgotPassword from "./views/ForgotPassword";
 
 function App() {
   const lenisRef = useRef(null);
@@ -77,6 +78,7 @@ function App() {
               <Route path="/add-to-cart" element={<AddToCart />} />
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
 
               <Route
                 path="/features"
