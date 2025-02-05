@@ -88,7 +88,6 @@ const SignIn = () => {
                   now={16.67}
                   key={3}
                 />
-               
               </ProgressBar>
             </div>
           </div>
@@ -262,7 +261,7 @@ const SignIn = () => {
 
                   {step === 3 && (
                     <>
-                    <span className="otp">OTP Verification</span>
+                      <span className="otp">OTP Verification</span>
                       <div className="otp-input-container">
                         {[...Array(6)].map((_, index) => (
                           <input
@@ -276,8 +275,8 @@ const SignIn = () => {
                         ))}
                       </div>
                       <span className="resent-otp">
-                      Didn’t get the code? <Link to="#!">Resend Otp </Link>
-                  </span>
+                        Didn’t get the code? <Link to="#!">Resend Otp </Link>
+                      </span>
                     </>
                   )}
 

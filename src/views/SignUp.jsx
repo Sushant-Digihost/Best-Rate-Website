@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import bg from "../assets/images/login.mp4";
 import logo from "../assets/images/FINAL-JPG.png";
 import {
@@ -34,6 +34,31 @@ const SignUp = () => {
   };
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
+
+  const inputRefs = useRef([]);
+
+  const handleKeyDown = (e, index) => {
+    if (
+      !/[0-9]/.test(e.key) &&
+      !["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
+    ) {
+      e.preventDefault();
+    }
+
+    if (/[0-9]/.test(e.key)) {
+      e.target.value = e.key; // Ensure single character entry
+      const nextInput = inputRefs.current[index + 1];
+      if (nextInput) nextInput.focus();
+      e.preventDefault(); // Prevent default behavior
+    }
+
+    if (e.key === "Backspace") {
+      e.target.value = ""; // Clear the input
+      const prevInput = inputRefs.current[index - 1];
+      if (prevInput) prevInput.focus();
+      e.preventDefault();
+    }
+  };
 
   return (
     <div className="sign_in">
@@ -281,34 +306,50 @@ const SignUp = () => {
                     </>
                   )}
                   {step === 5 && (
-                    <FloatingLabel
-                      controlId="floatingInput"
-                      label="Pin"
-                      className="mb-3 form-floating-lb"
-                    >
-                      <Form.Control
-                        className="form-float"
-                        type="password"
-                        placeholder="name@example.com"
-                      />
-                    </FloatingLabel>
+                    <>
+                      <span className="otp">OTP Verification</span>
+                      <div className="otp-input-container">
+                        {[...Array(6)].map((_, index) => (
+                          <input
+                            key={index}
+                            type="text"
+                            maxLength="1"
+                            className="otp-input"
+                            ref={(el) => (inputRefs.current[index] = el)}
+                            onKeyDown={(e) => handleKeyDown(e, index)}
+                          />
+                        ))}
+                      </div>
+                      <span className="resent-otp">
+                        Didn’t get the code? <Link to="#!">Resend Otp </Link>
+                      </span>
+                    </>
                   )}
                   {step === 6 && (
-                    <FloatingLabel
-                      controlId="floatingInput"
-                      label="OTP"
-                      className="mb-3 form-floating-lb"
-                    >
-                      <Form.Control
-                        className="form-float"
-                        type="password"
-                        placeholder="name@example.com"
-                      />
-                    </FloatingLabel>
+                    <>
+                      <span className="otp">Set Pin</span>
+                      <div className="otp-input-container">
+                        {[...Array(6)].map((_, index) => (
+                          <input
+                            key={index}
+                            type="text"
+                            maxLength="1"
+                            className="otp-input"
+                            ref={(el) => (inputRefs.current[index] = el)}
+                            onKeyDown={(e) => handleKeyDown(e, index)}
+                          />
+                        ))}
+                      </div>
+                    </>
                   )}
 
                   {/* Navigation Buttons */}
                   <div className="d-flex justify-content-between mt-4 w-100 align-items-center">
+                    {step === 1 && (
+                      <Link to="/sign-in" className="text-button fw-semibold">
+                        Sign in
+                      </Link>
+                    )}
                     {step > 1 && (
                       <button className="text-button" onClick={prevStep}>
                         <svg
