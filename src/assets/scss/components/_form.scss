@@ -9,3 +9,25 @@
     box-shadow: 0 0 0 0.15rem #dbe5fb;
   }
 }
+
+.sign_in {
+  .progress {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+    background: transparent;
+    border-radius: 0;
+    align-items: center;
+    .progress-bar {
+      border-radius: 10px;
+      height: 7px;
+      width: 30px !important;
+      &.bg-success {
+        background: #00ba00 !important;
+      }
+      &.bg-secondary {
+        background: #cfcfcf !important;
+      }
+    }
+  }
+}

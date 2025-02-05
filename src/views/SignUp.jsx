@@ -49,7 +49,38 @@ const SignUp = () => {
               </div>
               <h1>Create account</h1>
               <p>Lorem Ipsum is simply dummy text of the printing</p>
-              <ProgressBar now={(step / 6) * 100} className="mb-3" />
+              <ProgressBar>
+                <ProgressBar
+                  variant={step >= 1 ? "success" : "secondary"}
+                  now={16.67}
+                  key={1}
+                />
+                <ProgressBar
+                  variant={step >= 2 ? "success" : "secondary"}
+                  now={16.67}
+                  key={2}
+                />
+                <ProgressBar
+                  variant={step >= 3 ? "success" : "secondary"}
+                  now={16.67}
+                  key={3}
+                />
+                <ProgressBar
+                  variant={step >= 4 ? "success" : "secondary"}
+                  now={16.67}
+                  key={4}
+                />
+                <ProgressBar
+                  variant={step >= 5 ? "success" : "secondary"}
+                  now={16.67}
+                  key={5}
+                />
+                <ProgressBar
+                  variant={step >= 6 ? "success" : "secondary"}
+                  now={16.67}
+                  key={6}
+                />
+              </ProgressBar>
             </div>
           </div>
           <div className="col-md-6">
