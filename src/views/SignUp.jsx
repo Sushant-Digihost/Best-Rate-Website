@@ -73,7 +73,39 @@ const SignUp = () => {
                 <img src={logo} alt="" />
               </div>
               <h1>Create account</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
+              {step === 1 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
+              {step === 2 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
+              {step === 3 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
+              {step === 4 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
+              {step === 5 && (
+                <>
+                  <p>
+                    Please enter OTP to verify your account. A OTP has been sent
+                    to +91XXXXXXX576/sahXXXXXX@gmail.com
+                  </p>
+                </>
+              )}
+              {step === 6 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
               <ProgressBar>
                 <ProgressBar
                   variant={step >= 1 ? "success" : "secondary"}

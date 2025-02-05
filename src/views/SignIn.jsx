@@ -71,7 +71,24 @@ const SignIn = () => {
                 <img src={logo} alt="" />
               </div>
               <h1>Sign In</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
+              {step === 1 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
+              {step === 2 && (
+                <>
+                  <p>Lorem Ipsum is simply dummy text of the printing</p>
+                </>
+              )}
+              {step === 3 && (
+                <>
+                  <p>
+                    Please enter OTP to verify your account. A OTP has been sent
+                    to +91XXXXXXX576/sahXXXXXX@gmail.com
+                  </p>
+                </>
+              )}
               <ProgressBar>
                 <ProgressBar
                   variant={step >= 1 ? "success" : "secondary"}
