@@ -69,7 +69,7 @@
     .right_continaer {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: baseline;
 
       .google {
         display: inline-flex;
@@ -121,6 +121,17 @@
       }
     }
   }
+
+  .forgot_password {
+    color: #122c65;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: -0.28px;
+    padding-left: 15px;
+  }
 }
 
 .form-floating-lb {
@@ -131,5 +142,29 @@
     border-radius: 0;
     outline: 0;
     box-shadow: none;
+  }
+}
+
+// Add new OTP styles
+.otp-input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+
+  .otp-input {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #c9c9c9;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-family: Urbanist;
+    
+    &:focus {
+      border-color: #122c65;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(18, 44, 101, 0.1);
+    }
   }
 }

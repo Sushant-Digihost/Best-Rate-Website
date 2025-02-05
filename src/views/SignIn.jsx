@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import bg from "../assets/images/login.mp4";
 import logo from "../assets/images/FINAL-JPG.png";
 import {
@@ -33,6 +33,32 @@ const SignIn = () => {
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
 
+
+  const inputRefs = useRef([]);
+
+  const handleKeyDown = (e, index) => {
+    if (
+      !/[0-9]/.test(e.key) &&
+      !["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab"].includes(e.key)
+    ) {
+      e.preventDefault();
+    }
+
+    if (/[0-9]/.test(e.key)) {
+      e.target.value = e.key; // Ensure single character entry
+      const nextInput = inputRefs.current[index + 1];
+      if (nextInput) nextInput.focus();
+      e.preventDefault(); // Prevent default behavior
+    }
+
+    if (e.key === "Backspace") {
+      e.target.value = ""; // Clear the input
+      const prevInput = inputRefs.current[index - 1];
+      if (prevInput) prevInput.focus();
+      e.preventDefault();
+    }
+  };
+
   return (
     <Container className="sign_in">
       <div className="div_container">
@@ -46,7 +72,7 @@ const SignIn = () => {
                 <img src={logo} alt="" />
               </div>
               <h1>Sign In</h1>
-              <p>Lorem Ipsum is simply dummy text of the printing</p>
+              <p>Lorem Ipsum is simply dummy text of the printing</p>
               <ProgressBar now={(step / 3) * 100} className="mb-3" />
             </div>
           </div>
@@ -62,7 +88,7 @@ const SignIn = () => {
                       viewBox="0 0 20 20"
                       fill="none"
                     >
-                      <g clip-path="url(#clip0_3202_3112)">
+                      <g clipPath="url(#clip0_3202_3112)">
                         <path
                           d="M4.6875 9.9999C4.6875 9.009 4.96051 8.08076 5.4348 7.28596V3.91455H2.0634C0.725312 5.65236 0 7.77029 0 9.9999C0 12.2295 0.725312 14.3474 2.0634 16.0853H5.4348V12.7138C4.96051 11.919 4.6875 10.9908 4.6875 9.9999Z"
                           fill="#FBBD00"
@@ -105,7 +131,7 @@ const SignIn = () => {
                       viewBox="0 0 20 20"
                       fill="none"
                     >
-                      <g clip-path="url(#clip0_3202_3123)">
+                      <g clipPath="url(#clip0_3202_3123)">
                         <path
                           d="M12.7809 3.24623C13.4334 2.40499 13.9271 1.21499 13.7483 0C12.6821 0.0737496 11.4359 0.756246 10.7096 1.64499C10.0471 2.45124 9.50212 3.64873 9.71462 4.81247C10.8796 4.84872 12.0834 4.14998 12.7809 3.24623Z"
                           fill="#455A64"
@@ -149,26 +175,26 @@ const SignIn = () => {
                       fill="none"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M7.28694 10.6396L1.27344 16.6531C1.45439 16.7396 1.65389 16.7857 1.85837 16.7857H18.1441C18.3486 16.7857 18.5481 16.7396 18.729 16.6531L12.7155 10.6396L11.6008 11.7548C11.1765 12.1786 10.6011 12.4171 10.0012 12.4171C9.40136 12.4171 8.82593 12.1786 8.40161 11.7548L7.28694 10.6396Z"
                         fill="#3DADED"
                       />
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M19.369 3.98657C19.4554 4.16752 19.5015 4.36702 19.5015 4.5715V15.4286C19.5015 15.6331 19.4554 15.8326 19.369 16.0136L13.3555 10.0001L19.369 3.98657Z"
                         fill="#3DADED"
                       />
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0.632547 3.98657L6.64605 10.0001L0.632547 16.0136C0.546145 15.8326 0.5 15.6331 0.5 15.4286C0.5 12.6474 0.5 7.35274 0.5 4.5715C0.5 4.36702 0.546145 4.16752 0.632547 3.98657Z"
                         fill="#3DADED"
                       />
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M18.729 3.3469C18.5481 3.2605 18.3486 3.21436 18.1441 3.21436C14.359 3.21436 5.64344 3.21436 1.85837 3.21436C1.65389 3.21436 1.45439 3.2605 1.27344 3.3469L9.04172 11.1147C9.29596 11.3694 9.64112 11.5124 10.0012 11.5124C10.3613 11.5124 10.7065 11.3694 10.9607 11.1147L18.729 3.3469Z"
                         fill="#3DADED"
                       />
@@ -178,7 +204,7 @@ const SignIn = () => {
                   </div>
 
                   <p>
-                    Don’t have an account? <Link to="#!">Sign up </Link>
+                    Don't have an account? <Link to="#!">Sign up </Link>
                   </p>
                 </div>
               )}
@@ -188,7 +214,7 @@ const SignIn = () => {
                   {step === 1 && (
                     <FloatingLabel
                       controlId="floatingInput"
-                      label="Enter your name"
+                      label="Enter your email id"
                       className="mb-3 form-floating-lb"
                     >
                       <Form.Control
@@ -200,31 +226,37 @@ const SignIn = () => {
                   )}
 
                   {step === 2 && (
-                    <FloatingLabel
-                      controlId="floatingInput"
-                      label="Enter your email id"
-                      className="mb-3 form-floating-lb"
-                    >
-                      <Form.Control
-                        className="form-float"
-                        type="password"
-                        placeholder="name@example.com"
-                      />
-                    </FloatingLabel>
+                    <>
+                      <FloatingLabel
+                        controlId="floatingInput"
+                        label="Set Password"
+                        className="mb-3 form-floating-lb"
+                      >
+                        <Form.Control
+                          className="form-float"
+                          type="password"
+                          placeholder="Enter password"
+                        />
+                      </FloatingLabel>
+                      <Link to="#!" className="forgot_password">Forgot password?</Link>
+                    </>
                   )}
 
                   {step === 3 && (
-                    <FloatingLabel
-                      controlId="floatingInput"
-                      label="Set Password"
-                      className="mb-3 form-floating-lb"
-                    >
-                      <Form.Control
-                        className="form-float"
-                        type="password"
-                        placeholder="name@example.com"
-                      />
-                    </FloatingLabel>
+                    <>
+                        <div className="otp-input-container">
+      {[...Array(6)].map((_, index) => (
+        <input
+          key={index}
+          type="text"
+          maxLength="1"
+          className="otp-input"
+          ref={(el) => (inputRefs.current[index] = el)}
+          onKeyDown={(e) => handleKeyDown(e, index)}
+        />
+      ))}
+    </div>
+                    </>
                   )}
 
                   {/* Navigation Buttons */}
@@ -251,7 +283,6 @@ const SignIn = () => {
                         Next
                       </button>
                     ) : (
-                      // <Button variant="success">Submit</Button>
                       <button className="button2" onClick={nextStep}>
                         Submit
                       </button>
