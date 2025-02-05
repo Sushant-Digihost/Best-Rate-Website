@@ -236,7 +236,7 @@ const SignIn = () => {
                   </div>
 
                   <p>
-                    Don't have an account? <Link to="#!">Sign up </Link>
+                    Don't have an account? <Link to="/sign-up">Sign up </Link>
                   </p>
                 </div>
               )}
@@ -270,7 +270,7 @@ const SignIn = () => {
                           placeholder="Enter password"
                         />
                       </FloatingLabel>
-                      <Link to="#!" className="forgot_password">
+                      <Link to="/forgot-password" className="forgot_password">
                         Forgot password?
                       </Link>
                     </>

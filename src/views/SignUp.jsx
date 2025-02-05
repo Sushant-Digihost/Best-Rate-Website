@@ -384,7 +384,10 @@ const SignUp = () => {
                     }`}
                   >
                     {step === 1 && (
-                      <Link to="/sign-in" className="text-button fw-semibold">
+                      <Link
+                        to="/sign-in"
+                        className="text-button fw-semibold me-3"
+                      >
                         Sign In
                       </Link>
                     )}

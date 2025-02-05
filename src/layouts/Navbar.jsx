@@ -45,25 +45,25 @@ const Navbar = () => {
               </li>
             </ul>
             <div className="auth-links">
-              <a href="#!" className="ali">
-                Login
-              </a>
-              <a href="#!" className="button">
+              <Link to="/sign-in" className="ali">
+                Sign In
+              </Link>
+              <Link to="/sign-up" className="button">
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
           <div className="userlog">
             <ul>
               <li>
-                <a href="#!" className="cart">
+                <Link to="#!" className="cart">
                   <div className="cardbg">
                     <img src={cart} alt="" />{" "}
                     <div className="span">
                       <span>2</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               </li>
               <li>
                 <Dropdown className="dropdown">
