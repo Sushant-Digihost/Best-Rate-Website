@@ -73,6 +73,14 @@
       flex-direction: column;
       align-items: baseline;
 
+      .first-show-buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       .google {
         display: inline-flex;
         height: 48px;
@@ -85,6 +93,8 @@
         background: #fff;
         gap: 10px;
         margin-bottom: 20px;
+        cursor: pointer;
+        
 
         h2 {
           color: #393939;
