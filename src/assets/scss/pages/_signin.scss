@@ -8,9 +8,8 @@
   }
 
   .button2 {
-    padding: 10px 26px;
+    padding: 8px 26px;
     font-size: 16px;
-
   }
 
   .div_container {
@@ -50,7 +49,7 @@
 
       h1 {
         color: #122c65;
-    
+
         font-size: 34px;
         font-style: normal;
         font-weight: 700;
@@ -60,7 +59,7 @@
 
       p {
         color: #303030;
-    
+
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -73,7 +72,7 @@
       flex-direction: column;
       align-items: baseline;
 
-      .first-show-buttons{
+      .first-show-buttons {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -94,7 +93,6 @@
         gap: 10px;
         margin-bottom: 20px;
         cursor: pointer;
-        
 
         h2 {
           color: #393939;
@@ -181,16 +179,15 @@
     line-height: normal;
     margin-top: 20px;
   }
-
 }
 
 // Add new OTP styles
 .otp-input-container {
   display: flex;
 
-      justify-content: space-between;
-      margin: 20px 0;
-      width: 100%;
+  justify-content: space-between;
+  margin: 20px 0;
+  width: 100%;
 
   .otp-input {
     width: 45px;
@@ -208,5 +205,3 @@
     }
   }
 }
-
-
