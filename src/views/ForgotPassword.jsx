@@ -102,7 +102,7 @@ const ForgotPassword = () => {
                   {step === 1 && (
                     <FloatingLabel
                       controlId="floatingInput"
-                      label="Enter your email id"
+                      label="Enter your email"
                       className="mb-3 form-floating-lb"
                     >
                       <Form.Control
@@ -113,26 +113,7 @@ const ForgotPassword = () => {
                     </FloatingLabel>
                   )}
 
-                  {step === 2 && (
-                    <>
-                      <FloatingLabel
-                        controlId="floatingInput"
-                        label="Set Password"
-                        className="mb-3 form-floating-lb"
-                      >
-                        <Form.Control
-                          className="form-float"
-                          type="password"
-                          placeholder="Enter password"
-                        />
-                      </FloatingLabel>
-                      <Link to="#!" className="forgot_password">
-                        Forgot password?
-                      </Link>
-                    </>
-                  )}
-
-                  {step === 3 && (
+                {step === 2 && (
                     <>
                     <span className="otp">OTP Verification</span>
                       <div className="otp-input-container">
@@ -152,6 +133,42 @@ const ForgotPassword = () => {
                   </span>
                     </>
                   )}
+
+                  {step === 3 && (
+                    <>
+                      <FloatingLabel
+                        controlId="floatingInput"
+                        label="New Password"
+                        className="mb-3 form-floating-lb"
+                      >
+                        <Form.Control
+                          className="form-float"
+                          type="password"
+                          placeholder="New Password"
+                        />
+                      </FloatingLabel>
+                    
+                    </>
+                  )}
+
+                {step === 4 && (
+                    <>
+                      <FloatingLabel
+                        controlId="floatingInput"
+                        label="Confirm Password"
+                        className="mb-3 form-floating-lb"
+                      >
+                        <Form.Control
+                          className="form-float"
+                          type="password"
+                          placeholder="Confirm Password"
+                        />
+                      </FloatingLabel>
+                    
+                    </>
+                  )}
+
+                  
 
                   {/* Navigation Buttons */}
                   <div className="d-flex justify-content-between mt-4 w-100">
