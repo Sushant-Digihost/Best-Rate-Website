@@ -24,17 +24,19 @@ const SignUp = () => {
     name: "",
     email: "",
     password: "",
+    confirmPassword: "",
+    otpVarification: "",
+    setPin: "",
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
-    <Container className="sign_in">
+    <div className="sign_in">
       <div className="div_container">
         <video className="bg_video" src={bg} autoPlay loop muted></video>
       </div>
@@ -47,7 +49,7 @@ const SignUp = () => {
               </div>
               <h1>Create account</h1>
               <p>Lorem Ipsum is simply dummy text of the printing</p>
-              <ProgressBar now={(step / 3) * 100} className="mb-3" />
+              <ProgressBar now={(step / 6) * 100} className="mb-3" />
             </div>
           </div>
           <div className="col-md-6">
@@ -227,8 +229,55 @@ const SignUp = () => {
                     </FloatingLabel>
                   )}
 
+                  {step === 4 && (
+                    <>
+                      <FloatingLabel
+                        controlId="floatingInput"
+                        label="Confirm Password"
+                        className="mb-3 form-floating-lb"
+                      >
+                        <Form.Control
+                          className="form-float"
+                          type="password"
+                          placeholder="name@example.com"
+                        />
+                      </FloatingLabel>
+                      <Form.Check // prettier-ignore
+                        type="checkbox"
+                        className="w-100"
+                        label="I agree to all the Terms and Privacy policy. "
+                      />
+                    </>
+                  )}
+                  {step === 5 && (
+                    <FloatingLabel
+                      controlId="floatingInput"
+                      label="Pin"
+                      className="mb-3 form-floating-lb"
+                    >
+                      <Form.Control
+                        className="form-float"
+                        type="password"
+                        placeholder="name@example.com"
+                      />
+                    </FloatingLabel>
+                  )}
+                  {step === 6 && (
+                    <FloatingLabel
+                      controlId="floatingInput"
+                      label="OTP"
+                      className="mb-3 form-floating-lb"
+                    >
+                      <Form.Control
+                        className="form-float"
+                        type="password"
+                        placeholder="name@example.com"
+                      />
+                    </FloatingLabel>
+                  )}
+
                   {/* Navigation Buttons */}
-                  <div className="d-flex justify-content-between mt-4 w-100">
+                  <div className="d-flex justify-content-between mt-4 w-100 align-items-center">
                     {step > 1 && (
                       <button className="text-button" onClick={prevStep}>
                         <svg
@@ -246,7 +295,7 @@ const SignUp = () => {
                         Back
                       </button>
                     )}
-                    {step < 3 ? (
+                    {step < 6 ? (
                       <button className="button2" onClick={nextStep}>
                         Next
                       </button>
@@ -263,7 +312,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
