@@ -335,9 +335,7 @@ const SignIn = () => {
                         Next
                       </button>
                     ) : (
-                      <button className="button2" onClick={nextStep}>
-                        Submit
-                      </button>
+                      <button className="button2">Submit</button>
                     )}
                   </div>
                 </>
