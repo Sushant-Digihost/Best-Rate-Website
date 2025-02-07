@@ -126,3 +126,17 @@
   align-items: center;
   gap: 5px;
 }
+
+.button-nsd {
+  animation: none;
+  margin-top: 3.575rem;
+  font-size: 2.383vw !important;
+  padding: 1.5vw 8.5vw !important;
+  font-weight: 600;
+  border-radius: 1.77vw;
+  color: #fff;
+
+  &::before {
+    display: none;
+  }
+}

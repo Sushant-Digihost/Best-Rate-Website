@@ -23,6 +23,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
 import ForgotPassword from "./views/ForgotPassword";
+import CreatersClub from "./views/CreatersClub";
 
 function App() {
   const lenisRef = useRef(null);
@@ -79,6 +80,7 @@ function App() {
               <Route path="/sign-in" element={<SignIn />} />
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/creaters-club" element={<CreatersClub />} />
 
               <Route
                 path="/features"
