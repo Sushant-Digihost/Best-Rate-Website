@@ -9,7 +9,127 @@
       margin: auto;
     }
   }
+
   .image {
     padding-bottom: 5vw;
   }
+}
+
+
+.who-is-this {
+  position: relative !important;
+  height: 100vh !important;
+
+  p {
+    color: #000;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    width: 60%;
+    margin: auto;
+
+    /* 130% */
+  }
+
+  .blur-text {
+    position: absolute;
+    z-index: 5;
+    top: 30%;
+
+    h1 {
+      color: #8FCEED;
+      font-family: Urbanist;
+      font-size: 98px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 76px;
+      opacity: 0.16;
+      text-align: center;
+      text-wrap: nowrap;
+    }
+
+  }
+
+  .visible-text {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    top: 30%;
+    z-index: 6;
+
+
+    h1 {
+      color: #8FCEED;
+      font-family: Urbanist;
+      font-size: 98px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 76px;
+      display: inline-block;
+
+      span {
+        color: #666;
+        font-family: Urbanist;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+      }
+    }
+
+  }
+
+  .blur-text2 {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+
+    h1 {
+      color: #015F4D;
+      font-family: Urbanist;
+      font-size: 98px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 76px;
+      opacity: 0.16;
+      text-align: center;
+      text-wrap: nowrap;
+    }
+
+  }
+
+  .visible-text2 {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    top: 50%;
+    z-index: 6;
+    
+    h1 {
+      color: #015F4D;
+      font-family: Urbanist;
+      font-size: 98px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 76px;
+      display: inline-block;
+
+      span {
+        color: #666;
+        font-family: Urbanist;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+      }
+    }
+
+  }
+
+
 }
