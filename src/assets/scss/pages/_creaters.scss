@@ -60,39 +60,21 @@
     /* 130% */
   }
 
-  .blur-text {
-    position: absolute;
-    z-index: 5;
-    top: 30%;
-
-    h1 {
-      color: #8fceed;
-      font-family: Urbanist;
-      font-size: 98px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 76px;
-      opacity: 0.16;
-      text-align: center;
-      text-wrap: nowrap;
-    }
-  }
-
-  .visible-text {
+  .visible-text-wt {
     position: absolute;
     display: flex;
     align-items: flex-end;
     gap: 15px;
-    top: 30%;
+    top: 70%;
     z-index: 6;
 
     h1 {
-      color: #8fceed;
+      color: #a9ea98;
       font-family: Urbanist;
-      font-size: 98px;
+      font-size: 6.56vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 76px;
+      line-height: 1.4;
       display: inline-block;
 
       span {
@@ -104,17 +86,35 @@
         line-height: 26px;
       }
     }
+
+    &.visible-text1 {
+      top: 27%;
+      h1 {
+        color: #8fceed;
+      }
+    }
+    &.visible-text2 {
+      top: 47%;
+      h1 {
+        color: #015f4d;
+      }
+    }
+    &.visible-text3 {
+      top: 67%;
+      h1 {
+        color: #a9ea98;
+      }
+    }
   }
 
-  .blur-text2 {
+  .text-blur-op {
     position: absolute;
     z-index: 5;
-    top: 50%;
+    top: 30%;
 
     h1 {
-      color: #015f4d;
       font-family: Urbanist;
-      font-size: 98px;
+      font-size: 6.56vw;
       font-style: normal;
       font-weight: 700;
       line-height: 76px;
@@ -122,33 +122,161 @@
       text-align: center;
       text-wrap: nowrap;
     }
-  }
 
-  .visible-text2 {
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
-    gap: 15px;
-    top: 50%;
-    z-index: 6;
-
-    h1 {
-      color: #015f4d;
-      font-family: Urbanist;
-      font-size: 98px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 76px;
-      display: inline-block;
-
-      span {
-        color: #666;
-        font-family: Urbanist;
-        font-size: 26px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 26px;
+    &.blur-text1 {
+      top: 30%;
+      h1 {
+        color: #8fceed;
+      }
+    }
+    &.blur-text2 {
+      top: 50%;
+      h1 {
+        color: #015f4d;
+      }
+    }
+    &.blur-text3 {
+      top: 70%;
+      h1 {
+        color: #a9ea98;
       }
     }
   }
+
+  //   .blur-text {
+  //     position: absolute;
+  //     z-index: 5;
+  //     top: 30%;
+
+  //     h1 {
+  //       color: #8fceed;
+  //       font-family: Urbanist;
+  //       font-size: 98px;
+  //       font-style: normal;
+  //       font-weight: 700;
+  //       line-height: 76px;
+  //       opacity: 0.16;
+  //       text-align: center;
+  //       text-wrap: nowrap;
+  //     }
+  //   }
+
+  //   .visible-text {
+  //     position: absolute;
+  //     display: flex;
+  //     align-items: flex-end;
+  //     gap: 15px;
+  //     top: 30%;
+  //     z-index: 6;
+
+  //     h1 {
+  //       color: #8fceed;
+  //       font-family: Urbanist;
+  //       font-size: 98px;
+  //       font-style: normal;
+  //       font-weight: 700;
+  //       line-height: 76px;
+  //       display: inline-block;
+
+  //       span {
+  //         color: #666;
+  //         font-family: Urbanist;
+  //         font-size: 26px;
+  //         font-style: normal;
+  //         font-weight: 500;
+  //         line-height: 26px;
+  //       }
+  //     }
+  //   }
+
+  //   .blur-text2 {
+  //     position: absolute;
+  //     z-index: 5;
+  //     top: 50%;
+
+  //     h1 {
+  //       color: #015f4d;
+  //       font-family: Urbanist;
+  //       font-size: 98px;
+  //       font-style: normal;
+  //       font-weight: 700;
+  //       line-height: 76px;
+  //       opacity: 0.16;
+  //       text-align: center;
+  //       text-wrap: nowrap;
+  //     }
+  //   }
+
+  //   .visible-text2 {
+  //     position: absolute;
+  //     display: flex;
+  //     align-items: flex-end;
+  //     gap: 15px;
+  //     top: 50%;
+  //     z-index: 6;
+
+  //     h1 {
+  //       color: #015f4d;
+  //       font-family: Urbanist;
+  //       font-size: 98px;
+  //       font-style: normal;
+  //       font-weight: 700;
+  //       line-height: 76px;
+  //       display: inline-block;
+
+  //       span {
+  //         color: #666;
+  //         font-family: Urbanist;
+  //         font-size: 26px;
+  //         font-style: normal;
+  //         font-weight: 500;
+  //         line-height: 26px;
+  //       }
+  //     }
+  //   }
+  //   .blur-text3 {
+  //     position: absolute;
+  //     z-index: 5;
+  //     top: 70%;
+
+  //     h1 {
+  //       color: #a9ea98;
+  //       font-family: Urbanist;
+  //       font-size: 6.56vw;
+  //       font-style: normal;
+  //       font-weight: 700;
+  //       line-height: 1.4;
+  //       opacity: 0.16;
+  //       text-align: center;
+  //       text-wrap: nowrap;
+  //     }
+  //   }
+
+  //   .visible-text3 {
+  //     position: absolute;
+  //     display: flex;
+  //     align-items: flex-end;
+  //     gap: 15px;
+  //     top: 70%;
+  //     z-index: 6;
+
+  //     h1 {
+  //       color: #a9ea98;
+  //       font-family: Urbanist;
+  //       font-size: 6.56vw;
+  //       font-style: normal;
+  //       font-weight: 700;
+  //       line-height: 1.4;
+  //       display: inline-block;
+
+  //       span {
+  //         color: #666;
+  //         font-family: Urbanist;
+  //         font-size: 26px;
+  //         font-style: normal;
+  //         font-weight: 500;
+  //         line-height: 26px;
+  //       }
+  //     }
+  //   }
 }
