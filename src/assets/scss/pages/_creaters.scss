@@ -470,3 +470,134 @@
     }
   }
 }
+.why-join{
+  position: relative !important;
+  background: #F2F2F2 !important;
+  // height: 100vh !important;
+  // background-color: #F2F2F2;;
+
+  p {
+    color: #000;
+    text-align: center;
+    font-family: $urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+
+  }
+  .prizr-cont{
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.02);
+    padding: 94px 81px 93px 81px;
+    margin-top: 50px;
+    .bg-counter{
+      div:first-child{
+          .main-box{
+            &::after{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              left: auto;
+              background-image: url("./../images/icons/card1.png");
+              height: 208px;
+              width: 242px;
+              content: "";
+              display: block;
+              background-repeat: no-repeat;
+            }
+        }
+      }
+      div:nth-child(2){
+        .main-box{
+          border-radius: 0 !important;
+          background: linear-gradient(200deg, #071E51 16.99%, #2458CB 163.54%);
+          &::after{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: auto;
+            background-image: url("./../images/icons/card2.png");
+            height: 260px;
+            width: 197px;
+            content: "";
+            display: block;
+            background-repeat: no-repeat;
+          }
+          .num{
+            background-color: #E8ECF3;
+            span{
+              color: $primary;
+            }
+          }
+          .content{
+            h2{
+              color: #fff;
+            }
+          }
+        }
+      }
+      div:last-child{
+        .main-box{
+          border-radius: 0px 0px 60px 0px;
+          background: #E8ECF3;
+          &::after{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: auto;
+            background-image: url("./../images/icons/card3.png");
+            height: 280px;
+            width: 195px;
+            content: "";
+            display: block;
+            background-repeat: no-repeat;
+            transform: translateY(-55px);
+          }
+        }
+      }
+      .main-box{
+        border-radius: 60px 0px 0px 0px;
+        background: #E8ECF3;
+        position: relative;
+        padding: 25px;
+        .num{
+          height: 50px;
+          width: 50px;
+          background-color: $primary;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span{
+            color: #fff;
+            font-family: $primary;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+        .content{
+          padding-top: 185px;
+          position: relative;
+          z-index: 11;
+          h2{
+            color: var(--Primary, #122C65);
+            font-family: $urbanist;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 50px; /* 113.636% */
+          }
+        }
+      }
+    }
+  }
+  
+  
+}
