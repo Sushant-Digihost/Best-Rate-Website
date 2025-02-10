@@ -5,7 +5,7 @@ import circle from "./../../assets/images/creaters/unlock-bft.png";
 
 const UnlockBenefits = () => {
   return (
-    <section className="section unlock-benifits">
+    <section className="section unlock-benifits bg-light">
       <Container>
         <div className="ul-card">
           <h4>

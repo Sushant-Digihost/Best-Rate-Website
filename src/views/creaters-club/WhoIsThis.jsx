@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const WhoIsThis = () => {
   return (
-    <section className="section who-is-this">
+    <section className="section who-is-this bg-light">
       <Container>
         <h2 className="heading">Who is this for?</h2>
         <p>
