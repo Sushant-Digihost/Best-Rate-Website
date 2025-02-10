@@ -3,7 +3,7 @@ import bannerImage from "./../../assets/images/creaters/creaters-club.png";
 
 const BannerCc = () => {
   return (
-    <section className="banner banner-cc section pb-0">
+    <section className="banner banner-cc section pb-0 bg-light">
       <div className="container">
         <div className="banner-head">
           <div className="row justify-content-center">

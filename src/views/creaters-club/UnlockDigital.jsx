@@ -10,7 +10,7 @@ const UnlockDigital = () => {
   };
 
   return (
-    <section className="section unlock-digital">
+    <section className="section unlock-digital bg-light">
       <Container>
         <h2 className="heading mb-4">
           Unlocking Digital Affordability For All

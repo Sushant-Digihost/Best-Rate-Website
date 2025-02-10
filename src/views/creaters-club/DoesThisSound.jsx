@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 
 const DoesThisSound = () => {
   return (
-    <section className="section does-this-sound">
+    <section className="section does-this-sound bg-light">
       <Container>
         <h2 className="heading mb-4">Does this sound like you?</h2>
         <ul>
