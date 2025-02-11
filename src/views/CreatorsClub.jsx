@@ -7,7 +7,7 @@ import DoesThisSound from "./creaters-club/DoesThisSound";
 import UnlockDigital from "./creaters-club/UnlockDigital";
 import WhyJoinNow from "./creaters-club/WhyJoinNow";
 
-const CreatersClub = () => {
+const CreatorsClub = () => {
   return (
     <>
       <BannerCc />
@@ -15,10 +15,10 @@ const CreatersClub = () => {
       <UnlockBenefits />
       <WhyTrustUs />
       <DoesThisSound />
+      <WhyJoinNow />
       <UnlockDigital />
-      <WhyJoinNow/>
     </>
   );
 };
 
-export default CreatersClub;
+export default CreatorsClub;
