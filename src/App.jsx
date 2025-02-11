@@ -24,6 +24,9 @@ import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
 import ForgotPassword from "./views/ForgotPassword";
 import CreatorsClub from "./views/CreatorsClub";
+import CreatersClubForm from "./views/CreatersClubForm";
+import PayNow from "./views/creaters-club-form/PayNow";
+import SelectTheme from "./views/creaters-club-form/SelectTheme";
 
 function App() {
   const lenisRef = useRef(null);
@@ -81,6 +84,9 @@ function App() {
               <Route path="/sign-up" element={<SignUp />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/creators-club" element={<CreatorsClub />} />
+              <Route path="/club-resitration-form" element={<CreatersClubForm />} />
+              <Route path="/pay-now" element={<PayNow/>} />
+              <Route path="/select-theme" element={<SelectTheme/>} />
 
               <Route
                 path="/features"

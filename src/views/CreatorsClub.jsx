@@ -6,6 +6,7 @@ import WhyTrustUs from "./creaters-club/WhyTrustUs";
 import DoesThisSound from "./creaters-club/DoesThisSound";
 import UnlockDigital from "./creaters-club/UnlockDigital";
 import WhyJoinNow from "./creaters-club/WhyJoinNow";
+import ExclusiveSlider from "./creaters-club/ExclusiveSlider";
 
 const CreatorsClub = () => {
   return (
@@ -17,6 +18,7 @@ const CreatorsClub = () => {
       <DoesThisSound />
       <WhyJoinNow />
       <UnlockDigital />
+      <ExclusiveSlider/>
     </>
   );
 };
