@@ -718,6 +718,17 @@
   }
 }
 .select-theme{
+  .heading1{
+    color: #020B1F;
+    font-family: $urbanist;
+    font-size: 2.635vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-top: 70px;
+    text-align: left;
+    margin-bottom: 70px;
+  }
   .body-main{
     .theme-container{
       .Themes{
@@ -754,6 +765,129 @@
           }
         }
       }
+    }
+  }
+}
+
+
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  &:last-child::before{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    // background-color: #000;
+    border: 1px dotted #ccc;
+    content: "";
+    top: 50%;
+    left: -50%;
+    transform: translateY(-13px);
+  }
+  &:nth-child(2)::before{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    // background-color: #000;
+    border: 1px dotted #ccc;
+    content: "";
+    top: 50%;
+    left: -50%;
+    transform: translateY(-13px);
+  }
+  &.active::before{
+    border-color: #122C65;
+  }
+ 
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc;
+  color: #FFF;
+  text-align: center;
+  font-family: $urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+ 
+}
+
+.step.active .circle {
+  background-color: #002366; /* Dark Blue for Active Step */
+}
+
+.step-label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.line {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  background: #ccc;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.line.completed {
+  background: #002366;
+}
+
+.button-group {
+  text-align: center;
+}
+
+
+.selectthemeform{
+  .form-floating-lb{
+    label{
+      background-color: transparent !important;
+      &::after{
+        background-color: transparent !important;
+      }
+    }
+    .form-float{
+      background-color: transparent;
+    }
+    
+  }
+  .css-b62m3t-container{
+    height: 100%;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    width: 100%;
+    .css-13cymwt-control{
+      width: 100%;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #c9c9c9;
+      border-radius: 0;
     }
   }
 }
