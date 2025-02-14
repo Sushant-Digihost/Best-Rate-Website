@@ -864,30 +864,335 @@
 
 
 .selectthemeform{
-  .form-floating-lb{
-    label{
-      background-color: transparent !important;
-      &::after{
+  .css-1u9des2-indicatorSeparator,.css-1wy0on6{
+    display: none;
+  }
+  .css-13cymwt-control,
+  .css-t3ipsp-control{
+    position: relative;
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.9336 6.81641H9.74197H5.06695C4.26695 6.81641 3.86695 7.78307 4.43361 8.34975L8.7503 12.6664C9.44197 13.3581 10.567 13.3581 11.2586 12.6664L12.9003 11.0247L15.5753 8.34975C16.1336 7.78307 15.7336 6.81641 14.9336 6.81641Z" fill="%23122C65"/></svg>');
+      margin-right: 8px;
+      z-index: 1111;
+      position: absolute;
+      transform: translateY(13px);
+      top: 0;
+      right: 0;
+  
+    }
+  
+  }
+  .row{
+    gap: 30px 0;
+    .form-floating-lb{
+      label{
         background-color: transparent !important;
+        &::after{
+          background-color: transparent !important;
+        }
+      }
+      .form-float{
+        background-color: transparent;
+      }
+      
+    }
+    .css-b62m3t-container{
+      height: 100%;
+      align-items: center;
+      display: flex;
+      align-content: center;
+      width: 100%;
+      .css-13cymwt-control{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #c9c9c9;
+        border-radius: 0;
+      }
+      .css-t3ipsp-control{
+        width: 100%;
+        background-color: transparent;
+        border: none ;
+        border-bottom: 1px solid #c9c9c9;
+        border-radius: 0;
+        box-shadow: none;
       }
     }
-    .form-float{
-      background-color: transparent;
+    .logo-upload-container {
+      font-family: Arial, sans-serif;
+      h5{
+        color: #000;
+        font-family: $urbanist;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
     }
     
-  }
-  .css-b62m3t-container{
-    height: 100%;
-    align-items: center;
-    display: flex;
-    align-content: center;
-    width: 100%;
-    .css-13cymwt-control{
+    .file-upload-box {
+      padding: 21px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 16px;
+      background: #E8EEF5;
+      margin-top: 10px;
+    }
+    
+    .file-upload-label {
+      display: flex;
       width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .upload-area {
+      flex-grow: 1;
+      padding-left: 10px;
+    }
+    
+    .upload-area span {
+      color: #0D0D0E;
+      font-family: $urbanist;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    
+    .file-types {
+      color: #A7ACB1;
+      font-family: $urbanist;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+    
+    .business-name-checkbox {
+      margin-top: 10px;
+      color: #000;
+      // font-family: $urbanist;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%; /* 19.6px */
+      letter-spacing: -0.28px;
+    }
+    .file-btn{
+      color: #122C65;
+      text-align: center;
+      font-family: $urbanist;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 0.32px;
+      padding: 11px 24px;
       background-color: transparent;
+      border-radius: 10px;
+      border: 1px solid #122C65;
+      &:focus{
+        background-color: #122C65;
+        color: #fff;
+      }
+    }
+    .color-picker-container {
+      width: 100%;
+    }
+    
+    .color-box {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      width: 100%;
+      label{
+        color: #000;
+        font-family: $urbanist;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 13px;
+      }
+    }
+    
+    .color-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .color-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 6px;
+      border-radius: 16px;
+      background: #E8EEF5;
+    }
+    
+    .color-preview {
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      display: inline-block;
+    }
+    
+    .color-input-hidden {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      opacity: 0;
+      cursor: pointer;
+    }
+    
+    .edit-icon {
+      cursor: pointer;
+      color: gray;
+    }
+    .color-name{
+      color: #000;
+      font-family: $urbanist;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .color-title{
+      text-align: center;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .textarea{
+      color: #4A4A4A;
+      font-family: $urbanist;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .form-floating > label{
+      z-index: 0;
+    }
+  }
+  .form-floating-lb{
+    .form-float{
+      &:focus{
+        border-bottom: 1px solid #1B18A7;
+      }
+    }
+   
+  }
+  .contact-details{
+    margin-top: 40px;
+    h3{
+      color: #122C65;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    .email{
+      position: relative;
+      .validation{
+        position: absolute;
+        right: 0;
+        top: 50%;
+      }
+    }
+    
+    .phone-cont{
+      display: flex;
+      align-items: center;
+      position: relative;
+      p{
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .css-b62m3t-container{
+        width: auto;
+        .css-13cymwt-control,.css-t3ipsp-control{
+          padding: 3px 0;
+          .css-hlgwow{
+            width:85px;
+          }
+         
+        }
+      }
+    }
+    .contrycode{
+      padding: 10px;
+      font-size: 16px;
       border: none;
-      border-bottom: 1px solid #c9c9c9;
-      border-radius: 0;
+      border-bottom: 1px solid #ccc;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+  .other-details{
+    h4{
+      color: #000;
+      font-family: $urbanist;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 36px;
+    }
+    .tagslist{
+      .tag-container{
+        display: flex;
+        gap: 10px 25px;
+        flex-wrap: wrap;
+        h4{
+            display: inline-flex;
+            padding: 4px 13px;
+            justify-content: center;
+            align-items: center;
+            color: #122C65;
+            font-family: $urbanist;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 500;
+            line-height: normal;
+            border-radius: 6px;
+            background: #CEDDFE;
+            margin-bottom: 0;
+        }
+      }
+      .tag-seract{
+        display: flex;
+        .add-btn{
+          color:  #122C65;
+          text-align: center;
+          font-family: $urbanist;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          letter-spacing: 0.48px;
+          background-color: transparent;
+          border: none;
+          width: 100px;
+          border-bottom: 1px solid #c9c9c9;
+          padding: 0;
+          border-radius: 0;
+          height: 58px;
+        }
+      }
     }
   }
 }
