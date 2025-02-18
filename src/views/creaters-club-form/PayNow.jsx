@@ -18,7 +18,7 @@ const PayNow = () => {
                     </div>
                     <div className="prize">
                         <h4><span>₹</span>100</h4>
-                        <a href="#!" class="button btn-2">Pay Now</a>
+                        <a href="/select-theme" class="button btn-2">Pay Now</a>
                     </div>
                 </div>
             </div>

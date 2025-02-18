@@ -652,9 +652,41 @@
       background: #FFF;
     }
   }
+  .sign_in{ 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    .progress{
+      margin-top: 122px;
+      .progress-bar.bg-success{
+        background: #051844 !important;
+      }
+    }
+    .sign-in-form{ 
+      position: static;
+      transform: translate(0%, 0%); 
+      .right_continaer{
+        gap: 88px 0;
+        .form-floating-lb{ 
+          .form-float{
+            border-radius: 6px;
+            border: 1px solid #E4E4E4;
+            background: #FFF;
+          }
+        }
+        .form-floating > label{
+          color: #9C9C9C;
+        }
+      }
+    }
+  }
 }
 
 .paynow{
+  .container{
+    padding: 0 70px;
+  }
   .main-pay{
     display: flex;
     justify-content: flex-end;
@@ -668,7 +700,7 @@
       line-height: 4.538vw; /* 114.815% */
       text-transform: uppercase;
       position: absolute;
-      width: 40%;
+      width: 45%;
       left: 0;
     }
     .paynowsection{
@@ -783,30 +815,52 @@
   text-align: center;
   position: relative;
   flex: 1;
+  .step-label{
+    opacity: 0;
+  }
+  &:first-child{
+    text-align: left;
+    .circle{
+      margin-left: 40px;
+    }
+  }
   &:last-child::before{
     position: absolute;
-    width: 100%;
+    width: 132%;
     height: 2px;
     // background-color: #000;
-    border: 1px dotted #ccc;
+    border-bottom: 2px dotted #E3E3E3;
     content: "";
     top: 50%;
-    left: -50%;
+    left: -45%;
     transform: translateY(-13px);
   }
-  &:nth-child(2)::before{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    // background-color: #000;
-    border: 1px dotted #ccc;
-    content: "";
-    top: 50%;
-    left: -50%;
-    transform: translateY(-13px);
+  &:nth-child(2){
+    &::before{
+      position: absolute;
+      width: 123%;
+      height: 2px;
+      // background-color: #000;
+      border-bottom: 2px dotted #E3E3E3;
+      content: "";
+      top: 50%;
+      left: -78%;
+      transform: translateY(-13px);
+    }
   }
-  &.active::before{
-    border-color: #122C65;
+  &:last-child{
+    text-align: right;
+    .circle{
+      margin-right: 10px;
+    }
+  }
+  &.active{
+    &::before{
+      border-color: #122C65;
+    }
+    .step-label{
+      opacity: 1;
+    }
   }
  
 }
@@ -839,8 +893,12 @@
 
 .step-label {
   margin-top: 5px;
-  font-size: 14px;
-  color: #666;
+  color: #122C65;
+  font-family: $urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .line {
@@ -1124,7 +1182,7 @@
       .css-b62m3t-container{
         width: auto;
         .css-13cymwt-control,.css-t3ipsp-control{
-          padding: 3px 0;
+          padding: 2px 0;
           .css-hlgwow{
             width:85px;
           }
